@@ -4,74 +4,80 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(images/back.jpg);
-    background-size: cover;
+    background-color: wheat;
 }
 .container{
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
-    /* height: 100vh; */
-}
-h1{
-    text-align: center;
-    padding-top: 20px;
-    font-size: 48px;
-}
-h1 + p{
-    font-size: 24px;
-    padding: 20px 0;
-}
-#task-enter{
     display: grid;
-    grid-template-columns: 8fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 2fr 5fr;
+    height: 100vh;
 }
-#input-text{
-    height: 40px;
-    font-size: 20px;
-    padding: 5px 10px;
+.sidebar, .site{
+    border: 2px solid black;
     border-radius: 5px;
-    border: 0;
+}
+.sidebar{
+    /* display: grid; */
+    /* grid-template-rows: 1fr 4fr;  */
+    width: 350px;
+}
+.tools{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-gap: 5px; */
+    justify-items: center;
+    align-items: center;
+    height: 120px;
+    border-bottom: 2px black solid;
 }
 button{
-    height: 40px;
-    font-size: 20px;
+    height: 30px;
+    border: 2px white solid;
     border-radius: 5px;
-    cursor: pointer;
-    border: 0;
     background-color: white;
+    cursor: pointer;
 }
-#task-field{
-    padding-top: 20px;
+#buttonClearSite{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 95%;
 }
-#task-list{
-    list-style-type: none;
-    font-size: 20px;
-    width: 100%;
+.tools > button{
+    width: 90%;
 }
-#task-list li{
-    display: grid;
-    grid-template-columns: 1fr 15fr 1fr 1fr;
-    grid-gap: 10px;
-    height: 40px;
+.data-input{
+    padding: 10px;
+}
+.data-input input{
     margin: 10px 0;
-    width: 70%;
-    align-items: center;
-    background-color: white;
+    width: 90%;
+    height: 30px;
+    padding: 0 10px;
+    border: 2px white solid;
     border-radius: 5px;
-    border: 0;
 }
-
-#task-list li img{
-    height: 17px;
-    cursor: pointer;
+.data-input button{
+    width: 50%;
 }
-#task-list input{
-    margin-left: 10px;
+.data-input form{
+    display: flex;
+    justify-content: space-around;
 }
-.crossOut{
-    text-decoration: line-through;
+.data-input form p{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.normal-text{
-    text-decoration: none;
+.data-input form p input{
+    display: inline-block;
+    margin-left: 5px;
+    width: 15px;
+}
+.site{
+    padding: 20px;
+}
+.site a{
+    display: block;
 }
