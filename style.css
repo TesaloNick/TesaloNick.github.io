@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body > div{
+    height: 100vh;
+    overflow: auto;
+    background-image: url(images/Vector\ 1.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+button{
+    cursor: pointer;
+    width: 285px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1958DB;
+    line-height: 29px;
+    padding: 12px 0;
+    border-radius: 30px;
+    border: solid #1958DB 2px;
+    display: block;
+    margin: 10px auto;
+    background-color: white;
+}
+button:hover{
+    background-color: #1958DB;
+    color: white;
+    transition: 0.5s;
+    font-size: 26px;
+    transform: scale(1.05);
+
+}
+input{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+input::placeholder{
+    color: #BFBFBF;
+}
+p{
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    font-family: Montserrat;
+    color: #8C8C8C;
+}
+a{
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-family: Montserrat;
+    color: #1958DB;
+    font-weight: bold;
+}
+a:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.sign-up, .log-in{
+    display: none;
+}
+.main-page, .log-in, .sign-up{
+    width: 400px;
+    margin: auto;
+    z-index: 1;
+}
+.p-main{
+    color: #1d1d1d;
+    padding-top: 10px;
+}
+.send-log-in, .send-registration{
+    margin-top: 40px;
+}
+.main-image{
+    display: block;
+    margin: 20px auto;
+}
