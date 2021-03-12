@@ -92,6 +92,7 @@ const Site = function() {
                     } else {
                         deleteWrong(signUp, sendRegistration)
                         arrFormRegistration.push(user)
+                        alert('Ваши контакты сохранены')
                     }
                 }
             }
