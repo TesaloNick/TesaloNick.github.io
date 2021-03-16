@@ -3,86 +3,68 @@
     margin: 0;
     box-sizing: border-box;
 }
-body > div{
-    height: 100vh;
-    overflow: auto;
-    background-image: url(images/Vector\ 1.svg);
-    background-position: bottom right;
-    background-repeat: no-repeat;
-}
-.container{
-    max-width: 1200px;
+.contacts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 900px;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-items: center;
     margin: auto;
+    background-color: wheat;
 }
-
-button{
-    cursor: pointer;
-    width: 285px;
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 24px;
-    color: #1958DB;
-    line-height: 29px;
-    padding: 12px 0;
-    border-radius: 30px;
-    border: solid #1958DB 2px;
+.form-add, .form-edit, .form-remove{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+.form-add input, .form-edit input, .form-remove input{
     display: block;
+    width: 90%;
+    padding: 5px 10px;
     margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 3px;
     background-color: white;
 }
-button:hover{
-    background-color: #1958DB;
-    color: white;
-    transition: 0.5s;
-    font-size: 26px;
+.form-add button, .form-edit button, .form-remove button{
+    display: block;
+    width: 50%;
+    padding: 5px 10px;
+    margin: 10px auto;
+    border: 0px solid black;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+}
+.form-add button:hover, .form-edit button:hover, .form-remove button:hover{
     transform: scale(1.05);
-
-}
-input{
-    display: block;
-    padding: 10px;
-    width: 100%;
-    margin: 10px 0;
-}
-input::placeholder{
-    color: #BFBFBF;
-}
-p{
-    display: block;
-    margin: 10px 0;
-    font-size: 14px;
-    font-family: Montserrat;
-    color: #8C8C8C;
-}
-a{
-    display: block;
-    margin-top: 40px;
-    text-align: center;
-    font-size: 14px;
-    font-family: Montserrat;
-    color: #1958DB;
-    font-weight: bold;
-}
-a:hover{
-    transform: scale(1.1);
     transition: 0.5s;
 }
-.sign-up, .log-in{
-    display: none;
+.form-add, .form-edit{
+    width: 90%;
 }
-.main-page, .log-in, .sign-up{
-    width: 400px;
-    margin: auto;
-    z-index: 1;
+.form-remove{
+    width: 50%;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
-.p-main{
-    color: #1d1d1d;
-    padding-top: 10px;
+h1{
+    text-align: center;
 }
-.send-log-in, .send-registration{
-    margin-top: 40px;
+.result-contacts{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    width: 50%;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: white;
+    overflow: auto;
 }
-.main-image{
-    display: block;
-    margin: 20px auto;
+h2{
+    font-size: 18px;
 }
