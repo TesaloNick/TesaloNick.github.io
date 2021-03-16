@@ -9,7 +9,7 @@ class Users {
         }
     }
     edit(obj) {
-        for (let key in obj) {
+        for (let key in obj) { // 
             if (obj[key] !== undefined){
                 this.data[key] = obj[key]
             }

@@ -68,3 +68,26 @@ h1{
 h2{
     font-size: 18px;
 }
+@media (max-width: 1000px){
+    .contacts{
+        width: 90%;
+    }
+}
+@media (max-width: 700px){
+    h1{
+        font-size: 22px;
+    }
+    .form-add button, .form-edit button, .form-remove button{
+        width: 70%;
+    }
+}
+@media (max-width: 500px){
+    .contacts{
+        grid-template-columns: 1fr;
+    }
+    .form-remove, .result-contacts{
+        width: 90%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
