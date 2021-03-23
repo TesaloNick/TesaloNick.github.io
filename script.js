@@ -9,7 +9,7 @@ class Users {
         }
     }
     edit(obj) {
-        for (let key in obj) { // 
+        for (let key in obj) { 
             if (obj[key] !== undefined){
                 this.data[key] = obj[key]
             }
@@ -23,6 +23,7 @@ class Users {
 class Contacts{
     constructor() {
         this.data = []
+        this.date = ''
         this.add = this.add.bind(this)
         this.edit = this.edit.bind(this)
         this.remove = this.remove.bind(this)
@@ -30,86 +31,92 @@ class Contacts{
     add(event){     // добаление контакта
         event.preventDefault()
         let newUser = new Users(event.currentTarget[0].value, event.currentTarget[1].value, event.currentTarget[2].value,  event.currentTarget[3].value, event.currentTarget[4].value) // создание объекта с новым контактом
-        let counter = 0
-        for (let key of this.data) {        // проверка на повторение id при добавлении контакта
-            if (this.data.length > 0) {
-                if (event.currentTarget[0].value === key.id) {
-                    alert('Контакт с таким ID уже существует')
-                    counter++
-                } 
-            } 
-        }
-        if (counter === 0) {
-            console.log();
-            if (event.currentTarget[0].value !== '') { // проверка на пустую строку ID
-                this.data.push(newUser.data)        // добавление контакта в массив this.data
-            } else {
-                alert('Введите ID')
-            }
-        }  
+        if (this.data.find(item => item.id === event.currentTarget[0].value)) { // проверка на повторение id при добавлении контакта
+            alert('Контакт с таким ID уже существует')
+        } else {
+            this.data.push(newUser.data)        // добавление контакта в массив this.data
+        } 
         
-        for (let i=0; i < event.currentTarget.length; i++) { 
-            event.currentTarget[i].value = ''
-        }
+        this.clearInput(event);
         this.result()
-        console.log(this.data);
+        this.changeLocalStorage()
     }
-    edit(event) {       // редактирлвание контакта в массив this.data
+    edit(event, id) {       // редактирлвание контакта в массив this.data
         event.preventDefault()
         for (let key of this.data) {
             if (+key.id === +event.currentTarget[0].value) { // поиск ID уже созданного контакта и изменяемого
-                let arr = []
-                for (let key1 in key) { // массив свойст объекта
-                    arr.push(key1)
-                }
+                let arr = Object.keys(key)
                 for (let i=1; i < event.currentTarget.length-1; i++) { // изменение данных объекта
-                    if (event.currentTarget[i].value !== undefined) {
+                    if (event.currentTarget[i].value !== '') {
                         key[arr[i]] = event.currentTarget[i].value
                     }
                 }
             }
         }
-        for (let i=0; i < event.currentTarget.length; i++) {
-            event.currentTarget[i].value = ''
-        }
+
+        // let name = event.currentTarget[1].value      // альтернативный способ (замена всех значений)
+        // let email = event.currentTarget[2].value
+        // let address = event.currentTarget[3].value
+        // let phone = event.currentTarget[4].value
+        // let contact = this.data.find(item => item.id === event.currentTarget[0].value) 
+        // contact.name = name
+        // contact.email = email
+        // contact.address = address
+        // contact.phone = phone  
+        this.changeLocalStorage()
+        this.clearInput(event)
         this.result()
-        console.log(this.data);
     }
+
     remove(event) {        // удаление контакта в массив this.data
         event.preventDefault()
-        for (let i=0; i < this.data.length; i++) {  // поиск совпадений по ID
-            if (this.data[i].id === event.currentTarget[0].value) {
-                this.data.splice(i, 1)
-            }
-        }
-        for (let i=0; i < event.currentTarget.length; i++) {
-            event.currentTarget[i].value = ''
-        }
-        console.log(this.data);
+        this.data = this.data.filter(item => item.id !== event.currentTarget[0].value)
+
+        this.changeLocalStorage()
+        this.clearInput(event)
         this.result()
     }
     result(){       // вывод результата в контейнер
         document.querySelector('.result-contacts').innerHTML = ''
         let counter = 1;
-        for (let key of this.data) {
-            let h2 = document.createElement('h2') 
-            document.querySelector('.result-contacts').appendChild(h2)
-            h2.innerHTML = `Контакт №${counter}`
+        this.data.forEach(item => {
+            document.querySelector('.result-contacts').insertAdjacentHTML('beforeend', `
+                <h2>Контакт №${counter}</h2>
+                <p>id: ${item.id}</p>
+                <p>name: ${item.name}</p>
+                <p>email: ${item.email}</p>
+                <p>address: ${item.address}</p>
+                <p>phone: ${item.phone}</p>
+                <p>---------------------</p>
+            `)
             counter++
-            for (let key1 in key) { // вовод строк со свойствами объекта
-               let string = document.createElement('p') 
-                document.querySelector('.result-contacts').appendChild(string)
-                string.innerHTML = `${key1}: ${key[key1]}`
-            }
-            let line = document.createElement('p') 
-            document.querySelector('.result-contacts').appendChild(line)
-            line.innerHTML = `---------------------`
+        })
+        console.log(this.data);
+    }
+    changeLocalStorage() {
+        localStorage.clear()
+        this.date = new Date(Date.now() + 10000) // 10 секунд для проверки
+        this.date = this.date.toUTCString()
+        document.cookie = `storageExpiration = 10 days;  expires=` + this.date
+        this.data.forEach(item => {
+            // localStorage.removeItem(item.id)
+            localStorage.setItem(item.id, JSON.stringify(item))
+            document.cookie = `id: ${item.id} = ${JSON.stringify(item)}; expires=` + this.date
+        })
+    }
+    clearLocalStorage(){
+        if (this.date < Date.now()){
+            localStorage.clear()
+        }
+    }
+    clearInput(event){
+        for (let i=0; i < event.currentTarget.length; i++) {
+            event.currentTarget[i].value = ''
         }
     }
     get() {
-        return console.log(this.data);
+        return this.data
     }
-
 }
 
 class ContactsApp extends Contacts{
@@ -120,7 +127,7 @@ class ContactsApp extends Contacts{
         div.innerHTML = `
         <form class="form-add">
             <h1>Добавить контакт</h1>
-            <input type="number" placeholder="id" class="id-add">
+            <input type="number" placeholder="id" class="id-add" required>
             <input type="text" placeholder="name" class="name-add">
             <input type="email" placeholder="email" class="email-add">
             <input type="text" placeholder="address" class="address-add">
@@ -129,7 +136,7 @@ class ContactsApp extends Contacts{
         </form>
         <form class="form-edit">
             <h1>Изменить контакт</h1>
-            <input type="number" placeholder="id" class="id-edit">
+            <input type="number" placeholder="id" class="id-edit" required>
             <input type="text" placeholder="name" class="name-edit">
             <input type="email" placeholder="email" class="email-edit">
             <input type="text" placeholder="address" class="address-edit">
@@ -138,7 +145,7 @@ class ContactsApp extends Contacts{
         </form>
         <form class="form-remove">
             <h1>Удалить контакт</h1>
-            <input type="tel" placeholder="phone" class="phone-remove">
+            <input type="tel" placeholder="id" class="id-remove" required>
             <button class="button-remove-contact">Удалить контакт</button>
         </form>
         <div class="result-contacts"></div>
@@ -156,26 +163,17 @@ class ContactsApp extends Contacts{
     get(){
         super.get()
     }
+    get storage() {
+        return console.log(localStorage);
+    }
+    // set storage(value) {
+    //    
+    // }
 }
-
 
 const list = new ContactsApp()
 list.app()
 list.onAdd()
 list.onEdit()
 list.onRemove()
-// list.get()
-// list.add()
-// list.add(2, 'Valya', 'Valya@gmail.com', 'Lobcha', '+375 44 222-22-22')
-// list.add(6, 'Kostya', 'Kostyaa@gmail.com', 'Luninets', '+375 44 111-11-11')
-// list.add(4, 'John', 'John@gmail.com', 'Memphis', '+375 44 222-22-22')
-// list.edit(2, {
-//     email: 'Nick@gmail.com',
-//     address: 'Pinsk',
-// })
-// list.remove(3)
-
-// const list1 = new ContactsApp()
-// list1.add(4, 'John', 'John@gmail.com', 'Memphis', '+375 44 222-22-22')
-// list1.app()
-// console.log(list1);
+list.clearLocalStorage()
