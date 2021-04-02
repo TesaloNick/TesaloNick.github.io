@@ -22,7 +22,7 @@ class Users {
 
 class Contacts{
     constructor() {
-        this.data = []
+        this.data = localStorage.getItem('contacts') ? JSON.parse(localStorage.getItem('contacts')) : [] //  проверка на наличие localStorage
         this.date = ''
         this.add = this.add.bind(this)
         this.edit = this.edit.bind(this)
@@ -30,16 +30,16 @@ class Contacts{
     }
     add(event){     // добаление контакта
         event.preventDefault()
-        let newUser = new Users(event.currentTarget[0].value, event.currentTarget[1].value, event.currentTarget[2].value,  event.currentTarget[3].value, event.currentTarget[4].value) // создание объекта с новым контактом
-        if (this.data.find(item => item.id === event.currentTarget[0].value)) { // проверка на повторение id при добавлении контакта
+        let newUser = new Users(+event.currentTarget[0].value, event.currentTarget[1].value, event.currentTarget[2].value,  event.currentTarget[3].value, event.currentTarget[4].value) // создание объекта с новым контактом
+        if (this.data.find(item => item.id === +event.currentTarget[0].value)) { // проверка на повторение id при добавлении контакта
             alert('Контакт с таким ID уже существует')
         } else {
             this.data.push(newUser.data)        // добавление контакта в массив this.data
         } 
         
         this.clearInput(event);
-        this.result()
         this.changeLocalStorage()
+        this.result()
     }
     edit(event, id) {       // редактирлвание контакта в массив this.data
         event.preventDefault()
@@ -63,53 +63,61 @@ class Contacts{
         // contact.email = email
         // contact.address = address
         // contact.phone = phone  
-        this.changeLocalStorage()
         this.clearInput(event)
+        this.changeLocalStorage()
         this.result()
     }
 
     remove(event) {        // удаление контакта в массив this.data
         event.preventDefault()
-        this.data = this.data.filter(item => item.id !== event.currentTarget[0].value)
+        this.data = this.data.filter(item => item.id !== +event.currentTarget[0].value)
 
-        this.changeLocalStorage()
         this.clearInput(event)
+        this.changeLocalStorage()
         this.result()
     }
     result(){       // вывод результата в контейнер
         document.querySelector('.result-contacts').innerHTML = ''
         let counter = 1;
-        this.data.forEach(item => {
+        let adress;
+        JSON.parse(localStorage.getItem('contacts')).forEach(item => { // достаем из localStorage данные и парсим строку
+            if (item.address.city){
+                adress = item.address.city
+            } else {
+                adress = item.address
+            }
             document.querySelector('.result-contacts').insertAdjacentHTML('beforeend', `
+            <div>
                 <h2>Контакт №${counter}</h2>
                 <p>id: ${item.id}</p>
                 <p>name: ${item.name}</p>
                 <p>email: ${item.email}</p>
-                <p>address: ${item.address}</p>
+                <p>address: ${adress}</p>
                 <p>phone: ${item.phone}</p>
-                <p>---------------------</p>
+            </div>
             `)
             counter++
+
         })
         console.log(this.data);
     }
-    changeLocalStorage() {
-        localStorage.clear()
-        this.date = new Date(Date.now() + 10000) // 10 секунд для проверки
+    changeLocalStorage() { // меняет куки и localStorage
+        this.date = new Date(Date.now() + 1000000) // 1дней для проверки
         this.date = this.date.toUTCString()
         document.cookie = `storageExpiration = 10 days;  expires=` + this.date
         this.data.forEach(item => {
             // localStorage.removeItem(item.id)
-            localStorage.setItem(item.id, JSON.stringify(item))
+            // localStorage.setItem(item.id, JSON.stringify(item))
             document.cookie = `id: ${item.id} = ${JSON.stringify(item)}; expires=` + this.date
         })
+        localStorage.setItem('contacts', JSON.stringify(this.data))
     }
     clearLocalStorage(){
-        if (this.date < Date.now()){
-            localStorage.clear()
-        }
+        // if (this.date < Date.now()){
+        //     localStorage.clear()
+        // }
     }
-    clearInput(event){
+    clearInput(event){ // очищает поля input после ввода
         for (let i=0; i < event.currentTarget.length; i++) {
             event.currentTarget[i].value = ''
         }
@@ -150,6 +158,15 @@ class ContactsApp extends Contacts{
         </form>
         <div class="result-contacts"></div>
         `
+        if (localStorage.getItem('contacts')) {
+            this.result() // проверка на наличие в localStorage
+        } else {
+            // Promise.all([this.getData()]).then(() => this.result())
+            // let promise = new Promise(
+                this.getData()
+            // )
+            // promise.then(() => this.result())
+        } 
     }
     onAdd(){        // добавление данных из DOM в массив
         document.querySelector('.form-add').addEventListener('submit', this.add)
@@ -159,6 +176,24 @@ class ContactsApp extends Contacts{
     }
     onRemove(){        // удаление данных из DOM в массив
         document.querySelector('.form-remove').addEventListener('submit', this.remove)
+    }
+    getData(){
+        self = this
+        async function addUsers() {
+            let promise = await fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => {
+                localStorage.setItem('contacts', JSON.stringify(json))
+                self.result()
+                self.data = JSON.parse(localStorage.getItem('contacts'))
+            })
+
+            // альтернативный способ
+            // let json = await promise.json();
+            // console.log(json.length);
+            // console.log(this.data);
+        }
+        addUsers()
     }
     get(){
         super.get()
