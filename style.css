@@ -1,110 +1,153 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-.contacts{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 900px;
-    border: 2px solid black;
-    border-radius: 10px;
-    justify-items: center;
+body{
+    overflow-x:hidden;
+}
+.app{
+    max-width: 1200px;
     margin: auto;
-    background-color: wheat;
 }
-.form-add, .form-edit, .form-remove{
-    border: 2px solid black;
+header{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+}
+header .logo{
+    width: 200px;
+}
+header .basket{
+    width: 50px;
+}
+header a:last-child{
+    text-align: right;
+    padding-right: 50px;
+}
+header a:first-child{
+    /* text-align: center; */
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+}
+.products-head{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(241, 241, 241);
     border-radius: 10px;
-    margin: 10px;
+    margin: 20px 0;
 }
-.form-add input, .form-edit input, .form-remove input{
-    display: block;
-    width: 90%;
-    padding: 5px 10px;
-    margin: 10px auto;
+.products-div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding-bottom: 50px;
+}
+.product{
     border: 1px solid black;
-    border-radius: 3px;
-    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.form-add button, .form-edit button, .form-remove button{
-    display: block;
-    width: 50%;
-    padding: 5px 10px;
-    margin: 10px auto;
-    border: 0px solid black;
-    border-radius: 3px;
-    background-color: white;
+.product:hover{
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    transform: scale(1.005);
+}
+.product img{
+    width: 250px;
     cursor: pointer;
 }
-.form-remove button{
-    width: 30%;
+.product h2{
+    padding: 5px;
+    font-size: 20px;
 }
-.form-add button:hover, .form-edit button:hover, .form-remove button:hover{
-    transform: scale(1.05);
-    transition: 0.5s;
+.product-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
 }
-.form-add, .form-edit{
-    width: 90%;
+.product-information input{
+    height: 40px;
+    width: 150px;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 0 12px;
 }
-.form-remove{
-    width: 95%;
+.product h2{
     grid-column-start: 1;
     grid-column-end: 3;
 }
-h1{
-    text-align: center;
+.product p{
+    padding: 5px;
+    font-size: 25px;
+    padding-left: 20px;
 }
-.result-contacts{
+.product-basket{
+    cursor: pointer;
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px 20px;
-    margin: 10px;
-    width: 95%;
-    border-radius: 10px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background-color: white;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
 }
-.result-contacts div{
-    border-radius: 10px;
-    background-color: lightgoldenrodyellow;
+.product-basket img{
+    width: 50px;
+    height: 50px;
+    margin: auto;
     padding: 10px;
+    background-color: bisque;
+    border-radius: 5px;
 }
-.result-contacts p{
-    display: block;
+.product-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
 }
-h2{
-    font-size: 18px;
-    text-align: center;
+footer {
+    position: relative;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
-@media (max-width: 1000px){
-    .contacts{
-        width: 90%;
-    }
-    .result-contacts{
-        grid-template-columns: 1fr 1fr;
-    }
+footer:before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: calc(50% - 50vw);
+    z-index: -2;
 }
-@media (max-width: 700px){
-    h1{
-        font-size: 22px;
-    }
-    .form-add button, .form-edit button, .form-remove button{
-        width: 70%;
-    }
-    .result-contacts{
-        grid-template-columns: 1fr;
-    }
+
+.mini-logo{
+    background-color: black;
+    width: 50px;
 }
-@media (max-width: 500px){
-    .contacts{
-        grid-template-columns: 1fr;
-    }
-    .form-remove, .result-contacts{
-        width: 90%;
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
+footer .logo{
+    width: 200px;
+}
+footer p{
+    color: white;
+    padding-left: 15px;
+    font-size: 25px;
+}
+footer > div{
+    margin: auto 0;
+}
+footer > div > div{
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
 }
