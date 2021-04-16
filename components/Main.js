@@ -27,16 +27,16 @@ class Main {
                     <p class='price'>$${product.price}</p>
                     <img class='buy-button' src='images/cart.png'>
                 </div>
-                
             </div>
-
         </div>
         `)
-
     }
+    
     getAmountBuyProduct(){
-        const products = document.querySelectorAll(".product"); // массив всех продуктов
-        const buttonForBuy = document.querySelectorAll(".buy-button"); // массив всех кнопок покупки
+        const products = document.querySelectorAll('.product'); // массив всех продуктов
+        const buttonForBuy = document.querySelectorAll('.buy-button'); // массив всех кнопок покупки
+        const productsImage = document.querySelectorAll('.product-image'); // массив всех картинок
+        const productsTitle = document.querySelectorAll('.product-information > h2'); // массив всех картинок
         this.amountProduct = new Array(20);
         this.amountProduct.fill(1)
         for (let i = 0; i < products.length; i++) {
@@ -57,13 +57,15 @@ class Main {
                 this.amountProduct[i] = +$(`.amount${i}`).value
                 products[i].querySelector('.price').innerHTML = '$' + JSON.parse(localStorage.getItem('products'))[i].price
             });
+            productsTitle[i].addEventListener('click', () => window.location.hash = `product/${i+1}`)
+            productsImage[i].addEventListener('click', () => window.location.hash = `product/${i+1}`)
             buttonForBuy[i].addEventListener('click', () => { // событие по нажатию на кнопку покупки
                 let buyObj = JSON.parse(localStorage.getItem('products'))[i]
                 buyObj.amount = +$(`.amount${i}`).value // добавляем свойство в метод с количеством купленных товаров
 
                 if (this.buyProducts.find(item => item.title === buyObj.title)) { // проверка на повтор уже довабленного продукта
                     let repeat = this.buyProducts.find(item => item.title === buyObj.title)
-                    repeat.amount += +buyObj.amount
+                    repeat.amount = +repeat.amount + +buyObj.amount
                 } else {
                     this.buyProducts.push(buyObj) 
                 }
@@ -76,10 +78,7 @@ class Main {
                 $(`.amount${i}`).value = 1 // сброс цифры покупки
                 console.log(this.buyProducts);
             })
-
         }
-
-
     }
     getProducts(){ // достает информацию о товарах с постороннего ресурса
         if (!localStorage.getItem('products')) {
@@ -111,6 +110,43 @@ class Main {
             <span class='full-price-cart'>$0</span>`
         }
     }
+    modalWindow(taskId) {
+        const closeMethod = () => {
+            modalContainer.classList.remove('show')
+            setTimeout(() => {
+                modalContainer.remove() //удаляем модульное окно через половину секунды
+            }, 500)
+            window.location.hash = 'home'
+        }
+        const modalContainer = document.createElement('div')
+        modalContainer.classList.add('modal-container')
+        let main = JSON.parse(localStorage.getItem('products'))[taskId];
+        console.log(main);
+        modalContainer.innerHTML = `
+            <div class="modal-block"> 
+                <div class='close'></div>
+                <div class ='modal-product'>
+                    <div class ='modal-product-image'>
+                        <img src='${main.image}'>
+                    </div>
+                    <div class ='product-information'>
+                        <h2 class='modal-title'>${main.title}</h2>
+                        <p class='description'>${main.description}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modalContainer) //добавляем модальное окно в тело документа
+        $('.close').addEventListener('click', closeMethod)
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeMethod()
+        })
+        setTimeout(() => {
+            modalContainer.classList.add('show') //делаем задержку чтобы браузер понял что мы добавили класс show не срау с элементом
+        }, 100)
+        
+    }
     changeCartPage() { // меняем значения в корзине
         let buyProductsPlus = document.querySelectorAll('.plus')
         let buyProductsMinus = document.querySelectorAll('.minus')
@@ -126,7 +162,7 @@ class Main {
                 buyProductsAmount[i].value++
                 buyProductsFullPrice[i].innerHTML = `$${+Math.round(buyProductsAmount[i].value * JSON.parse(localStorage.getItem('buyProduct'))[i].price * 100)/100}`
             })
-            deleteProducts[i].addEventListener('click', () => {
+            deleteProducts[i].addEventListener('click', () => { // удаление из корзины
                 this.buyProducts.splice(i, 1)
                 localStorage.setItem('buyProduct', JSON.stringify(this.buyProducts)) 
                 $('.cart-div').remove()
@@ -135,7 +171,7 @@ class Main {
                 this.sumHeadFullPrice()
             })
         }
-        $('.cart-div button').addEventListener('click', () => {
+        $('.cart-div button').addEventListener('click', () => { // обновить значение общей суммы в корзине
             for (let i = 0; i < JSON.parse(localStorage.getItem('buyProduct')).length; i++) {
                 this.buyProducts[i].amount = buyProductsAmount[i].value
                 console.log(this.buyProducts);
@@ -196,34 +232,60 @@ class Main {
                 <h1>Phones</h1>
                 <a href='tel:+1234567890'>Tel: +1234567890</a>
                 <a href='mailto:wecare@metro.co.in'>Email: wecare@metro.co.in</a>
-                <a href='#'>Адресс: вулиця Макарова, 21, Рівне, Рівненська область, Украина</a>
+                <a href='#'>Адрес: вулиця Макарова, 21, Рівне, Рівненська область, Украина</a>
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21189.939460147387!2d35.03044501204864!3d48.40388928868605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbfb68113631ef%3A0xce20d61a5ed45382!2sMETRO%20Cash%26Carry!5e0!3m2!1sru!2sby!4v1618232434300!5m2!1sru!2sby" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         `
     }
     init() {
         $('.pageHome').addEventListener('click', () => {
-            $('.products-head').nextElementSibling.remove()
-            this.createProductPage()
+            window.location.hash = 'home'
         })
         $('.logo').addEventListener('click', () => {
-            $('.products-head').nextElementSibling.remove()
-            this.createProductPage()
+            window.location.hash = 'home'
         })
         $('.pageContact').addEventListener('click', () => {
-            $('.products-head').nextElementSibling.remove()
-            this.createContactsPage()
+            window.location.hash = 'contacts'
         })
         $('.pageCart').addEventListener('click', () => {
-            $('.products-head').nextElementSibling.remove()
-            this.createCartPage()
+            window.location.hash = 'cart'
         })
         $('.cart-link').addEventListener('click', () => {
-            $('.products-head').nextElementSibling.remove()
-            this.createCartPage()
+            window.location.hash = 'cart'
         })
         this.createProductPage()
     }
 }
-const main = new Main().init()
+const main = new Main()
+main.init()
+const router = () => { // переход по страницам в зависимости от хэша
+    const hash = window.location.hash
+
+    if (hash.includes('contacts')) {
+        main.createContactsPage()
+    }
+    if (hash.includes('home')) {
+        main.createProductPage()
+    }
+    if (hash.includes('cart')) {
+        main.createCartPage()
+    }
+    if (hash.includes('product')) {
+        const id = hash.replace('#', '').replace('product/', '');
+        main.modalWindow(+id-1)  
+    }
+}
+window.addEventListener('hashchange', () => { // когда меняется хэш
+    if (!(window.location.hash.includes('product'))) $('.products-head').nextElementSibling.remove() // если вызывается не модальное окно
+    router()
+})
+window.onload = () => { // при перезагрузке страницы, оставаться на последней
+    let hash = window.location.hash
+    if (hash) {
+        $('.products-head').nextElementSibling.remove()
+        router()
+    } else {
+        hash = 'home'
+    }
+}
 export {main};
