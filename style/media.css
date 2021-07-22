@@ -1,0 +1,147 @@
+/* -------------------------------------MEDIA------------------------------------------ */
+
+@media (max-width: 1300px) {
+    .container{
+        max-width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    header{
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+    .logo{
+        position: relative;
+        left: 0;
+    }
+    .menu-icon{
+        display: block;
+        z-index: 3;
+    }
+    .nav{
+        display: none;
+    }
+    .menu-icon:hover + .nav, .nav:hover{
+        display: block;
+        position: absolute;
+        top: 58px;
+        width: 100%;
+        z-index: 2;
+        background-color: white;
+        transition: 0.5s;
+        font-size: 24px;
+    }
+    .menu-icon:hover + .nav > ul, .nav:hover > ul{
+        flex-direction: column;        
+        transition: 0.5s;
+        font-size: 24px;
+    }
+    .menu-icon:hover + .nav > ul li, .nav:hover > ul li{
+        text-align: center;
+        height: 60px;
+        padding-top: 15px;
+        transition: 0.5s;
+        font-size: 24px;
+    }
+    .title-photo{
+        display: block;
+        position: relative;
+        right: 0;
+        height: 50vh;
+    }
+    .title-photo img{
+        height: 100%;
+        display: block;
+        margin: auto;
+    }
+    .title-block .slider{
+        display: none;
+    }
+    .title-block .title-information-block{
+        width: 100%;
+        padding: 5vh 0;
+    }
+    .title-block .title-information-block h1{
+        font-size: 48px;
+    }
+    
+    .portfolio-block{
+        padding-bottom: 10vh;
+    }
+    .portfolio-block h2{
+        width: 100%;
+    }
+    .portfolio-block .portfolio-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form form{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .form form .form-message-text, .form form .form-button{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4vh 0 3vh 0;
+    }
+    .footer h2{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 426px) {
+    header{
+        height: 65px;
+    }
+    .menu-icon:hover + .nav, .nav:hover{
+        top: 50px;
+    }
+    .title-photo img{
+        width: 100%;
+        height: auto;
+    }
+    .title-photo{
+        height: auto;
+    }
+    .title-block .title-information-block h1, .portfolio-block h2, .form h2, .footer h2{
+        font-size: 36px;
+    }
+    .title-block .title-information-block .title-buttons .title-button-active{
+        width: 160px;
+    }
+    .title-block .title-information-block .title-buttons .title-button-passive{
+        padding-left: 3vw;
+    }
+    .right-nav .contact-button{
+        display: none;
+    }
+
+    .portfolio-block .portfolio-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer h2{
+        font-size: 36px;
+    }
+    .footer .footer-nav{
+        grid-auto-flow: initial;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .footer .footer-nav li{
+        text-align: center;
+    }
+    .footer .footer-nav li:last-of-type{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+@media (max-width: 370px) {
+    .footer h2{
+        font-size: 30px;
+    }
+}
