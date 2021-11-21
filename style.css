@@ -1,0 +1,195 @@
+@import url("http://fonts.cdnfonts.com/css/fs-elliot-pro?styles=103048,103043");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.background {
+  background-color: #141225;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0; }
+  .background .background__background-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    max-width: 100vw; }
+  .background .background__background-right {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    max-width: 100vw; }
+  .background .background__neon-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    max-width: 100vw; }
+  .background .background__neon-right {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    max-width: 100vw; }
+  .background .background__background-up {
+    display: none; }
+  .background .center-informations {
+    position: relative;
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+    padding: 20px 0; }
+    .background .center-informations .center-informations__header {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .background .center-informations .center-informations__header .center-informations__language {
+        position: absolute;
+        left: 30px;
+        z-index: 3;
+        width: 92px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .background .center-informations .center-informations__header .center-informations__language .dd-select {
+          background-color: #271967 !important;
+          border: 0;
+          clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%); }
+        .background .center-informations .center-informations__header .center-informations__language .dd-selected {
+          display: flex;
+          align-items: center;
+          color: white;
+          font-size: 13px;
+          font-family: 'FS Elliot Pro', sans-serif;
+          font-weight: 400;
+          padding: 5px 15px; }
+          .background .center-informations .center-informations__header .center-informations__language .dd-selected img {
+            width: 22px; }
+        .background .center-informations .center-informations__header .center-informations__language .dd-options {
+          border: 0;
+          box-shadow: 0px 1px 5px #271967; }
+          .background .center-informations .center-informations__header .center-informations__language .dd-options .dd-option {
+            color: white !important;
+            font-size: 13px;
+            font-family: 'FS Elliot Pro', sans-serif;
+            font-weight: 400;
+            background-color: #271967;
+            border: 0;
+            display: flex;
+            align-items: center; }
+            .background .center-informations .center-informations__header .center-informations__language .dd-options .dd-option img {
+              width: 22px; }
+      .background .center-informations .center-informations__header .center-informations__logo {
+        justify-self: center; }
+    .background .center-informations .center-informations__logo, .background .center-informations .center-informations__title, .background .center-informations .center-informations__text, .background .center-informations .center-informations__case-page, .background .center-informations .center-informations__button, .background .center-informations .center-informations__payment {
+      justify-self: center; }
+    .background .center-informations .center-informations__title {
+      font-family: 'FS Elliot Pro', sans-serif;
+      color: #FFF101;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: 15vh; }
+    .background .center-informations .center-informations__text {
+      font-family: 'FS Elliot Pro', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #B0B0B0; }
+    .background .center-informations .center-informations__button {
+      cursor: pointer;
+      background-image: url(./img/button.svg);
+      width: 165px;
+      height: 42px;
+      transition: .3s; }
+    .background .center-informations .center-informations__button:hover {
+      background-image: url(./img/button-active.svg);
+      transition: .3s; }
+    .background .center-informations .center-informations__koko {
+      display: none; }
+    .background .center-informations .center-informations__payment {
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; }
+
+@media (max-width: 320px) {
+  .background {
+    height: 100%; }
+    .background .background__background-up {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; }
+    .background .background__background-left, .background .background__background-right, .background .background__neon-left, .background .background__neon-right {
+      display: none; }
+    .background .center-informations {
+      padding-bottom: 0; }
+      .background .center-informations .center-informations__header {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        max-width: 90%;
+        margin: auto; }
+        .background .center-informations .center-informations__header .center-informations__language {
+          position: relative;
+          left: 0; }
+          .background .center-informations .center-informations__header .center-informations__language .dd-select {
+            width: 60px !important;
+            clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%); }
+          .background .center-informations .center-informations__header .center-informations__language .dd-selected img {
+            display: none; }
+          .background .center-informations .center-informations__header .center-informations__language .dd-options {
+            width: 60px !important; }
+            .background .center-informations .center-informations__header .center-informations__language .dd-options .dd-option img {
+              display: none; }
+        .background .center-informations .center-informations__header .center-informations__logo {
+          width: 100%; }
+      .background .center-informations .center-informations__title {
+        font-size: 36px;
+        padding-top: 0;
+        max-width: 90%;
+        margin: auto; }
+      .background .center-informations .center-informations__text {
+        font-size: 18px;
+        text-align: center;
+        max-width: 90%;
+        margin: auto; }
+      .background .center-informations .center-informations__button {
+        z-index: 4;
+        max-width: 90%;
+        margin: auto; }
+      .background .center-informations .center-informations__koko {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 45vh;
+        background-image: url(./img/neon1.svg);
+        background-size: cover;
+        z-index: 2; }
+        .background .center-informations .center-informations__koko .koko__img {
+          position: absolute;
+          bottom: -30%;
+          right: 0;
+          width: 80%;
+          z-index: 1; }
+        .background .center-informations .center-informations__koko .koko__img-back {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          z-index: 2;
+          width: 100%; }
+      .background .center-informations .center-informations__payment {
+        background-color: #141225;
+        z-index: 3;
+        max-width: 90%;
+        margin: auto; } }
