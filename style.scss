@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+.no-active{
+  display: none !important;
+}
+
+.active{
+  display: block !important;
+}
+
 .background{
   background-color: #141225;
   width: 100%;
@@ -41,6 +49,15 @@
     height: 100%;
     right: 0;
     bottom: 0;
+    max-width: 100vw;
+  }
+
+  .background__neon-right-blink{
+    position: absolute;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
     max-width: 100vw;
   }
 
@@ -169,6 +186,18 @@
   }
 }
 
+@media (max-width: 700px) {
+  .background{
+    .background__neon-right{
+      height: auto;
+    }
+  
+    .background__neon-right-blink{
+      height: auto;
+    }
+  }
+}
+
 @media (max-width: 500px) {
   .background{
     .center-informations{
@@ -226,7 +255,15 @@
       width: 100%;
     }
 
-    .background__background-left, .background__background-right, .background__neon-left, .background__neon-right {
+    .background__neon-right{
+      height: auto;
+    }
+  
+    .background__neon-right-blink{
+      height: auto;
+    }
+
+    .background__background-left, .background__background-right, .background__neon-left{
       display: none;
     }
 
@@ -267,7 +304,7 @@
         position: relative;
         width: 100%;
         height: 320px;
-        background-image: url(./img/neon1.svg);
+        // background-image: url(./img/neon1.svg);
         z-index: 2;
         overflow-y: hidden;
 

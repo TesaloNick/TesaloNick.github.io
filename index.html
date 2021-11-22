@@ -14,6 +14,7 @@
     <img src="./img/background/back 1.svg" class="background__background-right" alt="">
     <img src="./img/background/neon2.svg" class="background__neon-left" alt="">
     <img src="./img/background/neon1.svg" class="background__neon-right" alt="">
+    <img src="./img/background/neon.svg" class="background__neon-right-blink" alt="">
     <img src="./img/back1 1.svg" class="background__background-up" alt="">
     <div class="center-informations">
       <div class="center-informations__header">
@@ -50,10 +51,21 @@
   
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
+  <script defer src="script.js"></script>
   <script>
     $('.language__select').ddslick({
       width: '92px'
     });
+
+    $(document).ready(function() {
+      setInterval (blinke_funk, Math.random()*1300);
+
+      function blinke_funk() { 
+        var blinke_speed = Math.random()*1300;
+        $(".background__neon-right-blink").fadeIn(blinke_speed).fadeOut(blinke_speed);
+      }
+    });
+
   </script>
 </body>
 </html>
