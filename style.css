@@ -117,6 +117,46 @@
       font-size: 13px;
       text-transform: uppercase;
       color: #B0B0B0; }
+    .background .center-informations .center-informations__case-page {
+      height: 120px;
+      margin: 20px 0; }
+    .background .center-informations .center-informations__mask-group-block {
+      position: relative;
+      height: 120px;
+      margin: 20px 0; }
+      .background .center-informations .center-informations__mask-group-block .center-informations__mask-group {
+        background-color: #141225;
+        height: 100%;
+        clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 10px;
+        align-items: center; }
+        .background .center-informations .center-informations__mask-group-block .center-informations__mask-group .mask-group__img {
+          width: 86px;
+          vertical-align: middle; }
+      .background .center-informations .center-informations__mask-group-block .arrow-down {
+        position: absolute;
+        width: 40px;
+        left: calc(50% - 20px);
+        top: -20px;
+        z-index: 1; }
+      .background .center-informations .center-informations__mask-group-block .arrow-up {
+        position: absolute;
+        width: 40px;
+        left: calc(50% - 20px);
+        bottom: -20px;
+        z-index: 1; }
+      .background .center-informations .center-informations__mask-group-block .center-informations__item {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        left: calc(50% - 20px);
+        top: -15px;
+        z-index: 5; }
+        .background .center-informations .center-informations__mask-group-block .center-informations__item .center-informations__item-img {
+          width: 100%;
+          z-index: 5; }
     .background .center-informations .center-informations__button {
       cursor: pointer;
       background-image: url(./img/button.svg);
@@ -178,13 +218,16 @@
       left: 0;
       width: 100%; }
     .background .background__neon-right {
-      height: auto; }
+      height: auto;
+      bottom: 50px; }
     .background .background__neon-right-blink {
-      height: auto; }
+      height: auto;
+      bottom: 50px; }
     .background .background__background-left, .background .background__background-right, .background .background__neon-left {
       display: none; }
     .background .center-informations {
-      padding-bottom: 0; }
+      padding-bottom: 0;
+      height: 100%; }
       .background .center-informations .center-informations__header .center-informations__language .dd-select {
         width: 60px !important;
         clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%); }

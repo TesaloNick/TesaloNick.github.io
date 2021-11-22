@@ -159,6 +159,64 @@
       color: #B0B0B0;
     }
 
+    .center-informations__case-page{
+      height: 120px;
+      margin: 20px 0;
+    }
+
+    .center-informations__mask-group-block{
+      position: relative;
+      height: 120px;
+      margin: 20px 0;
+
+      .center-informations__mask-group{
+        background-color: #141225;
+        height: 100%;
+        clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 10px;
+        align-items: center;
+  
+        .mask-group__img{
+          width: 86px;
+          vertical-align: middle;
+        }
+      }
+
+      .arrow-down{
+        position: absolute;
+        width: 40px;
+        left: calc(50% - 20px);
+        top: -20px;
+        z-index: 1;
+      }
+
+      .arrow-up{
+        position: absolute;
+        width: 40px;
+        left: calc(50% - 20px);
+        bottom: -20px;
+        z-index: 1;
+      }
+
+      .center-informations__item{
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        left: calc(50% - 20px);
+        top: -15px;
+        z-index: 5;
+
+        .center-informations__item-img{
+          width: 100%;
+          z-index: 5;
+        }
+      }
+    }
+
+
+
     .center-informations__button{
       cursor: pointer;
       background-image: url(./img/button.svg);
@@ -257,10 +315,12 @@
 
     .background__neon-right{
       height: auto;
+      bottom: 50px;
     }
   
     .background__neon-right-blink{
       height: auto;
+      bottom: 50px;
     }
 
     .background__background-left, .background__background-right, .background__neon-left{
@@ -269,6 +329,7 @@
 
     .center-informations{
       padding-bottom: 0;
+      height: 100%;
 
       .center-informations__header{
         .center-informations__language{
