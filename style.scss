@@ -266,9 +266,10 @@
         display: block;
         position: relative;
         width: 100%;
-        height: 35vh;
+        height: 320px;
         background-image: url(./img/neon1.svg);
         z-index: 2;
+        overflow-y: hidden;
 
         .koko__img{
           position: absolute;
