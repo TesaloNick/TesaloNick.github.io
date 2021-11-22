@@ -10,7 +10,7 @@
   height: 100vh;
   position: relative;
   z-index: 0;
-  overflow: hidden; }
+  overflow-x: hidden; }
   .background .background__background-left {
     position: absolute;
     height: 100%;
