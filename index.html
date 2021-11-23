@@ -7,6 +7,9 @@
   <title>SCINCLUB 1</title>
   <link rel="stylesheet" href="./style.css">
   <link href="http://fonts.cdnfonts.com/css/fs-elliot-pro?styles=103048,103043" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
+
 </head>
 <body>
   <div class="background">
@@ -32,9 +35,9 @@
       <div class="center-informations__mask-group-block no-active">
         <img src="./img/arrow-down.svg" alt="" class="arrow-down">
         <img src="./img/arrow-up.svg" alt="" class="arrow-up">
-        <div class="center-informations__item">
+        <!-- <div class="center-informations__item">
           <img class="center-informations__item-img no-active" src="" alt="">
-        </div>
+        </div> -->
         <div class="center-informations__mask-group mask-group">
           <img src="./img/items/1.svg" alt="" class="mask-group__img">
           <img src="./img/items/2.svg" alt="" class="mask-group__img">
@@ -72,23 +75,15 @@
   </div>
 
   
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="./slick/slick.css">
+  <link rel="stylesheet" href="./slick/slick-theme.css">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./slick/slick.min.js"></script>
+  <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
   <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js" ></script>
-  <script defer src="script.js"></script>
-  <script>
-    $('.language__select').ddslick({
-      width: '92px'
-    });
+  <script defer src="./script.js"></script>
 
-    $(document).ready(function() {
-      setInterval (blinke_funk, Math.random()*1300);
 
-      function blinke_funk() { 
-        var blinke_speed = Math.random()*1300;
-        // $(".background__neon-right-blink").fadeIn(blinke_speed).fadeOut(blinke_speed);
-      }
-    });
-
-  </script>
 </body>
 </html>
