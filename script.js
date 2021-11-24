@@ -19,6 +19,9 @@ $('.mask-group').slick({
   centerPadding: '60px',
   slidesToShow: 9,
   variableWidth: true,
+  focusOnSelect: true, 
+  // initialSlide: 1,
+  swipeToSlide: true,
   responsive: [
     {
       breakpoint: 768,
