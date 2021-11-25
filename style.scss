@@ -80,7 +80,7 @@
     position: relative;
     display: grid;
     grid-auto-flow: row;
-    justify-content: center;
+    // justify-content: center;
     height: 100vh;
     z-index: 2;
     padding: 20px 0;
@@ -123,6 +123,10 @@
         .dd-options{
           border: 0;
           box-shadow: 0px 1px 5px #271967;
+          width: 80% !important;
+          margin: auto;
+          left: 0;
+          right: 0;
 
           .dd-option{
             color: white !important;
@@ -136,6 +140,10 @@
 
             img{
               width: 22px;
+            }
+
+            label{
+              line-height: 22px !important;
             }
           }
         }
@@ -186,8 +194,9 @@
         height: 100%;
         width: 100%;
         clip-path: polygon(5% 0, 95% 0, 100% 50%, 95% 100%, 5% 100%, 0 50%);
+        box-shadow: 0px 24px 50px rgba(0, 0, 0, 0.02);
+        // transform: rotate(-90deg);
         position: relative;
-
 
         .mask-group__container{
           display: grid;
@@ -196,17 +205,14 @@
           width: 100%;
           grid-gap: 10px;
           align-items: center;
-          opacity: 0.2;
-          animation: mask-group 5s cubic-bezier(1,.01,1,.01);
+          animation: mask-group 1s cubic-bezier(.39,.9,.68,.92);
           position: absolute;
 
           img{
             width: 86px;
-            vertical-align: middle;
+            // vertical-align: middle;
           }
         }
-  
-
       }
 
       .arrow-down{
@@ -217,6 +223,7 @@
         margin: auto;
         top: -20px;
         z-index: 1;
+        transition: .5;
       }
 
       .arrow-up{
@@ -227,6 +234,7 @@
         margin: auto;        
         bottom: -20px;
         z-index: 1;
+        transition: .5;
       }
 
       .center-informations__goal{
@@ -240,6 +248,7 @@
         margin: auto;
         display: flex;
         align-items: center;
+        animation: goal 2s ease-in-out;
 
         .center-informations__goal-img{
           width: 100%;
@@ -447,13 +456,16 @@
   to { width: 35%; }
 }
 
+@keyframes goal {
+  from { width: 86px; }
+  to { width: 160px; }
+}
+
 @keyframes mask-group {
   from { 
     left: 100%;
-    opacity: 1; 
   }
   to { 
     left: 0; 
-    opacity: 0.2;
   }
 }
