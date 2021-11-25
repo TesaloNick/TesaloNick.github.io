@@ -315,6 +315,10 @@
 
 @media (max-width: 500px) {
   .background{
+    .background__koko{
+      display: none;
+    }
+
     .center-informations{
       .center-informations__header{
         display: grid;
@@ -394,6 +398,7 @@
           .dd-select{
             width: 60px !important;
             clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+            margin: auto;
           }
   
           .dd-selected{
@@ -403,7 +408,7 @@
           }
   
           .dd-options{  
-            width: 60px !important;
+            width: 48px !important;
             .dd-option{
               img{
                 display: none;
