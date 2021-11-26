@@ -8,12 +8,12 @@ $(document).ready(function() {
 
   function blinke_funk() { 
     var blinke_speed = Math.random()*800;
-    $(".background__neon-right-blink").fadeIn(blinke_speed).fadeOut(blinke_speed);
+    // $(".background__neon-right-blink").fadeIn(blinke_speed).fadeOut(blinke_speed);
   }
   function blinke_funk1() { 
     var blinke_speed1 = Math.random()*300;
-    $(".arrow-down").fadeIn(blinke_speed1).fadeOut(blinke_speed1);
-    $(".arrow-up").fadeIn(blinke_speed1).fadeOut(blinke_speed1);
+    // $(".arrow-down").fadeIn(blinke_speed1).fadeOut(blinke_speed1);
+    // $(".arrow-up").fadeIn(blinke_speed1).fadeOut(blinke_speed1);
   }
 });
 
@@ -78,6 +78,6 @@ $('.button-yellow').click(function(e) {
     $('.button-green').removeClass('no-active')
     $('.arrow-down').addClass('no-active')
     $('.arrow-up').addClass('no-active')
-    console.log(`mask-group__img${randomNumber}`, $(`mask-group__img${randomNumber}`));
+    console.log($(`.mask-group__img${randomNumber}`).data('color'));
   }, 4000)
 });

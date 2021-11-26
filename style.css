@@ -177,19 +177,25 @@
         transition: .5; }
       .background .center-informations .center-informations__mask-group-block .center-informations__goal {
         position: absolute;
-        width: 160px;
-        height: 160px;
-        top: -20px;
+        width: 30px;
+        height: 30px;
+        top: calc(50% - 15px);
         z-index: 5;
         right: 0;
         left: 0;
         margin: auto;
         display: flex;
         align-items: center;
-        animation: goal 2s ease-in-out; }
+        background-color: #3d98ff; }
         .background .center-informations .center-informations__mask-group-block .center-informations__goal .center-informations__goal-img {
-          width: 100%;
-          z-index: 5; }
+          position: absolute;
+          width: 160px;
+          height: 160px;
+          z-index: 5;
+          right: -75px;
+          left: -75px;
+          margin: auto;
+          animation: goal 2s ease-in-out; }
     .background .center-informations .center-informations__button {
       cursor: pointer;
       height: 42px;
