@@ -98,7 +98,6 @@ $padding-in-prices-blocks: 30px;
   transition: $transition-time;
 }
 
-
 *{
   margin: 0;
   padding: 0;
@@ -121,14 +120,14 @@ $padding-in-prices-blocks: 30px;
     padding-bottom: 4vh;
     height: 100vh;
 
-    header{
+    .header{
       display: grid;
       grid-auto-flow: column;
       align-items: center;
       padding: 4vh 0 8vh 0;
       position: relative;
       width: 50%;
-      grid-gap: 10%;
+      // grid-gap: 10%;
 
       .header__logo{
         position: fixed;
@@ -149,7 +148,7 @@ $padding-in-prices-blocks: 30px;
 
         .header__phones-and-email{
           display: grid;
-          row-gap: 5px;
+          row-gap: 10px;
 
           a{
             text-decoration: none;
@@ -175,37 +174,37 @@ $padding-in-prices-blocks: 30px;
           transition: $transition-time;
         }
 
-        .header__social-block:nth-of-type(1){
+        .header__social-block:nth-of-type(2){
           background-image: url(./img/social/whatsapp-img.svg);
           background-position: center;
           background-repeat: no-repeat;
         }
 
-        .header__social-block:nth-of-type(2){
+        .header__social-block:nth-of-type(3){
           background-image: url(./img/social/viber-img.svg);
           background-position: center;
           background-repeat: no-repeat;
         }
 
-        .header__social-block:nth-of-type(3){
+        .header__social-block:nth-of-type(4){
           background-image: url(./img/social/telegram-img.svg);
           background-position: center;
           background-repeat: no-repeat;
         }
 
-        .header__social-block:nth-of-type(1):hover{
+        .header__social-block:nth-of-type(2):hover{
           background-image: url(./img/social/whatsapp-img-black.svg);
           background-position: center;
           background-repeat: no-repeat;
         }
 
-        .header__social-block:nth-of-type(2):hover{
+        .header__social-block:nth-of-type(3):hover{
           background-image: url(./img/social/viber-img-black.svg);
           background-position: center;
           background-repeat: no-repeat;
         }
 
-        .header__social-block:nth-of-type(3):hover{
+        .header__social-block:nth-of-type(4):hover{
           background-image: url(./img/social/telegram-img-black.svg);
           background-position: center;
           background-repeat: no-repeat;
@@ -215,6 +214,11 @@ $padding-in-prices-blocks: 30px;
           background: #FFE600;
           color: #333333;
           transition: $transition-time;
+        }
+
+        .header__adress{
+          display: none;
+          @extend %header-text-style
         }
       }
     }
@@ -436,6 +440,7 @@ $padding-in-prices-blocks: 30px;
             width: 100%;
             background-image: url(./img/slider/slide1.png);
             background-size: cover;
+            background-position: center;
             height: 100%;
             z-index: 2;
           }
@@ -477,9 +482,6 @@ $padding-in-prices-blocks: 30px;
           }
         }
       }
-
-
-
     }
   }
 
@@ -569,6 +571,8 @@ $padding-in-prices-blocks: 30px;
         background-color: #F2BF14;
   
         .slider-of-prices__yelllow-block-list {
+          display: grid;
+          // grid-gap: 10px;
           list-style-type: none;
   
           .slider-of-prices__yelllow-block-item {
@@ -622,11 +626,11 @@ $padding-in-prices-blocks: 30px;
 
       .prices__consultation-button-block {
         // 
-        // background: linear-gradient(270deg, rgb(196, 196, 196) 70.65%, rgba(196, 196, 196, 0) 100%);
+        background: linear-gradient(270deg, rgb(196, 196, 196) 70.65%, rgba(196, 196, 196, 0) 100%);
      
         background-size: cover;
         // mix-blend-mode: screen;
-        opacity: 0.5;
+        // opacity: 0.5;
 
         .prices__consultation-button-block-shaddow{
           display: flex;
@@ -635,20 +639,22 @@ $padding-in-prices-blocks: 30px;
           padding-right: 40px;
           height: 100%;
           background-image: url(./img/button-consultation-background.png);
+          background-size: cover;
+
           .prices__consultation-button{
-            opacity: 0.5;
-            width: 100%;
-            height: 100%;
-            background: rgb(35,35,35);
-            background: linear-gradient(90deg, rgba(35,35,35,1) 0%, rgba(196,196,196,0) 57%);
-            // @extend %consultation-button;
-            // z-index: 2;
+            // opacity: 0.5;
+            // width: 100%;
+            // height: 100%;
+            background: #F2BF14;
+            // background: linear-gradient(90deg, rgba(35,35,35,1) 0%, rgba(196,196,196,0) 57%);
+            @extend %consultation-button;
+            z-index: 4;
           }
           
-          // .prices__consultation-button:hover{
-          //   background-color: #FFE600;
-          //   transition: $transition-time;
-          // }
+          .prices__consultation-button:hover{
+            background-color: #FFE600;
+            transition: $transition-time;
+          }
         }
 
 
@@ -682,8 +688,6 @@ $padding-in-prices-blocks: 30px;
       // grid-template-columns: repeat(2, 1fr);
       // justify-content: center;
 
-
-  
       .contacts {
         // position: absolute;
         position: relative;
@@ -716,7 +720,6 @@ $padding-in-prices-blocks: 30px;
           }
   
           .contacts__phones-button-block {
-
             .contacts__phones-button{
               @extend %call-back-button;
               padding: 12px 0;
@@ -780,6 +783,404 @@ $padding-in-prices-blocks: 30px;
             line-height: 140%;
             color: rgba(51, 51, 51, 0.6);
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .container{
+    max-width: 90%;
+  }
+
+  .background{
+    .start-page{
+      .header{
+        padding: 3vh 0 3vh 0;
+
+        .header__logo{
+          position: relative;
+          left: 0;
+        }
+
+        .header__contacts{
+          flex-direction: column;
+          row-gap: 10px;
+        }
+      }
+
+      .text-information{
+        .text-information__sidebar{
+          .sidebar{
+            display: none;
+          }
+        }
+        .text-information__main{
+          .text-information__consultation{
+            .text-information__consultation-button{
+              width: 50%;
+            }
+          }
+        }
+  
+      }
+
+      .benefits::before{
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 17vh;
+        bottom: 0;
+        left: calc(50% - 50vw);
+        background: #232323;
+      }
+
+      .benefits{
+        position: absolute;
+        width: 100%;
+        height: 17vh;
+        bottom: 0;
+        padding-top: 0;
+
+        .benefits__benefit{
+          display: flex;
+          align-items: center;
+          z-index: 2;
+
+          .benefits__benefit-text{
+            padding-left: 40px;
+            width: 80%;
+          }
+        }
+
+        .benefits__call{
+          display: none;
+        }
+      }
+
+      .slider-block{
+        height: 83vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .background{
+    .footer {
+      .container{
+        .contacts {
+          .contacts__phones-block {
+            grid-template-columns: 1fr 1fr;
+            .contacts__phones-button-block {
+              justify-self: end;
+            }
+          }
+          .contacts__adress-block {
+            grid-template-columns: 1fr 1fr;
+            .contacts__social-blocks {
+              justify-self: end;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  %grey-regular-text{
+    font-size: 14px;
+  }
+
+  .background{
+    .start-page{
+      height: auto;
+
+      .header{
+        width: 100%;
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 32px 1fr;
+        padding-top: 0;
+
+        .header__logo{
+          padding: 20px 0;
+        }
+
+        .header__contacts{
+          justify-self: flex-end;
+          padding: 20px 0;
+
+          .header__adress{
+            display: none;
+          }
+        }
+
+        .header__social-blocks::before{
+          position: absolute;
+          content: '';
+          width: 100vw;
+          height: 32px;
+          left: calc(50% - 50vw);
+          background: rgba(0, 0, 0, 0.4);        }
+
+        .header__social-blocks{
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+          display: grid;
+          grid-template-columns: 80% 1fr 1fr 1fr;
+          justify-self: auto;
+
+          .header__social-block{
+            justify-self: center;
+            z-index: 2;
+            background-color: transparent;
+          }
+
+          .header__adress{
+            display: block;
+            align-self: center;
+          }
+        }
+      }
+
+      .text-information{
+        width: 100%;
+
+        .text-information__main{
+          .text-information__concrete-definition{
+            width: 100%;
+          }
+          .text-information__consultation{
+            .text-information__consultation-button{
+              margin-bottom: 40px;
+            }
+          }
+
+        }
+      }
+
+      .benefits::before{
+        display: none;
+      }
+
+      .benefits{
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 15px 0 40px 0;
+
+        .benefits__benefit{
+          padding: 15px 0;
+        }
+
+        .benefits__benefit:nth-of-type(1){
+          padding: 15px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .benefits__benefit:nth-of-type(2){
+          padding: 15px 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      .slider-block{
+        position: relative;
+        left: calc(50% - 50vw);
+        top: auto;
+        width: 100vw;
+      }
+    }
+
+    .prices{
+      .slider-of-prices{
+        .slider-of-prices__yelllow-block {
+          .slider-of-prices__yelllow-block-list {
+
+          }
+            // 
+        }
+      }
+      .prices__consultation-block{
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 10px;
+
+        .prices__advantages{
+          padding: 20px;
+
+          .prices__advantage{
+            font-size: 14px;
+          }
+        }
+
+        .prices__consultation-button-block {
+          background: none;
+          display: flex;
+          justify-self: center;
+          padding-bottom: 20px;
+
+          .prices__consultation-button-block-shaddow{
+            background-image: none;
+
+            .prices__consultation-button{
+            }
+          }
+        }
+
+
+      }
+
+    }
+
+    .footer {
+      .footer__map {
+        position: relative;
+        width: 100%;
+        height: 375px;
+      }
+
+      .container{
+        .contacts {
+          width: 100%;
+          left: 0;
+          padding: 30px 0;
+
+          .contacts__phones-block {
+            .contacts__phones-button-block {
+              .contacts__phones-button{
+                width: 143px;
+              }
+            }
+          }
+
+
+
+          .contacts__adress-block {
+            padding-bottom: 30px;
+          }
+
+          .contacts__logo-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .contacts__all-right-reserved {
+              font-weight: normal;
+              font-size: 12px;
+              line-height: 140%;
+              color: rgba(51, 51, 51, 0.6);
+            }
+          }
+        }
+
+      }
+    }
+  } 
+}
+
+@media (max-width: 500px) {
+  .container{
+    max-width: 84%;
+  }
+
+  .background{
+    .start-page{
+      .header{
+        .header__social-blocks{
+          grid-template-columns: 70% 1fr 1fr 1fr;
+        }
+      }
+
+      .text-information{
+        .text-information__main{
+          .text-information__concrete-definition{
+            .text-information__yellow-title{
+              font-size: 16px;
+              line-height: 19px;
+            }
+
+            .text-information__white-main-title{
+              width: 285px;
+              span{
+                font-size: 28px;
+              }
+            }
+          }
+          .text-information__consultation{
+            .text-information__consultation-button{
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .slider-block{
+        .slider-block__slider{
+          .slick-dots{
+            bottom: 0px;
+          }
+
+          .slider-block__slide{
+            .slider-block__information {
+              bottom: 40px;
+
+              .slider-block__work {
+                font-size: 12px;
+                line-height: 14px;
+              }
+      
+              .slider-block__name {
+                font-size: 24px;
+                line-height: 29px;
+              }
+      
+              .slider-block__price {
+                font-size: 13px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+      .benefits{
+        position: relative;
+      }
+
+      .benefits::after{
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 6px;
+        background-color: rgba(0, 0, 0, 0.4);
+        left: calc(50% - 50vw);
+        bottom: 0;
+      }
+ 
+    }
+
+    .prices{
+      padding-top: 0;
+      padding-bottom: 20px;
+
+      .prices__title {
+        font-size: 24px;
+        line-height: 29px;
+        padding-top: 0;
+      }
+
+      .prices__products {
+        width: 100%;
+        flex-direction: column;
+
+        .prices__product {
+          font-size: 14px;
+
         }
       }
     }

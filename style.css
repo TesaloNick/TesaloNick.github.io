@@ -16,11 +16,11 @@
   src: url("./MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("./MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
-.background .start-page header .header__logo, .background .start-page .text-information .text-information__sidebar, .background .start-page .benefits .benefits__call {
+.background .start-page .header .header__logo, .background .start-page .text-information .text-information__sidebar, .background .start-page .benefits .benefits__call {
   left: 60px;
   width: 180px; }
 
-.background .start-page header .header__contacts .header__adress, .background .start-page header .header__contacts .header__phones-and-email a {
+.background .start-page .header .header__contacts .header__adress, .background .start-page .header .header__contacts .header__phones-and-email a, .background .start-page .header .header__social-blocks .header__adress {
   display: block;
   font-style: normal;
   font-weight: normal;
@@ -58,7 +58,7 @@
   background-color: #F2BF14;
   border-radius: 50%; }
 
-.background .start-page .text-information .text-information__main .text-information__consultation .text-information__consultation-button {
+.background .start-page .text-information .text-information__main .text-information__consultation .text-information__consultation-button, .background .prices .prices__consultation-block .prices__consultation-button-block .prices__consultation-button-block-shaddow .prices__consultation-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,34 +100,33 @@
     position: relative;
     padding-bottom: 4vh;
     height: 100vh; }
-    .background .start-page header {
+    .background .start-page .header {
       display: grid;
       grid-auto-flow: column;
       align-items: center;
       padding: 4vh 0 8vh 0;
       position: relative;
-      width: 50%;
-      grid-gap: 10%; }
-      .background .start-page header .header__logo {
+      width: 50%; }
+      .background .start-page .header .header__logo {
         position: fixed;
         width: 143px;
         cursor: pointer; }
-      .background .start-page header .header__contacts {
+      .background .start-page .header .header__contacts {
         display: flex;
         flex-direction: row-reverse;
         column-gap: 20%;
         justify-content: space-between; }
-        .background .start-page header .header__contacts .header__phones-and-email {
+        .background .start-page .header .header__contacts .header__phones-and-email {
           display: grid;
-          row-gap: 5px; }
-          .background .start-page header .header__contacts .header__phones-and-email a {
+          row-gap: 10px; }
+          .background .start-page .header .header__contacts .header__phones-and-email a {
             text-decoration: none; }
-      .background .start-page header .header__social-blocks {
+      .background .start-page .header .header__social-blocks {
         display: flex;
         column-gap: 4px;
         justify-self: center;
         align-self: flex-start; }
-        .background .start-page header .header__social-blocks .header__social-block {
+        .background .start-page .header .header__social-blocks .header__social-block {
           background: rgba(0, 0, 0, 0.4);
           width: 32px;
           height: 32px;
@@ -136,34 +135,36 @@
           align-items: center;
           cursor: pointer;
           transition: 0.3s; }
-        .background .start-page header .header__social-blocks .header__social-block:nth-of-type(1) {
+        .background .start-page .header .header__social-blocks .header__social-block:nth-of-type(2) {
           background-image: url(./img/social/whatsapp-img.svg);
           background-position: center;
           background-repeat: no-repeat; }
-        .background .start-page header .header__social-blocks .header__social-block:nth-of-type(2) {
+        .background .start-page .header .header__social-blocks .header__social-block:nth-of-type(3) {
           background-image: url(./img/social/viber-img.svg);
           background-position: center;
           background-repeat: no-repeat; }
-        .background .start-page header .header__social-blocks .header__social-block:nth-of-type(3) {
+        .background .start-page .header .header__social-blocks .header__social-block:nth-of-type(4) {
           background-image: url(./img/social/telegram-img.svg);
           background-position: center;
           background-repeat: no-repeat; }
-        .background .start-page header .header__social-blocks .header__social-block:nth-of-type(1):hover {
+        .background .start-page .header .header__social-blocks .header__social-block:nth-of-type(2):hover {
           background-image: url(./img/social/whatsapp-img-black.svg);
           background-position: center;
           background-repeat: no-repeat; }
-        .background .start-page header .header__social-blocks .header__social-block:nth-of-type(2):hover {
+        .background .start-page .header .header__social-blocks .header__social-block:nth-of-type(3):hover {
           background-image: url(./img/social/viber-img-black.svg);
           background-position: center;
           background-repeat: no-repeat; }
-        .background .start-page header .header__social-blocks .header__social-block:nth-of-type(3):hover {
+        .background .start-page .header .header__social-blocks .header__social-block:nth-of-type(4):hover {
           background-image: url(./img/social/telegram-img-black.svg);
           background-position: center;
           background-repeat: no-repeat; }
-        .background .start-page header .header__social-blocks .header__social-block:hover {
+        .background .start-page .header .header__social-blocks .header__social-block:hover {
           background: #FFE600;
           color: #333333;
           transition: 0.3s; }
+        .background .start-page .header .header__social-blocks .header__adress {
+          display: none; }
     .background .start-page .text-information {
       width: 50%;
       position: relative; }
@@ -293,6 +294,7 @@
             width: 100%;
             background-image: url(./img/slider/slide1.png);
             background-size: cover;
+            background-position: center;
             height: 100%;
             z-index: 2; }
           .background .start-page .slider-block .slider-block__slider .slider-block__slide .slider-block__background-img {
@@ -376,6 +378,7 @@
       .background .prices .slider-of-prices .slider-of-prices__yelllow-block {
         background-color: #F2BF14; }
         .background .prices .slider-of-prices .slider-of-prices__yelllow-block .slider-of-prices__yelllow-block-list {
+          display: grid;
           list-style-type: none; }
           .background .prices .slider-of-prices .slider-of-prices__yelllow-block .slider-of-prices__yelllow-block-list .slider-of-prices__yelllow-block-item {
             font-weight: 500;
@@ -409,21 +412,22 @@
           width: 6px;
           height: 6px; }
       .background .prices .prices__consultation-block .prices__consultation-button-block {
-        background-size: cover;
-        opacity: 0.5; }
+        background: linear-gradient(270deg, #c4c4c4 70.65%, rgba(196, 196, 196, 0) 100%);
+        background-size: cover; }
         .background .prices .prices__consultation-block .prices__consultation-button-block .prices__consultation-button-block-shaddow {
           display: flex;
           justify-content: right;
           align-items: center;
           padding-right: 40px;
           height: 100%;
-          background-image: url(./img/button-consultation-background.png); }
+          background-image: url(./img/button-consultation-background.png);
+          background-size: cover; }
           .background .prices .prices__consultation-block .prices__consultation-button-block .prices__consultation-button-block-shaddow .prices__consultation-button {
-            opacity: 0.5;
-            width: 100%;
-            height: 100%;
-            background: #232323;
-            background: linear-gradient(90deg, #232323 0%, rgba(196, 196, 196, 0) 57%); }
+            background: #F2BF14;
+            z-index: 4; }
+          .background .prices .prices__consultation-block .prices__consultation-button-block .prices__consultation-button-block-shaddow .prices__consultation-button:hover {
+            background-color: #FFE600;
+            transition: 0.3s; }
   .background .footer {
     background-color: #F2BF14;
     position: relative; }
@@ -497,3 +501,207 @@
           font-size: 12px;
           line-height: 140%;
           color: rgba(51, 51, 51, 0.6); }
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 90%; }
+
+  .background .start-page .header {
+    padding: 3vh 0 3vh 0; }
+    .background .start-page .header .header__logo {
+      position: relative;
+      left: 0; }
+    .background .start-page .header .header__contacts {
+      flex-direction: column;
+      row-gap: 10px; }
+  .background .start-page .text-information .text-information__sidebar .sidebar {
+    display: none; }
+  .background .start-page .text-information .text-information__main .text-information__consultation .text-information__consultation-button {
+    width: 50%; }
+  .background .start-page .benefits::before {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 17vh;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    background: #232323; }
+  .background .start-page .benefits {
+    position: absolute;
+    width: 100%;
+    height: 17vh;
+    bottom: 0;
+    padding-top: 0; }
+    .background .start-page .benefits .benefits__benefit {
+      display: flex;
+      align-items: center;
+      z-index: 2; }
+      .background .start-page .benefits .benefits__benefit .benefits__benefit-text {
+        padding-left: 40px;
+        width: 80%; }
+    .background .start-page .benefits .benefits__call {
+      display: none; }
+  .background .start-page .slider-block {
+    height: 83vh; } }
+@media (max-width: 1150px) {
+  .background .footer .container .contacts .contacts__phones-block {
+    grid-template-columns: 1fr 1fr; }
+    .background .footer .container .contacts .contacts__phones-block .contacts__phones-button-block {
+      justify-self: end; }
+  .background .footer .container .contacts .contacts__adress-block {
+    grid-template-columns: 1fr 1fr; }
+    .background .footer .container .contacts .contacts__adress-block .contacts__social-blocks {
+      justify-self: end; } }
+@media (max-width: 950px) {
+  .background .start-page .text-information .text-information__sidebar, .background .start-page .text-information .text-information__main .text-information__concrete-definition .text-information__grey-regular-text, .background .prices .prices__action-text, .background .footer .container .contacts .contacts__phones-block .contacts__phones .contacts__phone, .background .footer .container .contacts .contacts__email, .background .footer .container .contacts .contacts__adress-block .contacts__adress {
+    font-size: 14px; }
+
+  .background .start-page {
+    height: auto; }
+    .background .start-page .header {
+      width: 100%;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: 32px 1fr;
+      padding-top: 0; }
+      .background .start-page .header .header__logo {
+        padding: 20px 0; }
+      .background .start-page .header .header__contacts {
+        justify-self: flex-end;
+        padding: 20px 0; }
+        .background .start-page .header .header__contacts .header__adress {
+          display: none; }
+      .background .start-page .header .header__social-blocks::before {
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 32px;
+        left: calc(50% - 50vw);
+        background: rgba(0, 0, 0, 0.4); }
+      .background .start-page .header .header__social-blocks {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: grid;
+        grid-template-columns: 80% 1fr 1fr 1fr;
+        justify-self: auto; }
+        .background .start-page .header .header__social-blocks .header__social-block {
+          justify-self: center;
+          z-index: 2;
+          background-color: transparent; }
+        .background .start-page .header .header__social-blocks .header__adress {
+          display: block;
+          align-self: center; }
+    .background .start-page .text-information {
+      width: 100%; }
+      .background .start-page .text-information .text-information__main .text-information__concrete-definition {
+        width: 100%; }
+      .background .start-page .text-information .text-information__main .text-information__consultation .text-information__consultation-button {
+        margin-bottom: 40px; }
+    .background .start-page .benefits::before {
+      display: none; }
+    .background .start-page .benefits {
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      padding: 15px 0 40px 0; }
+      .background .start-page .benefits .benefits__benefit {
+        padding: 15px 0; }
+      .background .start-page .benefits .benefits__benefit:nth-of-type(1) {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+      .background .start-page .benefits .benefits__benefit:nth-of-type(2) {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .background .start-page .slider-block {
+      position: relative;
+      left: calc(50% - 50vw);
+      top: auto;
+      width: 100vw; }
+  .background .prices .prices__consultation-block {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 10px; }
+    .background .prices .prices__consultation-block .prices__advantages {
+      padding: 20px; }
+      .background .prices .prices__consultation-block .prices__advantages .prices__advantage {
+        font-size: 14px; }
+    .background .prices .prices__consultation-block .prices__consultation-button-block {
+      background: none;
+      display: flex;
+      justify-self: center;
+      padding-bottom: 20px; }
+      .background .prices .prices__consultation-block .prices__consultation-button-block .prices__consultation-button-block-shaddow {
+        background-image: none; }
+  .background .footer .footer__map {
+    position: relative;
+    width: 100%;
+    height: 375px; }
+  .background .footer .container .contacts {
+    width: 100%;
+    left: 0;
+    padding: 30px 0; }
+    .background .footer .container .contacts .contacts__phones-block .contacts__phones-button-block .contacts__phones-button {
+      width: 143px; }
+    .background .footer .container .contacts .contacts__adress-block {
+      padding-bottom: 30px; }
+    .background .footer .container .contacts .contacts__logo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .background .footer .container .contacts .contacts__logo-block .contacts__all-right-reserved {
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140%;
+        color: rgba(51, 51, 51, 0.6); } }
+@media (max-width: 500px) {
+  .container {
+    max-width: 84%; }
+
+  .background .start-page .header .header__social-blocks {
+    grid-template-columns: 70% 1fr 1fr 1fr; }
+  .background .start-page .text-information .text-information__main .text-information__concrete-definition .text-information__yellow-title {
+    font-size: 16px;
+    line-height: 19px; }
+  .background .start-page .text-information .text-information__main .text-information__concrete-definition .text-information__white-main-title {
+    width: 285px; }
+    .background .start-page .text-information .text-information__main .text-information__concrete-definition .text-information__white-main-title span {
+      font-size: 28px; }
+  .background .start-page .text-information .text-information__main .text-information__consultation .text-information__consultation-button {
+    width: 100%; }
+  .background .start-page .slider-block .slider-block__slider .slick-dots {
+    bottom: 0px; }
+  .background .start-page .slider-block .slider-block__slider .slider-block__slide .slider-block__information {
+    bottom: 40px; }
+    .background .start-page .slider-block .slider-block__slider .slider-block__slide .slider-block__information .slider-block__work {
+      font-size: 12px;
+      line-height: 14px; }
+    .background .start-page .slider-block .slider-block__slider .slider-block__slide .slider-block__information .slider-block__name {
+      font-size: 24px;
+      line-height: 29px; }
+    .background .start-page .slider-block .slider-block__slider .slider-block__slide .slider-block__information .slider-block__price {
+      font-size: 13px;
+      line-height: 16px; }
+  .background .start-page .benefits {
+    position: relative; }
+  .background .start-page .benefits::after {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: calc(50% - 50vw);
+    bottom: 0; }
+  .background .prices {
+    padding-top: 0;
+    padding-bottom: 20px; }
+    .background .prices .prices__title {
+      font-size: 24px;
+      line-height: 29px;
+      padding-top: 0; }
+    .background .prices .prices__products {
+      width: 100%;
+      flex-direction: column; }
+      .background .prices .prices__products .prices__product {
+        font-size: 14px; } }
