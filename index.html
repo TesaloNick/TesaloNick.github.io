@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="background">
-    <div class="container">
+    <div class="start-page container">
       <header class="header">
         <div class="header__logo"><img src="./img/main-logo.svg" alt="main-logo"></div>
         <div class="header__contacts">
@@ -23,23 +23,23 @@
           </div>
           <div class="header__phones-and-email">
             <div class="header__phones">
-              <a href="tel:+375336384775">+375 33 638-47-75</a>
-              <a href="tel:+375292945346">+375 29 294-53-46</a>
+              <a href="tel:+375336384775" class="header__phone">+375 33 638-47-75</a>
+              <a href="tel:+375292945346" class="header__phone">+375 29 294-53-46</a>
             </div>
-            <div class="header__email">
+            <div class="header__email" class="header__email">
               <a href="mailto:info@art-beton.by">info@art-beton.by</a>
             </div>
           </div>
         </div>
         <div class="header__social-blocks">
           <div class="header__social-block">
-            <img src="./img/social/whatsapp-img.svg" alt="whatsapp-img" class="social__whatsapp-img">
+            <!-- <img src="./img/social/whatsapp-img.svg" alt="whatsapp-img"> -->
           </div>
           <div class="header__social-block">
-            <img src="./img/social/viber-img.svg" alt="viber-img" class="social__viber-img">
+            <!-- <img src="./img/social/viber-img.svg" alt="viber-img"> -->
           </div>
           <div class="header__social-block">
-            <img src="./img/social/telegram-img.svg" alt="telegram-img" class="social__telegram-img">
+            <!-- <img src="./img/social/telegram-img.svg" alt="telegram-img"> -->
           </div>
         </div>
       </header>
@@ -68,7 +68,7 @@
       <div class="slider-block">
         <div class="slider-block__slider">
           <div class="slider-block__slide">
-            <img src="./img/slider/slide1.png" alt="slide1" class="slider-block__slide-img">
+            <div class="slider-block__slide-img"></div>
             <img src="./img/slider/background-slider.svg" alt="background-slider" class="slider-block__background-img">
             <div class="slider-block__information">
               <p class="slider-block__work">Выполненные работы</p>
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="slider-block__slide">
-            <img src="./img/slider/slide1.png" alt="slide1" class="slider-block__slide-img">
+            <div class="slider-block__slide-img"></div>
             <img src="./img/slider/background-slider.svg" alt="background-slider" class="slider-block__background-img">
             <div class="slider-block__information">
               <p class="slider-block__work">Выполненные работы</p>
@@ -86,7 +86,7 @@
             </div>
           </div>
           <div class="slider-block__slide">
-            <img src="./img/slider/slide1.png" alt="slide1" class="slider-block__slide-img">
+            <div class="slider-block__slide-img"></div>
             <img src="./img/slider/background-slider.svg" alt="background-slider" class="slider-block__background-img">
             <div class="slider-block__information">
               <p class="slider-block__work">Выполненные работы</p>
@@ -192,7 +192,59 @@
           </ul>
         </div>
       </div>
+      <div class="prices__consultation-block">
+        <div class="prices__advantages">
+          <div class="prices__advantage">Изделия для мощения тротуара устойчивы к гололеду и химическим реагентам</div>
+          <div class="prices__advantage">Экологически безопасные за счет натуральных компонентов и красителей</div>
+          <div class="prices__advantage">Невысокая цена за счет доступности компонентов</div>
+        </div>
+        <div class="prices__consultation-button-block">
+          <div class="prices__consultation-button-block-shaddow">
+            <div class="prices__consultation-button">Получить консультацию</div>
+
+          </div>
+        </div>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="footer__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82650.03566159288!2d30.124854676236374!3d55.194056322787404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c573e3fc7c7be7%3A0x430637d0624afff4!2z0JLQuNGC0LXQsdGB0Lo!5e1!3m2!1sru!2sby!4v1638273694766!5m2!1sru!2sby"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="container">
+
+        <div class="footer__contacts contacts">
+          <p class="contacts__title">Контакты</p>
+          <div class="contacts__phones-block">
+            <div class="contacts__phones">
+              <a href="tel:+375336384775" class="contacts__phone">+375 33 638-47-75</a>
+              <a href="tel:+375292945346" class="contacts__phone">+375 29 294-53-46</a>
+            </div>
+            <div class="contacts__phones-button-block">
+              <div class="contacts__phones-button">Перезвоните мне</div>
+            </div>
+          </div>
+          <a href="mailto:info@art-beton.by" class="contacts__email">info@art-beton.by</a>          
+          <div class="contacts__adress-block">
+            <p class="contacts__adress">г. Витебск,<br>ул. Транспортная д. 9А</p>
+            <div class="contacts__social-blocks">
+              <div class="contacts__social-block">
+                <img src="./img/social/whatsapp-img-black.svg" alt="whatsapp-img">
+              </div>
+              <div class="contacts__social-block">
+                <img src="./img/social/viber-img-black.svg" alt="viber-img">
+              </div>
+              <div class="contacts__social-block">
+                <img src="./img/social/telegram-img-black.svg" alt="telegram-img">
+              </div>
+            </div>
+          </div>
+          <div class="contacts__logo-block">
+            <div class="contacts__logo"><img src="./img/main-logo-down.svg" alt="main-logo-down"></div>
+            <div class="contacts__all-right-reserved">Все права защищены © 2022</div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
