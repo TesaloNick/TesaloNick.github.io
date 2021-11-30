@@ -322,7 +322,7 @@
               line-height: 22px;
               color: #CCCCCC; }
   .background .prices {
-    padding-bottom: 30px 0 60px 0; }
+    padding: 30px 0 60px 0; }
     .background .prices .prices__title {
       color: white;
       padding-bottom: 15px;

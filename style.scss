@@ -484,7 +484,8 @@ $padding-in-prices-blocks: 30px;
   }
 
   .prices{
-    padding-bottom: 30px 0 60px 0;
+    padding: 30px 0 60px 0;
+
     .prices__title {
       @extend %white-main-title;
       color: white;
