@@ -88,6 +88,9 @@
   box-sizing: border-box;
   font-family: 'Museo Sans Cyrl', sans-serif; }
 
+html, body {
+  width: 100vw; }
+
 .container {
   max-width: 1180px;
   margin: auto; }
@@ -95,7 +98,7 @@
 .background {
   background-image: url(./img/main-background.png);
   background-repeat: repeat;
-  overflow: hidden; }
+  width: 100vw; }
   .background .start-page {
     position: relative;
     padding-bottom: 4vh;
@@ -258,11 +261,15 @@
           border: 0px;
           width: 60px;
           height: 60px;
-          cursor: pointer; }
+          cursor: pointer;
+          display: flex !important;
+          justify-content: center;
+          align-items: center; }
         .background .start-page .slider-block .slider-block__slider .slick-dots {
           left: 50px;
           bottom: 40px;
-          text-align: left; }
+          text-align: left;
+          width: auto; }
           .background .start-page .slider-block .slider-block__slider .slick-dots li.slick-active {
             width: 40px;
             margin-left: 0; }
@@ -431,15 +438,18 @@
   .background .footer {
     background-color: #F2BF14;
     position: relative; }
-    .background .footer .footer__map {
+    .background .footer .footer__map-block {
       position: absolute;
       left: 0;
       width: 50vw;
       height: 100%;
       z-index: 1; }
-      .background .footer .footer__map iframe {
+      .background .footer .footer__map-block .footer__map {
         width: 100%;
         height: 100%; }
+        .background .footer .footer__map-block .footer__map iframe {
+          width: 100%;
+          height: 100%; }
     .background .footer .container {
       padding-bottom: 0px;
       position: relative; }
@@ -522,6 +532,7 @@
     position: absolute;
     content: '';
     width: 100vw;
+    max-width: 100vw;
     height: 17vh;
     bottom: 0;
     left: calc(50% - 50vw);
@@ -544,6 +555,42 @@
   .background .start-page .slider-block {
     height: 83vh; } }
 @media (max-width: 1150px) {
+  .background .prices {
+    position: relative; }
+    .background .prices .slider-of-prices {
+      grid-template-columns: repeat(1, 1fr);
+      position: relative;
+      left: calc(50% - 50vw);
+      height: 415px;
+      width: 100vw; }
+      .background .prices .slider-of-prices .slick-list {
+        height: 100%; }
+        .background .prices .slider-of-prices .slick-list .slick-track {
+          height: 100%; }
+          .background .prices .slider-of-prices .slick-list .slick-track .slick-slide {
+            margin-right: 10px; }
+      .background .prices .slider-of-prices .slider-block__arrow-left, .background .prices .slider-of-prices .slider-block__arrow-right {
+        position: absolute;
+        top: calc(50% - 30px);
+        z-index: 1;
+        background-color: #F2BF14;
+        border: 0px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex !important;
+        justify-content: center;
+        align-items: center; }
+      .background .prices .slider-of-prices .slider-block__arrow-left-img, .background .prices .slider-of-prices .slider-block__arrow-right-img {
+        width: 8px;
+        height: 13px; }
+      .background .prices .slider-of-prices .slider-block__arrow-left:hover, .background .prices .slider-of-prices .slider-block__arrow-right:hover {
+        background-color: #FFE600;
+        transition: 0.3s; }
+      .background .prices .slider-of-prices .slider-block__arrow-right {
+        right: 0; }
+      .background .prices .slider-of-prices .slider-block__arrow-left {
+        left: 0; }
   .background .footer .container .contacts .contacts__phones-block {
     grid-template-columns: 1fr 1fr; }
     .background .footer .container .contacts .contacts__phones-block .contacts__phones-button-block {
@@ -619,6 +666,8 @@
       left: calc(50% - 50vw);
       top: auto;
       width: 100vw; }
+  .background .prices .slider-of-prices .slick-list .slick-track .slick-slide {
+    padding: 20px; }
   .background .prices .prices__consultation-block {
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
@@ -634,7 +683,7 @@
       padding-bottom: 20px; }
       .background .prices .prices__consultation-block .prices__consultation-button-block .prices__consultation-button-block-shaddow {
         background-image: none; }
-  .background .footer .footer__map {
+  .background .footer .footer__map-block {
     position: relative;
     width: 100%;
     height: 375px; }
@@ -655,6 +704,10 @@
         font-size: 12px;
         line-height: 140%;
         color: rgba(51, 51, 51, 0.6); } }
+@media (max-width: 590px) {
+  .background .prices .slider-of-prices .slick-list .slick-track .slick-slide {
+    padding: 30px;
+    margin-right: 20px; } }
 @media (max-width: 500px) {
   .container {
     max-width: 84%; }

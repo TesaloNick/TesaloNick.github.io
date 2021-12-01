@@ -104,6 +104,12 @@ $padding-in-prices-blocks: 30px;
   box-sizing: border-box;
   font-family: 'Museo Sans Cyrl', sans-serif;
 }
+html, body{
+  width: 100vw;
+  // max-width:100%; 
+  // overflow-x: hidden;
+
+}
 
 .container{
   max-width: 1180px;
@@ -113,7 +119,8 @@ $padding-in-prices-blocks: 30px;
 .background{
   background-image: url(./img/main-background.png);
   background-repeat: repeat;
-  overflow: hidden;
+  width: 100vw;
+  // max-width:100%; 
 
   .start-page{
     position: relative;
@@ -127,7 +134,6 @@ $padding-in-prices-blocks: 30px;
       padding: 4vh 0 8vh 0;
       position: relative;
       width: 50%;
-      // grid-gap: 10%;
 
       .header__logo{
         position: fixed;
@@ -327,10 +333,6 @@ $padding-in-prices-blocks: 30px;
       padding-top: 6vh;
 
       .benefits__benefit{
-        .benefits__benefit-img{
-
-        }
-
         .benefits__benefit-text{
           padding-top: 12px;
           @extend %white-regular-text;
@@ -385,17 +387,21 @@ $padding-in-prices-blocks: 30px;
           width: 60px;
           height: 60px;
           cursor: pointer;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
         }
-
+    
         .slick-dots{
           left: 50px;
           bottom: 40px;
           text-align: left;
-
+          width: auto;
+    
           li.slick-active{
             width: 40px;
             margin-left: 0;
-
+    
             .slider-block__dot{
               width: 30px;
               height: 2px;
@@ -403,11 +409,11 @@ $padding-in-prices-blocks: 30px;
               background-color: #F2BF14;
             }
           }
-
+    
           li{
             width: 40px;
             margin-left: 0;
-
+    
             .slider-block__dot{
               width: 30px;
               height: 2px;
@@ -415,14 +421,14 @@ $padding-in-prices-blocks: 30px;
               background-color: rgba(255, 255, 255, 0.2);
             }
           }
-
+    
         }
-
+    
         .slider-block__arrow-left:hover, .slider-block__arrow-right:hover{
           background-color: #FFE600;
           transition: $transition-time;
         }
-
+    
         .slider-block__arrow-right{
           right: 0;
         }
@@ -483,6 +489,8 @@ $padding-in-prices-blocks: 30px;
         }
       }
     }
+
+
   }
 
   .prices{
@@ -534,6 +542,7 @@ $padding-in-prices-blocks: 30px;
         background-color: #232323;
         display: grid;
         grid-gap: 40px;
+        // min-width: 250px;
   
         .slider-of-prices__products-block{
           display: grid;
@@ -563,8 +572,6 @@ $padding-in-prices-blocks: 30px;
             }
           }
         }
-  
-  
       }
   
       .slider-of-prices__yelllow-block {
@@ -572,7 +579,6 @@ $padding-in-prices-blocks: 30px;
   
         .slider-of-prices__yelllow-block-list {
           display: grid;
-          // grid-gap: 10px;
           list-style-type: none;
   
           .slider-of-prices__yelllow-block-item {
@@ -594,9 +600,7 @@ $padding-in-prices-blocks: 30px;
             left: 0;
           }
         }
-  
       }
-  
     }
 
     .prices__consultation-block{
@@ -665,18 +669,22 @@ $padding-in-prices-blocks: 30px;
   .footer {
     background-color: #F2BF14;
     position: relative;
-    // width: 100vw;
 
-    .footer__map {
+    .footer__map-block {
       position: absolute;
       left: 0;
       width: 50vw;
       height: 100%;
       z-index: 1;
 
-      iframe{
+      .footer__map{
         width: 100%;
         height: 100%;
+
+        iframe{
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
@@ -732,7 +740,6 @@ $padding-in-prices-blocks: 30px;
               transition: $transition-time;
             }
           }
-  
         }
   
         .contacts__email {
@@ -775,8 +782,8 @@ $padding-in-prices-blocks: 30px;
         .contacts__logo-block {
           .contacts__logo {
             cursor: pointer;
-
           }
+
           .contacts__all-right-reserved {
             font-weight: normal;
             font-size: 12px;
@@ -830,6 +837,7 @@ $padding-in-prices-blocks: 30px;
         position: absolute;
         content: '';
         width: 100vw;
+        max-width:100vw; 
         height: 17vh;
         bottom: 0;
         left: calc(50% - 50vw);
@@ -868,6 +876,63 @@ $padding-in-prices-blocks: 30px;
 
 @media (max-width: 1150px) {
   .background{
+    .prices{
+      position: relative;
+      .slider-of-prices{
+        grid-template-columns: repeat(1, 1fr);
+        position: relative;
+        left: calc(50% - 50vw);
+        height: 415px;
+        width: 100vw;
+        // max-width: 100vw; 
+        .slick-list{
+          height: 100%;
+          .slick-track{
+            height: 100%;
+            // display: flex;
+            // grid-auto-flow: row;
+            .slick-slide{
+              // height: 100%;
+              // width: 250px !important;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        .slider-block__arrow-left, .slider-block__arrow-right{
+          position: absolute;
+          top: calc(50% - 30px);
+          z-index: 1;
+          background-color: #F2BF14;
+          border: 0px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          display: flex !important;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .slider-block__arrow-left-img, .slider-block__arrow-right-img{
+          width: 8px;
+          height: 13px;
+        }
+
+        .slider-block__arrow-left:hover, .slider-block__arrow-right:hover{
+          background-color: #FFE600;
+          transition: $transition-time;
+        }
+    
+        .slider-block__arrow-right{
+          right: 0;
+        }
+
+        .slider-block__arrow-left{
+          left: 0;
+        }
+      }
+    }
+  
     .footer {
       .container{
         .contacts {
@@ -921,6 +986,7 @@ $padding-in-prices-blocks: 30px;
           position: absolute;
           content: '';
           width: 100vw;
+          // max-width: 100vw; 
           height: 32px;
           left: calc(50% - 50vw);
           background: rgba(0, 0, 0, 0.4);        }
@@ -994,16 +1060,18 @@ $padding-in-prices-blocks: 30px;
         left: calc(50% - 50vw);
         top: auto;
         width: 100vw;
-      }
+        // max-width: 100vw; 
+}
     }
 
     .prices{
       .slider-of-prices{
-        .slider-of-prices__yelllow-block {
-          .slider-of-prices__yelllow-block-list {
-
+        .slick-list{
+          .slick-track{
+            .slick-slide{
+              padding: 20px;
+            }
           }
-            // 
         }
       }
       .prices__consultation-block{
@@ -1029,6 +1097,7 @@ $padding-in-prices-blocks: 30px;
             background-image: none;
 
             .prices__consultation-button{
+
             }
           }
         }
@@ -1039,7 +1108,7 @@ $padding-in-prices-blocks: 30px;
     }
 
     .footer {
-      .footer__map {
+      .footer__map-block {
         position: relative;
         width: 100%;
         height: 375px;
@@ -1058,8 +1127,6 @@ $padding-in-prices-blocks: 30px;
               }
             }
           }
-
-
 
           .contacts__adress-block {
             padding-bottom: 30px;
@@ -1082,6 +1149,39 @@ $padding-in-prices-blocks: 30px;
       }
     }
   } 
+}
+
+@media (max-width: 590px) {
+  .background{
+    .prices{
+      .slider-of-prices{
+        .slick-list{
+          .slick-track{
+            .slick-slide{
+              padding: 30px;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  .background{
+    .prices{
+      .slider-of-prices{
+        .slick-list{
+          .slick-track{
+            .slick-slide{
+              
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 500px) {
@@ -1156,6 +1256,7 @@ $padding-in-prices-blocks: 30px;
         position: absolute;
         content: '';
         width: 100vw;
+        // max-width: 100vw; 
         height: 6px;
         background-color: rgba(0, 0, 0, 0.4);
         left: calc(50% - 50vw);
@@ -1180,7 +1281,6 @@ $padding-in-prices-blocks: 30px;
 
         .prices__product {
           font-size: 14px;
-
         }
       }
     }
