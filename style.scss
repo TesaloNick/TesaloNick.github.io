@@ -104,12 +104,6 @@ $padding-in-prices-blocks: 30px;
   box-sizing: border-box;
   font-family: 'Museo Sans Cyrl', sans-serif;
 }
-html, body{
-  width: 100vw;
-  // max-width:100%; 
-  // overflow-x: hidden;
-
-}
 
 .container{
   max-width: 1180px;
@@ -119,246 +113,217 @@ html, body{
 .background{
   background-image: url(./img/main-background.png);
   background-repeat: repeat;
-  width: 100vw;
-  // max-width:100%; 
 
-  .start-page{
-    position: relative;
-    padding-bottom: 4vh;
+  .start-page-block{
     height: 100vh;
 
-    .header{
-      display: grid;
-      grid-auto-flow: column;
-      align-items: center;
-      padding: 4vh 0 8vh 0;
-      position: relative;
-      width: 50%;
-
-      .header__logo{
-        position: fixed;
-        @extend %left-indent;
-        width: 143px;
-        cursor: pointer;
-      }
-
-      .header__contacts{
-        display: flex;
-        flex-direction: row-reverse;
-        column-gap: 20%;
-        justify-content: space-between;
-
-        .header__adress{
-          @extend %header-text-style
-        }
-
-        .header__phones-and-email{
-          display: grid;
-          row-gap: 10px;
-
-          a{
-            text-decoration: none;
-            @extend %header-text-style
-          }
-        }
-      }
-
-      .header__social-blocks{
-        display: flex;
-        column-gap: 4px;
-        justify-self: center;
-        align-self: flex-start;
-
-        .header__social-block{
-          background: rgba(0, 0, 0, 0.4);
-          width: 32px;
-          height: 32px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          transition: $transition-time;
-        }
-
-        .header__social-block:nth-of-type(2){
-          background-image: url(./img/social/whatsapp-img.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-
-        .header__social-block:nth-of-type(3){
-          background-image: url(./img/social/viber-img.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-
-        .header__social-block:nth-of-type(4){
-          background-image: url(./img/social/telegram-img.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-
-        .header__social-block:nth-of-type(2):hover{
-          background-image: url(./img/social/whatsapp-img-black.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-
-        .header__social-block:nth-of-type(3):hover{
-          background-image: url(./img/social/viber-img-black.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-
-        .header__social-block:nth-of-type(4):hover{
-          background-image: url(./img/social/telegram-img-black.svg);
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-
-        .header__social-block:hover{
-          background: #FFE600;
-          color: #333333;
-          transition: $transition-time;
-        }
-
-        .header__adress{
-          display: none;
-          @extend %header-text-style
-        }
-      }
+    .header__adress-up{
+      display: none;
+      @extend %header-text-style
     }
 
-    .text-information{
-      width: 50%;
-      position: relative;
-
-      .text-information__sidebar{
-        @extend %grey-regular-text;
-        position: fixed;
-        @extend %left-indent;
-        left: 0;
-        font-weight: 700;
-
-        .sidebar{
-          list-style-type: none;
-          display: grid;
-          grid-gap: 13px;
-
-          .sidebar__item{
-            cursor: pointer;
-            position: relative;
-            transition: $transition-time;
-            padding-left: 60px;
-            width: 175px;
-
-            .sidebar__yellow-line{
-              position: absolute;
-              content: '';
-              width: 30px;
-              height: 1px;
-              background-color: #CCCCCC;
-              left: 0;
-              top: 11px;
-            }
-          }
-
-          .sidebar__item:hover{
-            color: #F2BF14;
-            transition: $transition-time;
-
-            .sidebar__yellow-line{
-              background-color: #F2BF14;
-            }
-          }
+    .start-page{
+      padding-bottom: 4vh;
+  
+      .header{
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        padding: 4vh 0 8vh 0;
+        position: relative;
+        width: 50%;
+  
+        .header__logo{
+          position: fixed;
+          @extend %left-indent;
+          width: 143px;
+          cursor: pointer;
         }
-      }
-
-      .text-information__main{
-        .text-information__concrete-definition{
-          border-bottom: rgba(255, 255, 255, 0.21) 1px solid;
-          width: 90%;
-          padding-bottom: 2vh;
-          display: grid;
-          row-gap: 10px;
-
-          .text-information__yellow-title{
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 3vh;
-            color: #F2BF14;
+  
+        .header__contacts{
+          display: flex;
+          flex-direction: row-reverse;
+          column-gap: 20%;
+          justify-content: space-between;
+  
+          .header__adress{
+            @extend %header-text-style
           }
-
-          .text-information__white-main-title{
-            color: #FFFFFF;
-            @extend %white-main-title;
-          }
-
-          .text-information__grey-regular-text{
-            @extend %grey-regular-text;
+  
+          .header__phones-and-email{
+            display: grid;
+            row-gap: 10px;
+  
+            a{
+              text-decoration: none;
+              @extend %header-text-style
+            }
           }
         }
   
-        .text-information__consultation{
-          padding-top: 25px;
-          display: grid;
-          row-gap: 15px;
-
-          .text-information__white-little-title{
-            @extend %white-little-title;
+        .header__social-blocks{
+          display: flex;
+          column-gap: 4px;
+          justify-self: center;
+          align-self: flex-start;
+  
+          .header__social-block{
+            background: rgba(0, 0, 0, 0.4);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: $transition-time;
           }
-
-          .text-information__white-regular-text{
-            @extend %white-regular-text;
+  
+          .header__social-block:nth-of-type(1){
+            background-image: url(./img/social/whatsapp-img.svg);
+            background-position: center;
+            background-repeat: no-repeat;
           }
-          
-          .text-information__consultation-button{
-            width: 35%;
-            @extend %consultation-button;
+  
+          .header__social-block:nth-of-type(2){
+            background-image: url(./img/social/viber-img.svg);
+            background-position: center;
+            background-repeat: no-repeat;
           }
-          
-          .text-information__consultation-button:hover{
-            background-color: #FFE600;
+  
+          .header__social-block:nth-of-type(3){
+            background-image: url(./img/social/telegram-img.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+  
+          .header__social-block:nth-of-type(1):hover{
+            background-image: url(./img/social/whatsapp-img-black.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+  
+          .header__social-block:nth-of-type(2):hover{
+            background-image: url(./img/social/viber-img-black.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+  
+          .header__social-block:nth-of-type(3):hover{
+            background-image: url(./img/social/telegram-img-black.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+  
+          .header__social-block:hover{
+            background: #FFE600;
+            color: #333333;
             transition: $transition-time;
           }
         }
       }
-    }
-
-    .benefits{
-      width: 50%;
-      position: relative;
-      display: flex;
-      column-gap: 40px;
-      padding-top: 6vh;
-
-      .benefits__benefit{
-        .benefits__benefit-text{
-          padding-top: 12px;
-          @extend %white-regular-text;
+  
+      .text-information{
+        width: 50%;
+        position: relative;
+  
+        .text-information__sidebar{
+          @extend %grey-regular-text;
+          position: fixed;
+          @extend %left-indent;
+          left: 0;
+          font-weight: 700;
+  
+          .sidebar{
+            list-style-type: none;
+            display: grid;
+            grid-gap: 13px;
+  
+            .sidebar__item{
+              cursor: pointer;
+              position: relative;
+              transition: $transition-time;
+              padding-left: 60px;
+              width: 175px;
+  
+              .sidebar__yellow-line{
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 1px;
+                background-color: #CCCCCC;
+                left: 0;
+                top: 11px;
+              }
+            }
+  
+            .sidebar__item:hover{
+              color: #F2BF14;
+              transition: $transition-time;
+  
+              .sidebar__yellow-line{
+                background-color: #F2BF14;
+              }
+            }
+          }
         }
-      }
-
-      .benefits__call{
-        @extend %call-back-button;
-        position: fixed;
-        // bottom: 0;
-        @extend %left-indent;
-        width: 143px;
-        padding: 9px 0;
-      }
-
-      .benefits__call:hover{
-        color: #333333;
-        background-color: #FFE600;
-        transition: $transition-time;
+  
+        .text-information__main{
+          .text-information__concrete-definition{
+            border-bottom: rgba(255, 255, 255, 0.21) 1px solid;
+            width: 90%;
+            padding-bottom: 2vh;
+            display: grid;
+            row-gap: 10px;
+  
+            .text-information__yellow-title{
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 3vh;
+              color: #F2BF14;
+            }
+  
+            .text-information__white-main-title{
+              color: #FFFFFF;
+              @extend %white-main-title;
+            }
+  
+            .text-information__grey-regular-text{
+              @extend %grey-regular-text;
+            }
+          }
+    
+          .text-information__consultation{
+            padding-top: 25px;
+            display: grid;
+            row-gap: 15px;
+            width: 90%;
+  
+            .text-information__white-little-title{
+              @extend %white-little-title;
+            }
+  
+            .text-information__white-regular-text{
+              @extend %white-regular-text;
+            }
+            
+            .text-information__consultation-button{
+              width: 35%;
+              @extend %consultation-button;
+            }
+            
+            .text-information__consultation-button:hover{
+              background-color: #FFE600;
+              transition: $transition-time;
+            }
+          }
+        }
       }
     }
 
     .slider-block{
       position: absolute;
       top: 0;
-      left: 50%;
+      right: 0;
       width: 50vw;
       height: 100%;
 
@@ -490,11 +455,46 @@ html, body{
       }
     }
 
+    .benefits__block{
+      position: relative;
 
+      .container{
+        .benefits{
+          width: 50%;
+          display: flex;
+          row-gap: 20px;
+          padding-right: 20px;          
+
+          .benefits__benefit{
+            .benefits__benefit-img{
+              height: 48px;
+            }
+            .benefits__benefit-text{
+              padding-top: 12px;
+              @extend %white-regular-text;
+            }
+          }
+    
+          .benefits__call{
+            @extend %call-back-button;
+            position: fixed;
+            @extend %left-indent;
+            width: 143px;
+            padding: 9px 0;
+          }
+    
+          .benefits__call:hover{
+            color: #333333;
+            background-color: #FFE600;
+            transition: $transition-time;
+          }
+        }
+      }
+    }
   }
 
   .prices{
-    padding: 30px 0 60px 0;
+    padding: 30px 0 10px 0;
 
     .prices__title {
       @extend %white-main-title;
@@ -530,13 +530,18 @@ html, body{
         @extend %dot-before-list;
       }
     }
+  }
 
-    .slider-of-prices{
+  .slider-of-prices{
+    padding: 20px 0;
+
+    .slider-of-prices__block{
+      max-width: 1180px;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 30px;
-      padding: 20px 0;
-  
+
       .slider-of-prices__products, .slider-of-prices__yelllow-block{
         padding: $padding-in-prices-blocks;
         background-color: #232323;
@@ -602,66 +607,58 @@ html, body{
         }
       }
     }
+  }
 
-    .prices__consultation-block{
-      background-color: #232323;
+
+  .consultation-block{
+    background-color: #232323;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    margin-bottom: 60px;
+
+    .consultation-block__advantages{
+      padding: $padding-in-prices-blocks;
       display: grid;
-      grid-template-columns: 3fr 2fr;
-
-      .prices__advantages{
-        padding: $padding-in-prices-blocks;
-        display: grid;
-        grid-gap: 5px;
-        
-        .prices__advantage{
-          @extend %white-little-title;
-          position: relative;
-          padding-left: 14px;
-          display: flex;
-          align-items: center; 
-        }
-
-        .prices__advantage::before{
-          width: 6px;
-          height: 6px;
-          @extend %dot-before-list;
-        }
+      grid-gap: 5px;
+      
+      .consultation-block__advantage{
+        @extend %white-little-title;
+        position: relative;
+        padding-left: 14px;
+        display: flex;
+        align-items: center; 
       }
 
-      .prices__consultation-button-block {
-        // 
-        background: linear-gradient(270deg, rgb(196, 196, 196) 70.65%, rgba(196, 196, 196, 0) 100%);
-     
+      .consultation-block__advantage::before{
+        width: 6px;
+        height: 6px;
+        @extend %dot-before-list;
+      }
+    }
+
+    .consultation-block__consultation-button-block {
+      background: linear-gradient(270deg, rgb(196, 196, 196) 70.65%, rgba(196, 196, 196, 0) 100%);
+      background-size: cover;
+
+      .consultation-block__consultation-button-block-shaddow{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding-right: 40px;
+        height: 100%;
+        background-image: url(./img/button-consultation-background.png);
         background-size: cover;
-        // mix-blend-mode: screen;
-        // opacity: 0.5;
 
-        .prices__consultation-button-block-shaddow{
-          display: flex;
-          justify-content: right;
-          align-items: center;
-          padding-right: 40px;
-          height: 100%;
-          background-image: url(./img/button-consultation-background.png);
-          background-size: cover;
-
-          .prices__consultation-button{
-            // opacity: 0.5;
-            // width: 100%;
-            // height: 100%;
-            background: #F2BF14;
-            // background: linear-gradient(90deg, rgba(35,35,35,1) 0%, rgba(196,196,196,0) 57%);
-            @extend %consultation-button;
-            z-index: 4;
-          }
-          
-          .prices__consultation-button:hover{
-            background-color: #FFE600;
-            transition: $transition-time;
-          }
+        .consultation-block__consultation-button{
+          background: #F2BF14;
+          @extend %consultation-button;
+          z-index: 4;
         }
-
-
+        
+        .consultation-block__consultation-button:hover{
+          background-color: #FFE600;
+          transition: $transition-time;
+        }
       }
     }
   }
@@ -802,75 +799,86 @@ html, body{
   }
 
   .background{
-    .start-page{
-      .header{
-        padding: 3vh 0 3vh 0;
-
-        .header__logo{
-          position: relative;
-          left: 0;
-        }
-
-        .header__contacts{
-          flex-direction: column;
-          row-gap: 10px;
-        }
-      }
-
-      .text-information{
-        .text-information__sidebar{
-          .sidebar{
-            display: none;
+    .start-page-block{
+      position: relative;
+      
+      .start-page{
+        .header{
+          padding: 3vh 0 3vh 0;
+  
+          .header__logo{
+            position: relative;
+            left: 0;
           }
-        }
-        .text-information__main{
-          .text-information__consultation{
-            .text-information__consultation-button{
-              width: 50%;
-            }
+  
+          .header__contacts{
+            flex-direction: column;
+            row-gap: 10px;
           }
         }
   
-      }
-
-      .benefits::before{
-        position: absolute;
-        content: '';
-        width: 100vw;
-        max-width:100vw; 
-        height: 17vh;
-        bottom: 0;
-        left: calc(50% - 50vw);
-        background: #232323;
-      }
-
-      .benefits{
-        position: absolute;
-        width: 100%;
-        height: 17vh;
-        bottom: 0;
-        padding-top: 0;
-
-        .benefits__benefit{
-          display: flex;
-          align-items: center;
-          z-index: 2;
-
-          .benefits__benefit-text{
-            padding-left: 40px;
-            width: 80%;
+        .text-information{
+          .text-information__sidebar{
+            .sidebar{
+              display: none;
+            }
           }
-        }
-
-        .benefits__call{
-          display: none;
+          .text-information__main{
+            .text-information__consultation{
+              .text-information__consultation-button{
+                width: 50%;
+              }
+            }
+          }
         }
       }
 
       .slider-block{
         height: 83vh;
       }
+
+      .benefits__block{
+        background: #232323;
+        position: absolute;
+        width: 100%;
+        height: 17vh;
+        left: 0;
+        bottom: 0;
+        padding-top: 0;
+  
+        .container{
+          height: 100%;
+
+          .benefits{
+            height: 100%;
+            width: 100%;
+            align-items: center;
+
+            .benefits__benefit{
+              display: flex;
+              align-items: center;
+              z-index: 2;
+
+              .benefits__benefit-text{
+                padding-left: 40px;
+                width: 80%;
+              }
+            }
+      
+            .benefits__call{
+              display: none;
+            }
+          }
+        }
+      }
     }
+
+    .slider-of-prices{
+      .slider-of-prices__block{
+        max-width: 90%;
+      }
+    }
+
   }
 }
 
@@ -878,27 +886,40 @@ html, body{
   .background{
     .prices{
       position: relative;
-      .slider-of-prices{
+    }
+
+    .start-page-block{
+      .start-page{
+        width: 100%;
+        .text-information{
+          .text-information__main{
+            .text-information__consultation{
+              .text-information__consultation-button{
+                width: 60%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .slider-of-prices{
+      .slider-of-prices__block{
         grid-template-columns: repeat(1, 1fr);
         position: relative;
-        left: calc(50% - 50vw);
+        left: 0;
         height: 415px;
-        width: 100vw;
-        // max-width: 100vw; 
+        max-width: 100%;
         .slick-list{
           height: 100%;
           .slick-track{
             height: 100%;
-            // display: flex;
-            // grid-auto-flow: row;
             .slick-slide{
-              // height: 100%;
-              // width: 250px !important;
               margin-right: 10px;
             }
           }
         }
-
+  
         .slider-block__arrow-left, .slider-block__arrow-right{
           position: absolute;
           top: calc(50% - 30px);
@@ -912,12 +933,12 @@ html, body{
           justify-content: center;
           align-items: center;
         }
-
+  
         .slider-block__arrow-left-img, .slider-block__arrow-right-img{
           width: 8px;
           height: 13px;
         }
-
+  
         .slider-block__arrow-left:hover, .slider-block__arrow-right:hover{
           background-color: #FFE600;
           transition: $transition-time;
@@ -926,13 +947,13 @@ html, body{
         .slider-block__arrow-right{
           right: 0;
         }
-
+  
         .slider-block__arrow-left{
           left: 0;
         }
       }
     }
-  
+
     .footer {
       .container{
         .contacts {
@@ -960,109 +981,158 @@ html, body{
   }
 
   .background{
-    .start-page{
+    .start-page-block{
       height: auto;
 
-      .header{
+      .header__adress-up{
+        position: absolute;
         width: 100%;
-        grid-template-columns: 3fr 2fr;
-        grid-template-rows: 32px 1fr;
-        padding-top: 0;
+        height: 32px;
+        display: block;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.4);        
 
-        .header__logo{
-          padding: 20px 0;
-        }
-
-        .header__contacts{
-          justify-self: flex-end;
-          padding: 20px 0;
-
-          .header__adress{
-            display: none;
-          }
-        }
-
-        .header__social-blocks::before{
-          position: absolute;
-          content: '';
-          width: 100vw;
-          // max-width: 100vw; 
-          height: 32px;
-          left: calc(50% - 50vw);
-          background: rgba(0, 0, 0, 0.4);        }
-
-        .header__social-blocks{
-          grid-column-start: 1;
-          grid-column-end: 3;
-          grid-row-start: 1;
-          grid-row-end: 2;
-          display: grid;
-          grid-template-columns: 80% 1fr 1fr 1fr;
-          justify-self: auto;
-
-          .header__social-block{
-            justify-self: center;
-            z-index: 2;
-            background-color: transparent;
-          }
-
-          .header__adress{
-            display: block;
-            align-self: center;
-          }
+        p {
+          max-width: 90%;
+          margin: auto;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          height: 100%;
         }
       }
 
-      .text-information{
-        width: 100%;
+      .start-page{ 
+        padding-bottom: 4px; 
 
-        .text-information__main{
-          .text-information__concrete-definition{
-            width: 100%;
+        .header{
+          width: 100%;
+          grid-template-columns: 3fr 2fr;
+          grid-template-rows: 32px 1fr;
+          padding-top: 0;
+  
+          .header__logo{
+            padding: 20px 0;
           }
-          .text-information__consultation{
-            .text-information__consultation-button{
-              margin-bottom: 40px;
+  
+          .header__contacts{
+            justify-self: flex-end;
+            padding: 20px 0;
+  
+            .header__adress{
+              display: none;
             }
           }
-
+  
+          .header__social-blocks{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            display: grid;
+            width: 115px;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-self: right;
+  
+            .header__social-block{
+              justify-self: center;
+              z-index: 2;
+              background-color: transparent;
+            }
+          }
+        }
+  
+        .text-information{
+          width: 100%;
+  
+          .text-information__main{
+            .text-information__concrete-definition{
+              width: 100%;
+            }
+            .text-information__consultation{
+              .text-information__consultation-button{
+                width: 50%;
+                margin-bottom: 40px;
+              }
+            }
+  
+          }
         }
       }
-
-      .benefits::before{
-        display: none;
-      }
-
-      .benefits{
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-        padding: 15px 0 40px 0;
-
-        .benefits__benefit{
-          padding: 15px 0;
-        }
-
-        .benefits__benefit:nth-of-type(1){
-          padding: 15px 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .benefits__benefit:nth-of-type(2){
-          padding: 15px 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-      }
-
+       
       .slider-block{
         position: relative;
-        left: calc(50% - 50vw);
+        right: 0;
         top: auto;
-        width: 100vw;
-        // max-width: 100vw; 
-}
+        width: 100%;
+        height: 380px;
+
+        .slider-block__slider{
+          .slick-dots{
+            bottom: 0px;
+          }
+
+          .slider-block__slide{
+            .slider-block__information {
+              bottom: 40px;
+
+              .slider-block__work {
+                font-size: 12px;
+                line-height: 14px;
+              }
+      
+              .slider-block__name {
+                font-size: 24px;
+                line-height: 29px;
+              }
+      
+              .slider-block__price {
+                font-size: 13px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      .benefits__block{
+        position: relative;
+        background-color: transparent;
+        height: auto;
+  
+        .container{
+
+          .benefits{
+            flex-direction: column;
+            // justify-content: center;
+            height: auto;
+            padding: 40px 0;
+
+            .benefits__benefit{
+              padding: 15px 0;
+              width: 100%;
+
+
+              .benefits__benefit-text{
+                padding-left: 40px;
+                width: 80%;
+              }
+            }
+
+            .benefits__benefit:nth-of-type(1){
+              padding: 15px 0;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+    
+            .benefits__benefit:nth-of-type(2){
+              padding: 15px 0;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+          }
+        }
+      }
     }
+
 
     .prices{
       .slider-of-prices{
@@ -1074,36 +1144,36 @@ html, body{
           }
         }
       }
-      .prices__consultation-block{
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        grid-gap: 10px;
+    }
 
-        .prices__advantages{
-          padding: 20px;
+    .consultation-block{
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      grid-gap: 10px;
 
-          .prices__advantage{
-            font-size: 14px;
-          }
+      .consultation-block__advantages{
+        padding: 20px;
+
+        .consultation-block__advantage{
+          font-size: 14px;
         }
-
-        .prices__consultation-button-block {
-          background: none;
-          display: flex;
-          justify-self: center;
-          padding-bottom: 20px;
-
-          .prices__consultation-button-block-shaddow{
-            background-image: none;
-
-            .prices__consultation-button{
-
-            }
-          }
-        }
-
-
       }
+
+      .consultation-block__consultation-button-block {
+        background: none;
+        display: flex;
+        justify-self: center;
+        padding-bottom: 20px;
+
+        .consultation-block__consultation-button-block-shaddow{
+          background-image: none;
+
+          .consultation-block__consultation-button{
+
+          }
+        }
+      }
+
 
     }
 
@@ -1111,6 +1181,7 @@ html, body{
       .footer__map-block {
         position: relative;
         width: 100%;
+        left: 0%;
         height: 375px;
       }
 
@@ -1151,118 +1222,49 @@ html, body{
   } 
 }
 
-@media (max-width: 590px) {
-  .background{
-    .prices{
-      .slider-of-prices{
-        .slick-list{
-          .slick-track{
-            .slick-slide{
-              padding: 30px;
-              margin-right: 20px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 710px) {
-  .background{
-    .prices{
-      .slider-of-prices{
-        .slick-list{
-          .slick-track{
-            .slick-slide{
-              
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 @media (max-width: 500px) {
   .container{
     max-width: 84%;
   }
 
   .background{
-    .start-page{
-      .header{
-        .header__social-blocks{
-          grid-template-columns: 70% 1fr 1fr 1fr;
+    .start-page-block{
+      .header__adress-up{      
+        p {
+          max-width: 84%;
         }
       }
 
-      .text-information{
-        .text-information__main{
-          .text-information__concrete-definition{
-            .text-information__yellow-title{
-              font-size: 16px;
-              line-height: 19px;
-            }
-
-            .text-information__white-main-title{
-              width: 285px;
-              span{
-                font-size: 28px;
+      .start-page{
+        .text-information{
+          .text-information__main{
+            .text-information__concrete-definition{
+              .text-information__yellow-title{
+                font-size: 16px;
+                line-height: 19px;
+              }
+  
+              .text-information__white-main-title{
+                width: 285px;
+                span{
+                  font-size: 28px;
+                }
               }
             }
-          }
-          .text-information__consultation{
-            .text-information__consultation-button{
-              width: 100%;
-            }
-          }
-        }
-      }
-
-      .slider-block{
-        .slider-block__slider{
-          .slick-dots{
-            bottom: 0px;
-          }
-
-          .slider-block__slide{
-            .slider-block__information {
-              bottom: 40px;
-
-              .slider-block__work {
-                font-size: 12px;
-                line-height: 14px;
-              }
-      
-              .slider-block__name {
-                font-size: 24px;
-                line-height: 29px;
-              }
-      
-              .slider-block__price {
-                font-size: 13px;
-                line-height: 16px;
+            .text-information__consultation{
+              .text-information__consultation-button{
+                width: 100%;
               }
             }
           }
         }
+
       }
+
+
       .benefits{
         position: relative;
       }
-
-      .benefits::after{
-        position: absolute;
-        content: '';
-        width: 100vw;
-        // max-width: 100vw; 
-        height: 6px;
-        background-color: rgba(0, 0, 0, 0.4);
-        left: calc(50% - 50vw);
-        bottom: 0;
-      }
- 
     }
 
     .prices{
@@ -1281,6 +1283,24 @@ html, body{
 
         .prices__product {
           font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .background{
+    .slider-of-prices{
+      .slider-of-prices__block{
+        .slick-list{
+          .slick-track{
+            .slick-slide{
+              padding: 30px;
+              margin-right: 30px;
+              margin-left: 30px;
+            }
+          }
         }
       }
     }
