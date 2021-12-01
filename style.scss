@@ -115,6 +115,7 @@ $padding-in-prices-blocks: 30px;
   background-repeat: repeat;
 
   .start-page-block{
+    position: relative;
     height: 100vh;
 
     .header__adress-up{
@@ -257,12 +258,7 @@ $padding-in-prices-blocks: 30px;
             }
   
             .sidebar__item:hover{
-              color: #F2BF14;
               transition: $transition-time;
-  
-              .sidebar__yellow-line{
-                background-color: #F2BF14;
-              }
             }
           }
         }
@@ -307,7 +303,7 @@ $padding-in-prices-blocks: 30px;
             }
             
             .text-information__consultation-button{
-              width: 35%;
+              width: 40%;
               @extend %consultation-button;
             }
             
@@ -456,7 +452,11 @@ $padding-in-prices-blocks: 30px;
     }
 
     .benefits__block{
-      position: relative;
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 60px;
+      left: 0;
+      right: 0;
 
       .container{
         .benefits{
@@ -481,6 +481,7 @@ $padding-in-prices-blocks: 30px;
             @extend %left-indent;
             width: 143px;
             padding: 9px 0;
+            bottom: 60px;
           }
     
           .benefits__call:hover{
@@ -547,7 +548,6 @@ $padding-in-prices-blocks: 30px;
         background-color: #232323;
         display: grid;
         grid-gap: 40px;
-        // min-width: 250px;
   
         .slider-of-prices__products-block{
           display: grid;
@@ -687,20 +687,14 @@ $padding-in-prices-blocks: 30px;
 
     .container{
       padding-bottom: 0px;
-      // width: 100%;
-      // display: grid;
       position: relative;
-      // grid-template-columns: repeat(2, 1fr);
-      // justify-content: center;
 
       .contacts {
-        // position: absolute;
         position: relative;
         left: 50%;
         width: 50%;
         display: grid;
         grid-gap: 20px;
-        // width: 100%;
         padding: 30px 0 30px 60px;
         right: 0;
 
@@ -839,13 +833,12 @@ $padding-in-prices-blocks: 30px;
 
       .benefits__block{
         background: #232323;
-        position: absolute;
         width: 100%;
         height: 17vh;
-        left: 0;
         bottom: 0;
         padding-top: 0;
-  
+        padding-bottom: 0;
+
         .container{
           height: 100%;
 
@@ -1099,14 +1092,14 @@ $padding-in-prices-blocks: 30px;
         position: relative;
         background-color: transparent;
         height: auto;
-  
+        border-bottom: #232323 6px solid;
+
         .container{
 
           .benefits{
             flex-direction: column;
-            // justify-content: center;
             height: auto;
-            padding: 40px 0;
+            padding: 20px 0;
 
             .benefits__benefit{
               padding: 15px 0;
@@ -1261,15 +1254,17 @@ $padding-in-prices-blocks: 30px;
 
       }
 
-
-      .benefits{
-        position: relative;
+      .benefits__block{
+        .container{
+          .benefits{
+            position: relative;
+          }
+        }
       }
     }
 
     .prices{
-      padding-top: 0;
-      padding-bottom: 20px;
+      padding: 20px 0;
 
       .prices__title {
         font-size: 24px;

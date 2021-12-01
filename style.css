@@ -96,6 +96,7 @@
   background-image: url(./img/main-background.png);
   background-repeat: repeat; }
   .background .start-page-block {
+    position: relative;
     height: 100vh; }
     .background .start-page-block .header__adress-up {
       display: none; }
@@ -190,10 +191,7 @@
                 left: 0;
                 top: 11px; }
             .background .start-page-block .start-page .text-information .text-information__sidebar .sidebar .sidebar__item:hover {
-              color: #F2BF14;
               transition: 0.3s; }
-              .background .start-page-block .start-page .text-information .text-information__sidebar .sidebar .sidebar__item:hover .sidebar__yellow-line {
-                background-color: #F2BF14; }
         .background .start-page-block .start-page .text-information .text-information__main .text-information__concrete-definition {
           border-bottom: rgba(255, 255, 255, 0.21) 1px solid;
           width: 90%;
@@ -213,7 +211,7 @@
           row-gap: 15px;
           width: 90%; }
           .background .start-page-block .start-page .text-information .text-information__main .text-information__consultation .text-information__consultation-button {
-            width: 35%; }
+            width: 40%; }
           .background .start-page-block .start-page .text-information .text-information__main .text-information__consultation .text-information__consultation-button:hover {
             background-color: #FFE600;
             transition: 0.3s; }
@@ -312,7 +310,11 @@
               line-height: 22px;
               color: #CCCCCC; }
     .background .start-page-block .benefits__block {
-      position: relative; }
+      position: absolute;
+      bottom: 0;
+      padding-bottom: 60px;
+      left: 0;
+      right: 0; }
       .background .start-page-block .benefits__block .container .benefits {
         width: 50%;
         display: flex;
@@ -325,7 +327,8 @@
         .background .start-page-block .benefits__block .container .benefits .benefits__call {
           position: fixed;
           width: 143px;
-          padding: 9px 0; }
+          padding: 9px 0;
+          bottom: 60px; }
         .background .start-page-block .benefits__block .container .benefits .benefits__call:hover {
           color: #333333;
           background-color: #FFE600;
@@ -538,12 +541,11 @@
       height: 83vh; }
     .background .start-page-block .benefits__block {
       background: #232323;
-      position: absolute;
       width: 100%;
       height: 17vh;
-      left: 0;
       bottom: 0;
-      padding-top: 0; }
+      padding-top: 0;
+      padding-bottom: 0; }
       .background .start-page-block .benefits__block .container {
         height: 100%; }
         .background .start-page-block .benefits__block .container .benefits {
@@ -686,11 +688,12 @@
     .background .start-page-block .benefits__block {
       position: relative;
       background-color: transparent;
-      height: auto; }
+      height: auto;
+      border-bottom: #232323 6px solid; }
       .background .start-page-block .benefits__block .container .benefits {
         flex-direction: column;
         height: auto;
-        padding: 40px 0; }
+        padding: 20px 0; }
         .background .start-page-block .benefits__block .container .benefits .benefits__benefit {
           padding: 15px 0;
           width: 100%; }
@@ -757,11 +760,10 @@
       font-size: 28px; }
   .background .start-page-block .start-page .text-information .text-information__main .text-information__consultation .text-information__consultation-button {
     width: 100%; }
-  .background .start-page-block .benefits {
+  .background .start-page-block .benefits__block .container .benefits {
     position: relative; }
   .background .prices {
-    padding-top: 0;
-    padding-bottom: 20px; }
+    padding: 20px 0; }
     .background .prices .prices__title {
       font-size: 24px;
       line-height: 29px;
