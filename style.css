@@ -426,19 +426,18 @@
         width: 6px;
         height: 6px; }
     .background .consultation-block .consultation-block__consultation-button-block {
-      background: linear-gradient(270deg, #c4c4c4 70.65%, rgba(196, 196, 196, 0) 100%);
+      background-image: url(./img/button-consultation-background.png);
       background-size: cover; }
       .background .consultation-block .consultation-block__consultation-button-block .consultation-block__consultation-button-block-shaddow {
+        background: linear-gradient(90deg, #232323 0%, rgba(35, 35, 35, 0) 30%);
+        background-color: rgba(36, 36, 36, 0.5);
         display: flex;
         justify-content: right;
         align-items: center;
         padding-right: 40px;
-        height: 100%;
-        background-image: url(./img/button-consultation-background.png);
-        background-size: cover; }
+        height: 100%; }
         .background .consultation-block .consultation-block__consultation-button-block .consultation-block__consultation-button-block-shaddow .consultation-block__consultation-button {
-          background: #F2BF14;
-          z-index: 4; }
+          background: #F2BF14; }
         .background .consultation-block .consultation-block__consultation-button-block .consultation-block__consultation-button-block-shaddow .consultation-block__consultation-button:hover {
           background-color: #FFE600;
           transition: 0.3s; }

@@ -609,7 +609,6 @@ $padding-in-prices-blocks: 30px;
     }
   }
 
-
   .consultation-block{
     background-color: #232323;
     display: grid;
@@ -637,22 +636,22 @@ $padding-in-prices-blocks: 30px;
     }
 
     .consultation-block__consultation-button-block {
-      background: linear-gradient(270deg, rgb(196, 196, 196) 70.65%, rgba(196, 196, 196, 0) 100%);
+      background-image: url(./img/button-consultation-background.png);
       background-size: cover;
+      // opacity: 0.5;
 
       .consultation-block__consultation-button-block-shaddow{
+        background: linear-gradient(90deg, #232323 0%, rgba(35, 35, 35, 0) 30%);
+        background-color: rgba(36, 36, 36, 0.5);
         display: flex;
         justify-content: right;
         align-items: center;
         padding-right: 40px;
         height: 100%;
-        background-image: url(./img/button-consultation-background.png);
-        background-size: cover;
 
         .consultation-block__consultation-button{
           background: #F2BF14;
           @extend %consultation-button;
-          z-index: 4;
         }
         
         .consultation-block__consultation-button:hover{
