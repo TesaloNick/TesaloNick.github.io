@@ -1,19 +1,3 @@
-@font-face {
-  font-family: 'Museo Sans Cyrl';
-  src: url("./MuseoSansCyrl/MuseoSansCyrl-500.eot");
-  src: url("./MuseoSansCyrl/MuseoSansCyrl_500.otf") format("opentype");
-  src: url("./MuseoSansCyrl/__MACOSX/._MuseoSansCyrl_500.otf") format("opentype");
-  src: url("./MuseoSansCyrl/MuseoSansCyrl-500.woff") format("woff"), url("./MuseoSansCyrl/MuseoSansCyrl-500.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
-@font-face {
-  font-family: 'Museo Sans Cyrl';
-  src: url("./MuseoSansCyrl/MuseoSansCyrl-700.eot");
-  src: url("./MuseoSansCyrl/MuseoSansCyrl_700.otf") format("opentype");
-  src: url("./MuseoSansCyrl/__MACOSX/._MuseoSansCyrl_700.otf") format("opentype");
-  src: url("./MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("./MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal; }
 .background .start-page-block .start-page .header .header__logo, .background .start-page-block .start-page .text-information .text-information__sidebar, .background .start-page-block .benefits__block .container .benefits .benefits__call {
   left: 60px;
   width: 180px; }
@@ -91,8 +75,9 @@
   margin: auto; }
 
 .background {
-  background-image: url(./img/main-background.png);
-  background-repeat: repeat; }
+  background-image: url(../img/main-background.png);
+  background-repeat: repeat;
+  position: relative; }
   .background .start-page-block {
     position: relative;
     height: 100vh; }
@@ -136,27 +121,27 @@
             cursor: pointer;
             transition: 0.3s; }
           .background .start-page-block .start-page .header .header__social-blocks .header__social-block:nth-of-type(1) {
-            background-image: url(./img/social/whatsapp-img.svg);
+            background-image: url(../img/social/whatsapp-img.svg);
             background-position: center;
             background-repeat: no-repeat; }
           .background .start-page-block .start-page .header .header__social-blocks .header__social-block:nth-of-type(2) {
-            background-image: url(./img/social/viber-img.svg);
+            background-image: url(../img/social/viber-img.svg);
             background-position: center;
             background-repeat: no-repeat; }
           .background .start-page-block .start-page .header .header__social-blocks .header__social-block:nth-of-type(3) {
-            background-image: url(./img/social/telegram-img.svg);
+            background-image: url(../img/social/telegram-img.svg);
             background-position: center;
             background-repeat: no-repeat; }
           .background .start-page-block .start-page .header .header__social-blocks .header__social-block:nth-of-type(1):hover {
-            background-image: url(./img/social/whatsapp-img-black.svg);
+            background-image: url(../img/social/whatsapp-img-black.svg);
             background-position: center;
             background-repeat: no-repeat; }
           .background .start-page-block .start-page .header .header__social-blocks .header__social-block:nth-of-type(2):hover {
-            background-image: url(./img/social/viber-img-black.svg);
+            background-image: url(../img/social/viber-img-black.svg);
             background-position: center;
             background-repeat: no-repeat; }
           .background .start-page-block .start-page .header .header__social-blocks .header__social-block:nth-of-type(3):hover {
-            background-image: url(./img/social/telegram-img-black.svg);
+            background-image: url(../img/social/telegram-img-black.svg);
             background-position: center;
             background-repeat: no-repeat; }
           .background .start-page-block .start-page .header .header__social-blocks .header__social-block:hover {
@@ -230,6 +215,9 @@
           .background .start-page-block .slider-block .slider-block__slider .slick-list .slick-track {
             width: 100%;
             height: 100%; }
+            .background .start-page-block .slider-block .slider-block__slider .slick-list .slick-track .slick-slide > div {
+              width: 100%;
+              height: 100%; }
         .background .start-page-block .slider-block .slider-block__slider .slider-block__arrow-left, .background .start-page-block .slider-block .slider-block__slider .slider-block__arrow-right {
           position: absolute;
           top: calc(50% - 30px);
@@ -276,7 +264,7 @@
           position: relative; }
           .background .start-page-block .slider-block .slider-block__slider .slider-block__slide .slider-block__slide-img {
             width: 100%;
-            background-image: url(./img/slider/slide1.png);
+            background-image: url(../img/slider/slide1.png);
             background-size: cover;
             background-position: center;
             height: 100%;
@@ -362,6 +350,10 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 30px; }
+      .background .slider-of-prices .slider-of-prices__block .slick-slide > div {
+        height: 100%; }
+        .background .slider-of-prices .slider-of-prices__block .slick-slide > div .slider-of-prices__products, .background .slider-of-prices .slider-of-prices__block .slick-slide > div .slider-of-prices__yelllow-block {
+          height: 100%; }
       .background .slider-of-prices .slider-of-prices__block .slider-of-prices__products, .background .slider-of-prices .slider-of-prices__block .slider-of-prices__yelllow-block {
         padding: 30px;
         background-color: #232323;
@@ -402,7 +394,7 @@
             content: '';
             width: 18px;
             height: 14px;
-            background-image: url(./img/tick.svg);
+            background-image: url(../img/tick.svg);
             background-position: center;
             position: absolute;
             left: 0; }
@@ -424,7 +416,7 @@
         width: 6px;
         height: 6px; }
     .background .consultation-block .consultation-block__consultation-button-block {
-      background-image: url(./img/button-consultation-background.png);
+      background-image: url(../img/button-consultation-background.png);
       background-size: cover; }
       .background .consultation-block .consultation-block__consultation-button-block .consultation-block__consultation-button-block-shaddow {
         background: linear-gradient(90deg, #232323 0%, rgba(35, 35, 35, 0) 30%);
@@ -450,10 +442,12 @@
       z-index: 1; }
       .background .footer .footer__map-block .footer__map {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        border: 0; }
         .background .footer .footer__map-block .footer__map iframe {
           width: 100%;
-          height: 100%; }
+          height: 100%;
+          border: 0px; }
     .background .footer .container {
       padding-bottom: 0px;
       position: relative; }
@@ -515,6 +509,75 @@
           font-size: 12px;
           line-height: 140%;
           color: rgba(51, 51, 51, 0.6); }
+  .background .get-help__block-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1; }
+  .background .get-help__block {
+    z-index: 1; }
+    .background .get-help__block .get-help__window {
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      bottom: 140px;
+      right: 50px;
+      width: 300px;
+      display: grid;
+      grid-gap: 10px;
+      padding: 20px;
+      background-color: #CCCCCC;
+      border-radius: 10px;
+      transform: translate(100%, 0px);
+      transition: all 0.5s ease 0s;
+      z-index: 2; }
+      .background .get-help__block .get-help__window .get-help__name, .background .get-help__block .get-help__window .get-help__phone, .background .get-help__block .get-help__window .get-help__comment, .background .get-help__block .get-help__window .get-help__send-button {
+        border: 0;
+        background-color: white;
+        min-height: 40px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 100%; }
+      .background .get-help__block .get-help__window .get-help__comment {
+        resize: none; }
+      .background .get-help__block .get-help__window .get-help__send-button {
+        cursor: pointer;
+        color: #333333; }
+      .background .get-help__block .get-help__window .get-help__close-form {
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        background-image: url(../img/close-icon.svg);
+        background-size: 20px 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer; }
+    .background .get-help__block .get-help__button {
+      width: 70px;
+      height: 70px;
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      border: 0px;
+      border-radius: 50%;
+      background-color: #FFE600;
+      background-image: url(../img/get-help/icon-speech.png);
+      background-size: 40px 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      transition: all 0.5s ease 0s;
+      z-index: 2; }
 
 @media (max-width: 1600px) {
   .container {
@@ -769,7 +832,12 @@
       width: 100%;
       flex-direction: column; }
       .background .prices .prices__products .prices__product {
-        font-size: 14px; } }
+        font-size: 14px; }
+  .background .get-help__block .get-help__window {
+    right: 40px; }
+  .background .get-help__block .get-help__button {
+    bottom: 40px;
+    right: 40px; } }
 @media (max-width: 480px) {
   .background .slider-of-prices .slider-of-prices__block .slick-list .slick-track .slick-slide {
     padding: 30px;

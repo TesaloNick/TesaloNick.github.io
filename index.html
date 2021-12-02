@@ -5,12 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Арт-бетон</title>
-  <link rel="stylesheet" href="./style.css">
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>  
-  <script src="/slick/slick.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
-  <script defer src="./scripts.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" type="text/css" href="./js/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css"/>
 </head>
 <body>
   <div class="background">
@@ -30,21 +28,15 @@
                 <a href="tel:+375336384775" class="header__phone">+375 33 638-47-75</a>
                 <a href="tel:+375292945346" class="header__phone">+375 29 294-53-46</a>
               </div>
-              <div class="header__email" class="header__email">
+              <div class="header__email">
                 <a href="mailto:info@art-beton.by">info@art-beton.by</a>
               </div>
             </div>
           </div>
           <div class="header__social-blocks">
-            <div class="header__social-block">
-              <!-- <img src="./img/social/whatsapp-img.svg" alt="whatsapp-img"> -->
-            </div>
-            <div class="header__social-block">
-              <!-- <img src="./img/social/viber-img.svg" alt="viber-img"> -->
-            </div>
-            <div class="header__social-block">
-              <!-- <img src="./img/social/telegram-img.svg" alt="telegram-img"> -->
-            </div>
+            <div class="header__social-block"></div>
+            <div class="header__social-block"></div>
+            <div class="header__social-block"></div>
           </div>
         </header>
         <div class="text-information">
@@ -222,7 +214,7 @@
         <div style="position:relative;overflow:hidden;" class="footer__map">
           <a href="https://yandex.by/maps/154/vitebsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Витебск</a>
           <a href="https://yandex.by/maps/154/vitebsk/?ll=30.202878%2C55.184217&pt=30.202878%2C55.184217&source=entity_search&utm_medium=mapframe&utm_source=maps&z=11" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — транспорт, навигация, поиск мест</a>
-          <iframe src="https://yandex.by/map-widget/v1/-/CCUufFW9sD" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+          <iframe src="https://yandex.by/map-widget/v1/-/CCUufFW9sD" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
         </div>
       </div>
       <div class="container">
@@ -259,6 +251,23 @@
         </div>
       </div>
     </footer>
+    <div class="get-help__block-background"></div>
+    <div class="get-help__block">
+      <form class="get-help__window">
+        <input type="text" name="name" placeholder="Имя" class="get-help__name">
+        <input type="text" name="phone" placeholder="Номер телефона" class="get-help__phone">
+        <textarea name="comment" cols="30" rows="10" placeholder="Комментарий" class="get-help__comment"></textarea>
+        <button class="get-help__send-button">Отправить заявку</button>
+        <div class="get-help__close-form"></div>
+      </form>
+      <button class="get-help__button"></button>
+    </div>
   </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="./js/slick/slick.min.js"></script>
+  <script src="./js/slick/slick.js"></script>
+  <script defer src="./js/scripts.js"></script>
 </body>
 </html>
