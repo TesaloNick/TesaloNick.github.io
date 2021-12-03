@@ -787,6 +787,13 @@ $padding-in-prices-blocks: 30px;
     visibility: hidden;
     opacity: 0;
     z-index: 1;
+
+    .get-help__close-background{
+      z-index: 2;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
   }
 
   .get-help__block{
@@ -796,17 +803,18 @@ $padding-in-prices-blocks: 30px;
       visibility: hidden;
       opacity: 0;
       position: fixed;
-      bottom: 140px;
-      right: 50px;
-      width: 300px;
+      top: 10%;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 50%;
       display: grid;
       grid-gap: 10px;
       padding: 20px;
       background-color: #CCCCCC;
-      border-radius: 10px;
-      transform: translate(100%, 0px);
+      border-radius: 5px;
       transition: all 0.5s ease 0s;
-      z-index: 2;
+      z-index: 3;
 
       .get-help__name, .get-help__phone, .get-help__comment, .get-help__send-button{
         border: 0;
@@ -814,7 +822,7 @@ $padding-in-prices-blocks: 30px;
         min-height: 40px;
         padding: 10px;
         border-radius: 5px;
-        font-size: 16px;
+        font-size: 20px;
         width: 100%;
       }
 
@@ -843,23 +851,6 @@ $padding-in-prices-blocks: 30px;
       }
     }
 
-    .get-help__button{
-      width: 70px;
-      height: 70px;
-      position: fixed;
-      bottom: 50px;
-      right: 50px;
-      border: 0px;
-      border-radius: 50%;
-      background-color: #FFE600;
-      background-image: url(../img/get-help/icon-speech.png);
-      background-size: 40px 40px;
-      background-position: center;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      transition: all 0.5s ease 0s;
-      z-index: 2;
-    }
   }
 
 }
@@ -1203,7 +1194,6 @@ $padding-in-prices-blocks: 30px;
       }
     }
 
-
     .prices{
       .slider-of-prices{
         .slick-list{
@@ -1289,7 +1279,14 @@ $padding-in-prices-blocks: 30px;
 
       }
     }
+
+    .get-help__block{
+      .get-help__window{
+        width: 80%;
+      }
+    }
   } 
+
 }
 
 @media (max-width: 500px) {
@@ -1356,17 +1353,6 @@ $padding-in-prices-blocks: 30px;
         .prices__product {
           font-size: 14px;
         }
-      }
-    }
-
-    .get-help__block{
-      .get-help__window{
-        right: 40px;
-      }
-  
-      .get-help__button{
-        bottom: 40px;
-        right: 40px;
       }
     }
   }

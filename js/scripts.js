@@ -81,16 +81,15 @@ ourWorksButton.addEventListener('click', () => scrollTo(background, ourWorksButt
 pricesButton.addEventListener('click', () => scrollTo(prices, pricesButton))
 mapButton.addEventListener('click', () => scrollTo(footer, mapButton))
 
-const getHelpButton = document.querySelector('.get-help__button')
+const consultationButtons = document.querySelectorAll('.consultation-button')
 const getHelpBlockBackground = document.querySelector('.get-help__block-background')
+const getHelpCloseBackground = document.querySelector('.get-help__close-background')
 const getHelpWindow = document.querySelector('.get-help__window')
 const getHelpSendButton = document.querySelector('.get-help__send-button')
 const getHelpCloseForm = document.querySelector('.get-help__close-form')
 
 function openGetHelpWindow() {
   getHelpBlockBackground.style.backgroundColor = 'rgba(204, 204, 204, 0.376)'
-  getHelpButton.style.backgroundImage = 'url(../img/get-help/icon-cross.png)'
-  getHelpButton.style.backgroundColor = '#CCCCCC'
   getHelpWindow.style.opacity = '1'  
   getHelpWindow.style.visibility = 'visible'  
   getHelpWindow.style.transform = 'translate(0px, 0px)'  
@@ -100,22 +99,20 @@ function openGetHelpWindow() {
 
 function closeGetHelpWindow() {
   getHelpBlockBackground.style.backgroundColor = 'rgba(204, 204, 204, 0)'
-  getHelpButton.style.backgroundImage = 'url(../img/get-help/icon-speech.png)'
-  getHelpButton.style.backgroundColor = '#FFE600'
   getHelpWindow.style.opacity = '0'  
   getHelpWindow.style.visibility = 'hidden'  
-  getHelpWindow.style.transform = 'translate(100%, 0px)'  
+  getHelpWindow.style.transform = 'translate(0px, -100%)'  
   getHelpBlockBackground.style.opacity = '0'  
   getHelpBlockBackground.style.visibility = 'hidden'  
 }
 
-getHelpButton.addEventListener('click', () => {
+consultationButtons.forEach(consultationButton => consultationButton.addEventListener('click', () => {
   if (getHelpBlockBackground.style.backgroundColor == 'rgba(204, 204, 204, 0.376)') {
     closeGetHelpWindow()
   } else{
     openGetHelpWindow()
   }
-})
+}))
 
 getHelpSendButton.addEventListener('click', (event) => {
   event.preventDefault()
@@ -123,5 +120,8 @@ getHelpSendButton.addEventListener('click', (event) => {
 })
 
 getHelpCloseForm.addEventListener('click', () => {
+  closeGetHelpWindow()
+})
+getHelpCloseBackground.addEventListener('click', () => {
   closeGetHelpWindow()
 })
