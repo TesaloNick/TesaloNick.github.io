@@ -1,274 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Арт-бетон</title>
+  <title>SPEAK</title>
+  <link rel="stylesheet" href="./fonts/stylesheet.css">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./fonts/fonts.css">
-  <link rel="stylesheet" type="text/css" href="./js/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="./js/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css" />
+  <script defer src="./js/scripts.js"></script>
 </head>
+
 <body>
-  <div class="background">
-    <div class="start-page-block">
-      <div class="header__adress-up">
-        <p>г. Витебск, ул. Транспортная д. 9А</p>
-      </div>
-      <div class="start-page container">
+  <div class="open-menu-scroll">
+    <div class="nonfooter">
+      <div class="first-blur">
         <header class="header">
-          <div class="header__logo"><img src="./img/main-logo.svg" alt="main-logo"></div>
-          <div class="header__contacts">
-            <div class="header__adress">
-              <p>г. Витебск,<br> ул. Транспортная д. 9А</p>
-            </div>
-            <div class="header__phones-and-email">
-              <div class="header__phones">
-                <a href="tel:+375336384775" class="header__phone">+375 33 638-47-75</a>
-                <a href="tel:+375292945346" class="header__phone">+375 29 294-53-46</a>
+          <div class="container">
+            <div class="header__container">
+              <div class="header__logo"><img src="./img/header/logo.svg" alt=""></div>
+              <nav class="header__nav">
+                <ul>
+                  <li><a href='#'>About us</a></li>
+                  <li><a href='#'>Blog</a></li>
+                  <li><a href='#'>Contact</a></li>
+                </ul>
+              </nav>
+              <div class="header__right-block">
+                <div class="header__burger-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="header__languages">
+                  <div id='lan'></div>
+                </div>
+                <div class="header__log-in">Войти</div>
               </div>
-              <div class="header__email">
-                <a href="mailto:info@art-beton.by">info@art-beton.by</a>
-              </div>
             </div>
-          </div>
-          <div class="header__social-blocks">
-            <div class="header__social-block"></div>
-            <div class="header__social-block"></div>
-            <div class="header__social-block"></div>
           </div>
         </header>
-        <div class="text-information">
-          <div class="text-information__sidebar">
-            <ul class="sidebar">
-              <li class="sidebar__item"><div class="sidebar__yellow-line"></div><p class="sidebar__our-works-button sidebar-button">Наши работы</p></li>
-              <li class="sidebar__item"><div class="sidebar__yellow-line"></div><p class="sidebar__prices-button sidebar-button">Цены</p></li>
-              <li class="sidebar__item"><div class="sidebar__yellow-line"></div><p class="sidebar__map-button sidebar-button">Карта проезда</p></li>
+        <div class="container">
+          <main class="main">
+            <div class="main__text">
+              <p class="main__subtitle">+300 прошедших отбор психологов</p>
+              <h1 class="main__title">Сессии с психологом<br>Онлайн</h1>
+              <div class="main__button">Начать беседу</div>
+            </div>
+            <div class="main__image"><img src="./img/main/main.png" alt=""></div>
+          </main>
+          <div class="app">
+            <div class="app__video-block"><img src="./img/app/video.png" alt=""></div>
+            <div class="app__text-block">
+              <h2 class="app__title">Скачайте бесплатно приложение SPEAK</h2>
+              <div class="app__content app-content">
+                <div class="app-content__image"><img src="./img/app/speak-logo.svg" alt=""></div>
+                <h3 class="app-content__title">Speak</h3>
+                <p class="app-content__subtitle">онлайн сессии с психологом<br>доступно для iOS и Android</p>
+              </div>
+              <div class="app__buttons">
+                <a href="" class="app__button">
+                  <img src="./img/app/appstore.svg" alt="appstore">
+                </a>
+                <a href="" class="app__button">
+                  <img src="./img/app/playstore.svg" alt="playstore">
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="second-blur">
+        <div class="container">
+          <div class="workers">
+            <h2 class="workers__title">Психологи работающие с актуальными темами</h2>
+            <div class="workers__buttons">
+              <a href="#" class="workers__button">Чувства</a>
+              <a href="#" class="workers__button">Одиночество</a>
+              <a href="#" class="workers__button">Вредные привычки</a>
+              <a href="#" class="workers__button">Отношения</a>
+              <a href="#" class="workers__button">Работа</a>
+              <a href="#" class="workers__button">Смыслы</a>
+              <a href="#" class="workers__button">Одиночество</a>
+              <a href="#" class="workers__button">Не одиночество</a>
+              <a href="#" class="workers__button">Отношения с близкими</a>
+              <a href="#" class="workers__button">+ 300 психологов</a>
+            </div>
+            <div class="workers__slider">
+              <div class="worker">
+                <div class="worker__photo"><img src="./img/workers/worker1.png" alt=""></div>
+                <p class="worker__name">Илья Благов</p>
+                <div class="worker__rating">
+                  <div class="worker__stars">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                  </div>
+                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
+                </div>
+              </div>
+              <div class="worker">
+                <div class="worker__photo"><img src="./img/workers/worker2.png" alt=""></div>
+                <p class="worker__name">Иванна Есина</p>
+                <div class="worker__rating">
+                  <div class="worker__stars">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                  </div>
+                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
+                </div>
+              </div>
+              <div class="worker">
+                <div class="worker__photo"><img src="./img/workers/worker3.png" alt=""></div>
+                <p class="worker__name">Артур Островский</p>
+                <div class="worker__rating">
+                  <div class="worker__stars">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                  </div>
+                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
+                </div>
+              </div>
+              <div class="worker">
+                <div class="worker__photo"><img src="./img/workers/worker4.png" alt=""></div>
+                <p class="worker__name">Юля Заграничная</p>
+                <div class="worker__rating">
+                  <div class="worker__stars">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                  </div>
+                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
+                </div>
+              </div>
+              <div class="worker">
+                <div class="worker__photo"><img src="./img/workers/worker5.png" alt=""></div>
+                <p class="worker__name">Андрей Ян</p>
+                <div class="worker__rating">
+                  <div class="worker__stars">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                  </div>
+                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
+                </div>
+              </div>
+              <div class="worker">
+                <div class="worker__photo"><img src="./img/workers/worker5.png" alt=""></div>
+                <p class="worker__name">Андрей Ян</p>
+                <div class="worker__rating">
+                  <div class="worker__stars">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                  </div>
+                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="help">
+            <div class="help__text-block">
+              <h2 class="help__title">Поможем вам</h2>
+              <ul class="help__list">
+                <li class="help__item">Разрешить причины сложных отношений с партнером</li>
+                <li class="help__item">Снять или снизить остроту переживаний</li>
+                <li class="help__item">Справиться с выгоранием на работе и найти мотивацию</li>
+                <li class="help__item">Понять себя в отношениях с близкими людьми</li>
+                <li class="help__item">Найти себя и понимать свои желания</li>
+                <li class="help__item">Исследовать и управлять изменениями в своей жизни</li>
+              </ul>
+            </div>
+            <div class="help__picture-block"><img src="./img/help/help-image.png" alt=""></div>
+          </div>
+        </div>
+        <div class="advantages">
+          <div class="advantages__picture-block"><img src="./img/advantages/advantage-phone.png" alt=""></div>
+          <div class="advantages__text-block">
+            <h2 class="advantages__title">Преимущества онлайн сессий с психологом</h2>
+            <ul class="advantages__list">
+              <li class="advantages__advantage">
+                <h4>Занимайтесь где и как удобно</h4>
+                <p>Дома или в поездке и в любом часовом поясе</p>
+              </li>
+              <li class="advantages__advantage">
+                <h4>Меньше забот- больше мотивации</h4>
+                <p>Не тратьте время на дорогу и управляйте занятиями в два клика</p>
+              </li>
+              <li class="advantages__advantage">
+                <h4>Доверяйте себе</h4>
+                <p>Выбирайте среди проверенных психологов, которые специаллизируются на ваших запросах</p>
+              </li>
             </ul>
           </div>
-          <div class="text-information__main">
-            <div class="text-information__concrete-definition">
-              <p class="text-information__yellow-title">Искусство в камне</p>
-              <p class="text-information__white-main-title">Мытый бетон <span>в Витебске</span></p>
-              <p class="text-information__grey-regular-text">«Мытый бетон» — технология изготовления декоративных изделий из крупного и мелкого камня. Широко распространенная в Европе и США теперь доступна и Вам.</p>
-              <p class="text-information__grey-regular-text">Современный привлекательный забор, уютная придомовая территория, практичный и долговечный фасад Вашего дома.</p>
-            </div>
-            <div class="text-information__consultation">
-              <p class="text-information__white-little-title">Устали от обыденности и однообразия?</p>
-              <p class="text-information__white-regular-text">Предлагаем Вам лучшие решения для экстерьера Вашего дома и участка.</p>
-              <div class="text-information__consultation-button consultation-button">Получить консультацию</div>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="slider-block">
-        <div class="slider-block__slider">
-          <div class="slider-block__slide">
-            <div class="slider-block__slide-img"></div>
-            <img src="./img/slider/background-slider.svg" alt="background-slider" class="slider-block__background-img">
-            <div class="slider-block__information">
-              <p class="slider-block__work">Выполненные работы</p>
-              <p class="slider-block__name">Вазон круглый</p>
-              <p class="slider-block__price">40/30 — 75р</p>
-            </div>
-          </div>
-          <div class="slider-block__slide">
-            <div class="slider-block__slide-img"></div>
-            <img src="./img/slider/background-slider.svg" alt="background-slider" class="slider-block__background-img">
-            <div class="slider-block__information">
-              <p class="slider-block__work">Выполненные работы</p>
-              <p class="slider-block__name">Не Вазон круглый</p>
-              <p class="slider-block__price">10р</p>
-            </div>
-          </div>
-          <div class="slider-block__slide">
-            <div class="slider-block__slide-img"></div>
-            <img src="./img/slider/background-slider.svg" alt="background-slider" class="slider-block__background-img">
-            <div class="slider-block__information">
-              <p class="slider-block__work">Выполненные работы</p>
-              <p class="slider-block__name">Да, Вазон круглый</p>
-              <p class="slider-block__price">44р</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="benefits__block">
+      <div class="third-blur">
         <div class="container">
-          <div class="benefits">
-            <div class="benefits__benefit">
-              <img src="./img/benefits/benefit1.svg" alt="benefit1" class="benefits__benefit-img">
-              <p class="benefits__benefit-text">Долговечны и обраладют высокой износоустойчивостью</p>
+          <div class="selection">
+            <h2 class="selection__title">Как мы отбираем специалистов?</h2>
+            <p class="selection__subtitle">Отбор проходят меньше 10% специаллистов</p>
+            <div class="selection__content">
+              <div class="selection__text">
+                <ul class="selection__list">
+                  <li class="selection__item">
+                    <div class="selection__item-number"><img src="./img/selection/num1.svg" alt=""></div>
+                    <h4>Документы об образовании</h4>
+                    <p>Обязательно иметь высшее психологическое образование и сертификаты для ведения психотерапии</p>
+                  </li>
+                  <li class="selection__item">
+                    <div class="selection__item-number"><img src="./img/selection/num2.svg" alt=""></div>
+                    <h4>Опыт частной практики и личной терапии</h4>
+                    <p>Нужно не менее 3-х лет частной практики, личная терапия и регулярные супервизии</p>
+                  </li>
+                  <li class="selection__item">
+                    <div class="selection__item-number"><img src="./img/selection/num3.svg" alt=""></div>
+                    <h4>Собеседование с нашим экспертом-ментором</h4>
+                    <p>Отслеживаются коммуникативные способности, уровень эмпатии, манера и стиль беседы,
+                      проффесиональные
+                      компетенции</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="selection__picture"><img src="./img/selection/selection-img.png" alt=""></div>
             </div>
-            <div class="benefits__benefit">
-              <img src="./img/benefits/benefit2.svg" alt="benefit2" class="benefits__benefit-img">
-              <p class="benefits__benefit-text">Не требуют ухода на всем сроке эксплуатации</p>
-            </div>
-            <div class="benefits__benefit">
-              <img src="./img/benefits/benefit3.svg" alt="benefit3" class="benefits__benefit-img">
-              <p class="benefits__benefit-text">Не боиться прямых солнечных лучей и не выветривается</p>
-            </div>
-            <div class="benefits__call consultation-button">Перезвоните мне</div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="fourth-blur">
+        <div class="container">
+          <div class="about-service">
+            <h2 class="about-service__title">О сервисе</h2>
+            <div class="about-service__content">
+              <div class="about-service__video-block"><img src="./img/about-service/service-video.png" alt=""></div>
+              <ul class="about-service__list">
+                <li class="about-service__item">
+                  <div class="about-service__number"><span class="count">900</span> +</div>
+                  <div class="about-service__description">регистраций вчера</div>
+                </li>
+                <li class="about-service__item">
+                  <div class="about-service__number"><span class="count">75000</span> +</div>
+                  <div class="about-service__description">проведено сессий</div>
+                </li>
+                <li class="about-service__item">
+                  <div class="about-service__number"><span class="count">354</span> +</div>
+                  <div class="about-service__description">психологов</div>
+                </li>
+              </ul>
+            </div>
 
-    <div class="prices container">
-      <p class="prices__title">Цены на изделия</p>
-      <p class="prices__action-text">Мы производим следующие изделия по технологии «Мытый бетон»</p>
-      <ul class="prices__products">
-        <li class="prices__product">Заборный камень</li>
-        <li class="prices__product">Плитка для придомовой территории</li>
-        <li class="prices__product">Плитка для отделки фасада и фундамента</li>
-        <li class="prices__product">Уличные вазоны для растений</li>
-        <li class="prices__product">Урны</li>
-      </ul>
-    </div>
-    <div class="slider-of-prices">
-      <div class="slider-of-prices__block">
-        <div class="slider-of-prices__products">
-          <div class="slider-of-prices__products-block">
-            <div class="slider-of-prices__product">
-              <p class="slider-of-prices__product-title">Блок столбовой</p>
-              <p class="slider-of-prices__product-date">30/30/20</p>
-              <p class="slider-of-prices__product-price">до 100 шт — 12 р.</p>
-              <p class="slider-of-prices__product-price">от 100 шт — 11р.</p>
-              <p class="slider-of-prices__product-price">от 300 шт — 10р.</p>
+          </div>
+          <div class="sets">
+            <div class="sets__set">
+              <div class="sets__image-block"><img src="./img/sets/later.png" alt=""></div>
+              <div class="sets__text-block">
+                <h4 class="sets__title">Подбор “По позже”</h4>
+                <p class="sets__description">Подбор с возможностью бронирование сессии на будущее</p>
+              </div>
+            </div>
+            <div class="sets__set">
+              <div class="sets__image-block"><img src="./img/sets/now.png" alt=""></div>
+              <h4 class="sets__title">Подбор “Сейчас”</h4>
+              <p class="sets__description">Подбор с возможностью начала сессии “здесь и сейчас”</p>
             </div>
           </div>
-          <div class="slider-of-prices__products-block">
-            <div class="slider-of-prices__product">
-              <p class="slider-of-prices__product-title">Блок рядный</p>
-              <p class="slider-of-prices__product-date">40/20/20</p>
-              <p class="slider-of-prices__product-price">до 100 шт — 12 р.</p>
-              <p class="slider-of-prices__product-price">от 100 шт — 11р.</p>
-              <p class="slider-of-prices__product-price">от 300 шт — 10р.</p>
+          <div class="order">
+            <h2 class="order__title">Как это устроено</h2>
+            <div class="order__steps steps">
+              <div class="steps__picture-block"><img src="./img/order/mobile.png" alt=""></div>
+              <div class="steps__content-block">
+                <div class="steps__step">
+                  <h4>Заполните простую анкету</h4>
+                  <p>Расскажите, что вас беспокоит и что важно в психологе.</p>
+                </div>
+                <div class="steps__step">
+                  <h4>Выберите психолога</h4>
+                  <p>Выберите понравившегося психолога </p>
+                </div>
+                <div class="steps__step">
+                  <h4>Выберите способ связи с психологом</h4>
+                  <p>49руб/мин по <span>аудио/видео связи</span><br>200руб за 24 часа <span>чата + аудио
+                      сообщения</span>
+                  </p>
+                </div>
+                <div class="steps__step">
+                  <h4>Начните общение</h4>
+                  <p>Все общение происходит через платформу SPEAK. Вслучае если психолог вам не понравится, вы можете
+                    заменить его без дополнительных переплат</p>
+                </div>
+              </div>
             </div>
+            <div class="order__button">Начать общение</div>
           </div>
-        </div>
-        <div class="slider-of-prices__products">
-          <div class="slider-of-prices__products-block">
-            <div class="slider-of-prices__product">
-              <div class="slider-of-prices__product-title">Крышка столбовая</div>
-              <div class="slider-of-prices__product-price">45/45 — 10р</div>
-            </div>
-            <div class="slider-of-prices__product">
-              <div class="slider-of-prices__product-title">Крышка рядная</div>
-              <div class="slider-of-prices__product-price">30/50 — 8р</div>
-            </div>
-          </div>
-          <div class="slider-of-prices__products-block">
-            <div class="slider-of-prices__product">
-              <div class="slider-of-prices__product-title">Плитка тротуарная</div>
-              <div class="slider-of-prices__product-price">40/40/4,5 — 40р/м<span>2</span></div>
-            </div>
-            <div class="slider-of-prices__product">
-              <div class="slider-of-prices__product-title">Плитка фасадная</div>
-              <div class="slider-of-prices__product-price">40/20/2,5 — 35р/м<span>2</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="slider-of-prices__products">
-          <div class="slider-of-prices__products-block">
-            <div class="slider-of-prices__product">
-              <div class="slider-of-prices__product-title">Вазон круглый</div>
-              <div class="slider-of-prices__product-price">40/30 — 75р</div>
-            </div>
-            <div class="slider-of-prices__product">
-              <div class="slider-of-prices__product-title">Вазон шарообразный</div>
-              <div class="slider-of-prices__product-price">60/60 — 130р</div>
-            </div>
-          </div>
-          <div class="slider-of-prices__products-block">
-            <div class="slider-of-prices__product">
-              <div class="slider-of-prices__product-title">Урна</div>
-              <div class="slider-of-prices__product-price">30/25 — 40р</div>
-            </div>
-          </div>
-        </div>
-        <div class="slider-of-prices__yelllow-block">
-          <ul class="slider-of-prices__yelllow-block-list">
-            <li class="slider-of-prices__yelllow-block-item">Марка цемента применяется М400 и больше;</li>
-            <li class="slider-of-prices__yelllow-block-item">В Качестве цветного фрационного наполнителя используется натуральный каменный материал с размером зерна от 5 до 20 мм;</li>
-            <li class="slider-of-prices__yelllow-block-item">Применение бетона, изготовленного по данной технологии, разнообразно.</li>
-          </ul>
         </div>
       </div>
-    </div>
-    <div class="consultation-block container">
-      <div class="consultation-block__advantages">
-        <div class="consultation-block__advantage">Изделия для мощения тротуара устойчивы к гололеду и химическим реагентам</div>
-        <div class="consultation-block__advantage">Экологически безопасные за счет натуральных компонентов и красителей</div>
-        <div class="consultation-block__advantage">Невысокая цена за счет доступности компонентов</div>
-      </div>
-      <div class="consultation-block__consultation-button-block">
-        <div class="consultation-block__consultation-button-block-shaddow">
-          <div class="consultation-block__consultation-button consultation-button">Получить консультацию</div>
+      <div class="fifth-blur">
+        <div class="container">
+          <div class="service">
+            <h2 class="service__title">Услуги</h2>
+            <div class="service__content-block">
+              <div class="service__chat-block chat">
+                <div>
+                  <h4 class="chat__title service__subtitle">24 часа чата</h4>
+                  <p class="chat__price service__price"><span class="count2">4200</span>₽ <span
+                      class="service__per-time">/
+                      24 часа</span></p>
+                </div>
+                <ul class="chat__list service__list">
+                  <li>24 часа доступа к чату с психологом</li>
+                  <li>Аудио сообщения</li>
+                </ul>
+                <form action="" class="chat__form service__form">
+                  <button class="chat__button service__button">Перейти</button>
+                </form>
+              </div>
+              <div class="service__sessions-block sessions">
+                <div class="service__popular-mark">
+                  <p>Популярное</p>
+                  <img src="./img/service/star.svg" alt="">
+                </div>
+                <div>
+                  <h4 class="sessions__title service__subtitle">Аудио/Видео сессии</h4>
+                  <p class="sessions__price service__price"><span class="count2">49</span>₽ <span
+                      class="service__per-time">/ 1 минута</span></p>
+                </div>
+                <ul class="sessions__list service__list">
+                  <li>Безлимитный доступа к чату с психологом до начала сессии</li>
+                  <li>Аудио/Видео звонки</li>
+                  <li>Нет лимитов по времени разговора</li>
+                </ul>
+                <form action="" class="sessions__form service__form">
+                  <div class="sessions__inputs input">
+                    <input type="number" class="sessions__input" value='1' min='1'>
+                    <div class="input__minute">min</div>
+                    <div class="input__vertical-bar"></div>
+                    <p class="input__multiply-number">49</p>
+                    <div class="input__ruble">₽</div>
+                    <img src="./img/service/arrow.svg" alt="" class="input__arrow-left">
+                    <img src="./img/service/arrow.svg" alt="" class="input__arrow-right">
+                  </div>
+                  <button class="sessions__button service__button">Перейти</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="app second-app">
+            <div class="app__video-block second-video-block"><img src="./img/app/phone-photo.png" alt=""></div>
+            <div class="app__text-block">
+              <h2 class="app__title">Скачайте бесплатно приложение SPEAK</h2>
+              <div class="app__content app-content">
+                <div class="app-content__image"><img src="./img/app/speak-logo.svg" alt=""></div>
+                <h3 class="app-content__title">Speak</h3>
+                <p class="app-content__subtitle">онлайн сессии с психологом<br>доступно для iOS и Android</p>
+              </div>
+              <div class="app__buttons">
+                <a href="" class="app__button">
+                  <img src="./img/app/appstore.svg" alt="appstore">
+                </a>
+                <a href="" class="app__button">
+                  <img src="./img/app/playstore.svg" alt="playstore">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <footer class="footer">
-      <div class="footer__map-block">
-        <div style="position:relative;overflow:hidden;" class="footer__map">
-          <a href="https://yandex.by/maps/154/vitebsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Витебск</a>
-          <a href="https://yandex.by/maps/154/vitebsk/?ll=30.202878%2C55.184217&pt=30.202878%2C55.184217&source=entity_search&utm_medium=mapframe&utm_source=maps&z=11" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты — транспорт, навигация, поиск мест</a>
-          <iframe src="https://yandex.by/map-widget/v1/-/CCUufFW9sD" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        <div class="comments">
+          <h2 class="comments__title container">Отзывы</h2>
+          <div class="comments__slider">
+            <div class="comment">
+              <div class="comment__picture"><img src="./img/comments/person1.png" alt=""></div>
+              <div class="comment__head">
+                <div>
+                  <p class="comment__name">Sophia Jones</p>
+                  <p class="comment__profession">Teacher</p>
+                </div>
+                <div class="comment__stars">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                </div>
+              </div>
+              <div class="comment__text">After just 2 months, Speak has already made such an impact on my life. It has
+                helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me
+                navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s
+                easy to open up to, making me feel heard and understood.</div>
+            </div>
+            <div class="comment">
+              <div class="comment__picture"><img src="./img/comments/person2.png" alt=""></div>
+              <div class="comment__head">
+                <div>
+                  <p class="comment__name">Jay K. Braun</p>
+                  <p class="comment__profession">Artist</p>
+                </div>
+                <div class="comment__stars">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                </div>
+              </div>
+              <div class="comment__text">After just 2 months, Speak has already made such an impact on my life. It has
+                helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me
+                navigate the difficult stages of grief after losing my mom, with compassion and </div>
+            </div>
+            <div class="comment">
+              <div class="comment__picture"><img src="./img/comments/person3.png" alt=""></div>
+              <div class="comment__head">
+                <div>
+                  <p class="comment__name">Jay K. Braun</p>
+                  <p class="comment__profession">Artist</p>
+                </div>
+                <div class="comment__stars">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                </div>
+              </div>
+              <div class="comment__text">After just 2 months, Speak has already made such an impact on my life. It has
+                helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me
+                navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s
+                easy to open up to, making me feel heard and understood.</div>
+            </div>
+            <div class="comment">
+              <div class="comment__picture"><img src="./img/comments/person3.png" alt=""></div>
+              <div class="comment__head">
+                <div>
+                  <p class="comment__name">Jay K. Braun</p>
+                  <p class="comment__profession">Artist</p>
+                </div>
+                <div class="comment__stars">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                  <img src="./img/comments/icon_star.svg" alt="">
+                </div>
+              </div>
+              <div class="comment__text">After just 2 months, Speak has already made such an impact on my life. It has
+                helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me
+                navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s
+                easy to open up to, making me feel heard and understood.</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="container">
-        <div class="footer__contacts contacts">
-          <p class="contacts__title">Контакты</p>
-          <div class="contacts__phones-block">
-            <div class="contacts__phones">
-              <a href="tel:+375336384775" class="contacts__phone">+375 33 638-47-75</a>
-              <a href="tel:+375292945346" class="contacts__phone">+375 29 294-53-46</a>
+        <div class="child-help">
+          <h2 class="child-help__title">Детский психолог онлайн</h2>
+          <div class="child-help__text-block">
+            <div class="child-help__first-column">
+              <h4>Чем поможет детский психолог онлайн?</h4>
+              <p>Каждый родитель хочет, чтобы его ребенок рос сильной уравновешенной личностью. Мы понимаем, что именно
+                в
+                детстве формируются зачатки характера. Как справиться с возникающими проблемами, как выстроить отношения
+                с
+                ребенком, чтобы он доверял вам? На эти и другие вопросы поможет ответить детский психолог онлайн.</p>
+              <h4>Преимущества онлайн-консультации детского психолога</h4>
+              <p>Главный плюс сеанса в таком формате – экономия времени. Вам не придется тратить время на дорогу и
+                долгие
+                сборы. Все, что нужно – компьютер или смартфон, микрофон и блокнот с ручкой, чтобы записывать важную
+                информацию. Если вам или ребенку тяжело общаться с незнакомым человеком лично, онлайн-связь в этом
+                случае
+                упростит дело. </p>
+              <h4>Когда нужна помощь детского психолога онлайн?</h4>
+              <p>Онлайн-консультация детского психолога может быть полезна, если у вас есть вопросы по таким темам, как:
+              </p>
+              <ul>
+                <li>Плохая успеваемость;</li>
+                <li>Стеснительность;</li>
+                <li>Цифровая зависимость;</li>
+                <li>Агрессия;</li>
+                <li>Потеря близкого в семье;</li>
+                <li>Возрастной кризис;</li>
+                <li>Подготовка к детскому саду или школе;</li>
+                <li>Профориентация.</li>
+              </ul>
+              <p>Это лишь часть тем, которые можно затронуть. Помните, что, если возникает ситуация, в которой вы
+                самостоятельно не можете разобраться, сейчас консультация детского психолога онлайн поможет найти
+                ответы.
+              </p>
+              <h4>Как проходит онлайн-консультация детского психолога?</h4>
+              <p>Задать вопрос детскому психологу онлайн может как сам ребенок, так и родитель. </p>
             </div>
-            <div class="contacts__phones-button-block">
-              <div class="contacts__phones-button consultation-button">Перезвоните мне</div>
+            <div class="child-help__second-column">
+              <p>На первом сеансе обычно присутствует родитель или опекун, а также сам «виновник торжества». Следующие
+                сеансы могут быть и без взрослого, если ребенок сам в состоянии связаться через интернет.
+              </p>
+              <p>Бывает и так, что сначала ребенку присутствовать необязательно. В этом случае работа происходит с
+                родителем, а если есть необходимость, позже присоединяется ребенок.
+              </p>
+              <p>Психолог по детским вопросам онлайн может попросить ребенка нарисовать что-то, далее по этим рисункам
+                он
+                проведет диагностику. Родитель тоже является звеном связи с психикой ребенка. Через него психолог может
+                сделать вывод о том, какая проблема сейчас назрела.
+              </p>
+              <p>Если специалист попросит вас пройти обследование или сдать анализы для более ясной картины, не
+                пугайтесь,
+                это нормально. Таким образом, вы оба сможете исключить какие-либо диагнозы</p>
+              <h4>О чем поговорить с детским психологом?</h4>
+              <p>Родители малышей часто обращаются с вопросами об адаптации в детском саду. Есть тревожные мамы, которые
+                сомневаются, стоит ли отдавать малыша в сад или же пока слишком рано. Очень многих волнует, что
+                воспитатель
+                будет срываться на ребенка. Это логично, ведь в силу того, что в СМИ регулярно появляются жуткие новости
+                о
+                чудовищных ЧП в детсадах, беспокойство обосновано.
+              </p>
+              <p>Отдельный вопрос подготовки к саду. В интернете полно информации в таком ключе: «ребенок должен
+                научиться
+                самостоятельно есть, ходить в туалет и засыпать сам перед тем, как идти в сад». Особо мнительные
+                беспрекословно верят, другие понимают: ребенок ничего никому не должен. Его невозможно научить чему-то,
+                пока
+                он сам не захочет делать это. «Дрессировке» малыши не поддаются. Но пугаться не стоит, в любом случае,
+                воспитатели будут помогать малышам в этих вопросах. Главное – настроиться на позитив и верить в хорошее.
+              </p>
+              <p>Дети постарше сталкиваются с проблемами переходного возраста, неуверенностью в себе, безответной
+                любовью
+                и
+                другими. Если вы понимаете, что вам с чадом необходима онлайн-консультация, вы можете выбрать
+                специалиста
+                на
+                нашем сайте.</p>
             </div>
-          </div>
-          <a href="mailto:info@art-beton.by" class="contacts__email">info@art-beton.by</a>          
-          <div class="contacts__adress-block">
-            <p class="contacts__adress">г. Витебск,<br>ул. Транспортная д. 9А</p>
-            <div class="contacts__social-blocks">
-              <div class="contacts__social-block">
-                <img src="./img/social/whatsapp-img-black.svg" alt="whatsapp-img">
-              </div>
-              <div class="contacts__social-block">
-                <img src="./img/social/viber-img-black.svg" alt="viber-img">
-              </div>
-              <div class="contacts__social-block">
-                <img src="./img/social/telegram-img-black.svg" alt="telegram-img">
-              </div>
-            </div>
-          </div>
-          <div class="contacts__logo-block">
-            <div class="contacts__logo"><img src="./img/main-logo-down.svg" alt="main-logo-down"></div>
-            <div class="contacts__all-right-reserved">Все права защищены © 2022</div>
           </div>
         </div>
       </div>
-    </footer>
-    <div class="get-help__block-background">
-      <div class="get-help__close-background"></div>
     </div>
-    <div class="get-help__block">
-      <form class="get-help__window">
-        <input type="text" name="name" placeholder="Имя" class="get-help__name">
-        <input type="text" name="phone" placeholder="Номер телефона" class="get-help__phone">
-        <textarea name="comment" cols="30" rows="10" placeholder="Комментарий" class="get-help__comment"></textarea>
-        <button class="get-help__send-button">Отправить заявку</button>
-        <div class="get-help__close-form"></div>
-      </form>
+    <div class="footer-blur">
+      <div class="container">
+        <footer class="footer">
+          <div class="footer__left-block">
+            <div class="footer__logo"><img src="./img/footer/logo.svg" alt=""></div>
+            <ul class="footer__menu">
+              <li><a href=''>Home</a></li>
+              <li><a href=''>Blog</a></li>
+              <li><a href=''>Privacy Policy</a></li>
+              <li><a href=''>About us</a></li>
+              <li><a href=''>Contact</a></li>
+              <li><a href=''>Terms and Conditions</a></li>
+            </ul>
+          </div>
+          <div class="footer__right-block">
+            <div class="footer__socials">
+              <img src="./img/footer/facebook.svg" alt="">
+              <img src="./img/footer/linkedin.svg" alt="">
+              <img src="./img/footer/twitter.svg" alt="">
+              <img src="./img/footer/instagram.svg" alt="">
+            </div>
+            <div class="footer__contacts">
+              <p class="footer__mail">info@speak.help</p>
+              <p class="footer__address">33 W 60th Street, 8th FI New York, NY 10023</p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
+
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-spincrement-master/jquery.spincrement.js"></script>
   <script src="./js/slick/slick.min.js"></script>
-  <script src="./js/slick/slick.js"></script>
-  <script defer src="./js/scripts.js"></script>
+  <script src="./js/jquery.ddslick.min.js"></script>
 </body>
+
 </html>

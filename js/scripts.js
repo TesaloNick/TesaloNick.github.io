@@ -1,127 +1,197 @@
-$('.slider-block__slider').slick({
-  dots: true,
-  customPaging: function(slider, i) {
-    return '<div class="slider-block__dot"></div>';
+//--------------------слайдеры-------------------------
+var ddData = [
+  {
+    text: "EN",
+    value: 1,
+    selected: true,
+    imageSrc: "../img/header/flags/gb.svg"
   },
-  prevArrow: '<button type="button" class="slider-block__arrow-left"><img src="../img/slider/arrow-left.svg" alt="arrow-left" class="slider-block__arrow-left-img"></button>',
-  nextArrow: '<button type="button" class="slider-block__arrow-right"><img src="../img/slider/arrow-right.svg" alt="arrow-right" class="slider-block__arrow-right-img"></button>',
+  {
+    text: "AD",
+    value: 2,
+    selected: false,
+    imageSrc: "../img/header/flags/ad.svg"
+  },
+  {
+    text: "RU",
+    value: 3,
+    selected: false,
+    imageSrc: "../img/header/flags/ru.svg"
+  },
+  {
+    text: "BY",
+    value: 4,
+    selected: false,
+    imageSrc: "../img/header/flags/by.svg"
+  },
+  {
+    text: "IS",
+    value: 5,
+    selected: false,
+    imageSrc: "../img/header/flags/yiddish.svg"
+  }
+];
+
+$('#lan').ddslick({
+  data: ddData,
+  defaultSelectedIndex: 2,
 });
 
-if ($(window).width() <= 1150) {
-  $('.slider-of-prices__block').slick({
-    dots: false,
-    focusOnSelect: true,
-    prevArrow: '<button type="button" class="slider-block__arrow-left"><img src="./img/slider/arrow-left.svg" alt="arrow-left" class="slider-block__arrow-left-img"></button>',
-    nextArrow: '<button type="button" class="slider-block__arrow-right"><img src="./img/slider/arrow-right.svg" alt="arrow-right" class="slider-block__arrow-right-img"></button>',
-    slidesToShow: 3,
-    centerPadding: '60px',
-    responsive: [
-      {
-        breakpoint: 830,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        }
+$('.workers__slider').slick({
+  infinite: true,
+  arrows: false,
+  slidesToShow: 5,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 950,
+      settings: {
+        slidesToShow: 4
       }
-    ]
-  }); 
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 615,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+if ($(window).width() <= 900) {
+  $('.steps__content-block').slick({
+    infinite: true,
+    arrows: false,
+    slidesToShow: 1,
+    dots: true,
+  });
+
+  let paddingTopDots = 0;
+  paddingTopDots = document.querySelector(".order__steps").offsetHeight;
+  document.querySelector('.steps__content-block .slick-dots').style = `top: -${paddingTopDots + 50}px`;
+
+  if ($(window).width() <= 450) {
+    document.querySelector('.steps__content-block .slick-dots').style = `top: -${paddingTopDots + 30}px`;
+  };
 }
 
-const sidebarButtons = document.querySelectorAll('.sidebar-button')
+$('.comments__slider').slick({
+  infinite: true,
+  arrows: false,
+  slidesToShow: 3,
+  variableWidth: true,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        variableWidth: false,
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        variableWidth: false,
+      }
+    }
+  ]
+});
 
-const ourWorksButton = document.querySelector('.sidebar__our-works-button')
-const pricesButton = document.querySelector('.sidebar__prices-button')
-const mapButton = document.querySelector('.sidebar__map-button')
-const background = document.querySelector('.background')
-const prices = document.querySelector('.prices')
-const footer = document.querySelector('.footer')
+//--------------------определение цены-------------------------
 
-function scrollTo(scrollToElement, button) {
-  window.scroll({
-    left: 0,
-    top: scrollToElement.offsetTop,
-    behavior: 'smooth'
+const arrowLeft = document.querySelector('.input__arrow-left');
+const arrowRight = document.querySelector('.input__arrow-right');
+const number = document.querySelector('.sessions__input');
+const multiplyNumber = document.querySelector('.input__multiply-number');
+const sessionsForm = document.querySelector('.sessions__form');
+
+arrowRight.addEventListener('click', () => {
+  number.value++
+  multiplyNumber.innerHTML = +number.value * 49;
+})
+
+arrowLeft.addEventListener('click', () => {
+  if (+number.value > 1) number.value--
+  multiplyNumber.innerHTML = +number.value * 49;
+})
+
+number.addEventListener('change', () => {
+  multiplyNumber.innerHTML = +number.value * 49;
+})
+
+sessionsForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  multiplyNumber.innerHTML = +number.value * 49;
+})
+
+//-----------------------возрастающие числа------------------------------
+
+function countup(className) {
+  var countBlockTop = $("." + className).offset().top;
+  var windowHeight = window.innerHeight;
+  var show = true;
+
+  $(window).scroll(function () {
+    if (show && (countBlockTop < $(window).scrollTop() + windowHeight)) {
+      show = false;
+
+      $('.' + className).spincrement({
+        from: 1,
+        duration: 4000,
+      });
+    }
   })
 }
 
-ourWorksButton.style.color = '#F2BF14'
-ourWorksButton.previousSibling.style.backgroundColor = '#F2BF14'
+$(function () {
+  countup("count", $(".count").text());
+  countup("count2", $(".count2").text());
+  countup("count3", $(".count3").text());
+});
 
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset+window.innerHeight >= footer.offsetTop) {
-    mapButton.style.color = '#F2BF14'
-    mapButton.previousSibling.style.backgroundColor = '#F2BF14'
-    pricesButton.style.color = '#CCCCCC'
-    pricesButton.previousSibling.style.backgroundColor = '#CCCCCC'
-    ourWorksButton.style.color = '#CCCCCC'
-    ourWorksButton.previousSibling.style.backgroundColor = '#CCCCCC'
-  } else if (window.pageYOffset > 0 && window.pageYOffset+window.innerHeight < footer.offsetTop){
-    pricesButton.style.color = '#F2BF14'
-    pricesButton.previousSibling.style.backgroundColor = '#F2BF14'
-    mapButton.style.color = '#CCCCCC'
-    mapButton.previousSibling.style.backgroundColor = '#CCCCCC'
-    ourWorksButton.style.color = '#CCCCCC'
-    ourWorksButton.previousSibling.style.backgroundColor = '#CCCCCC'
-  } else if (window.pageYOffset === 0){
-    ourWorksButton.style.color = '#F2BF14'
-    ourWorksButton.previousSibling.style.backgroundColor = '#F2BF14'
-    mapButton.style.color = '#CCCCCC'
-    mapButton.previousSibling.style.backgroundColor = '#CCCCCC'
-    pricesButton.style.color = '#CCCCCC'
-    pricesButton.previousSibling.style.backgroundColor = '#CCCCCC'
-  }
-})
+//------------------------------всплывающие блоки-------------------------
 
-ourWorksButton.addEventListener('click', () => scrollTo(background, ourWorksButton))
-pricesButton.addEventListener('click', () => scrollTo(prices, pricesButton))
-mapButton.addEventListener('click', () => scrollTo(footer, mapButton))
+function appearup(classStart, classAppear) {
+  var show = true;
 
-const consultationButtons = document.querySelectorAll('.consultation-button')
-const getHelpBlockBackground = document.querySelector('.get-help__block-background')
-const getHelpCloseBackground = document.querySelector('.get-help__close-background')
-const getHelpWindow = document.querySelector('.get-help__window')
-const getHelpSendButton = document.querySelector('.get-help__send-button')
-const getHelpCloseForm = document.querySelector('.get-help__close-form')
-
-function openGetHelpWindow() {
-  getHelpBlockBackground.style.backgroundColor = 'rgba(204, 204, 204, 0.376)'
-  getHelpWindow.style.opacity = '1'  
-  getHelpWindow.style.visibility = 'visible'  
-  getHelpWindow.style.transform = 'translate(0px, 0px)'  
-  getHelpBlockBackground.style.opacity = '1'  
-  getHelpBlockBackground.style.visibility = 'visible'  
+  $(window).scroll(function () {
+    var distanceTop = $(classStart).offset().top;
+    if (show && ($(window).scrollTop() + window.innerHeight > distanceTop)) {
+      show = false;
+      $(classAppear).addClass('animate');
+    }
+  });
 }
 
-function closeGetHelpWindow() {
-  getHelpBlockBackground.style.backgroundColor = 'rgba(204, 204, 204, 0)'
-  getHelpWindow.style.opacity = '0'  
-  getHelpWindow.style.visibility = 'hidden'  
-  getHelpWindow.style.transform = 'translate(0px, -100%)'  
-  getHelpBlockBackground.style.opacity = '0'  
-  getHelpBlockBackground.style.visibility = 'hidden'  
-}
+$(function () {
+  appearup(".help__title", ".help");
+  appearup(".second-video-block", ".second-app");
+  appearup(".workers", ".workers");
+  appearup(".advantages", ".advantages");
+  appearup(".selection__title", ".selection");
+  appearup(".about-service", ".about-service");
+  appearup(".sets", ".sets");
+  appearup(".order__title", ".order");
+  appearup(".comments", ".comments");
+  appearup(".service__title", ".service");
+  appearup(".child-help__title", ".child-help");
+  appearup(".footer__left-block", ".footer");
+});
 
-consultationButtons.forEach(consultationButton => consultationButton.addEventListener('click', () => {
-  if (getHelpBlockBackground.style.backgroundColor == 'rgba(204, 204, 204, 0.376)') {
-    closeGetHelpWindow()
-  } else{
-    openGetHelpWindow()
-  }
-}))
+//------------------------------меню-------------------------
 
-getHelpSendButton.addEventListener('click', (event) => {
-  event.preventDefault()
-  closeGetHelpWindow()
-})
-
-getHelpCloseForm.addEventListener('click', () => {
-  closeGetHelpWindow()
-})
-getHelpCloseBackground.addEventListener('click', () => {
-  closeGetHelpWindow()
-})
+$(function () {
+  $('.header__burger-menu').click(() => {
+    $('.header__burger-menu').toggleClass('active-menu')
+    $('.header__nav').toggleClass('active-menu')
+    $('.open-menu-scroll').toggleClass('active-menu')
+  })
+});
