@@ -19,6 +19,124 @@ body {
   }
 }
 
+.pop-up {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74%, 74%, 74%, 0.75);
+  z-index: 15;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__block {
+    width: 50%;
+    padding: 90px 30px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: auto;
+    z-index: 17;
+
+    @media (max-width: 650px) {
+      width: 90%;
+    }
+  }
+
+  &__close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover{
+      transform: scale(1.2);
+      transition: .5s;
+    }
+
+    span {
+      width: 30px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: #333;
+      position: absolute;
+
+      &:nth-of-type(1) {
+        display: block;
+        position: absolute;
+        transform: rotate(45deg);
+        top: 50%;
+      }
+
+      &:nth-of-type(2) {
+        display: block;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 50%;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  input {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #333333;
+    padding: 10px;
+    width: 100%;
+    border: #333333 1px solid;
+    border-radius: 5px;
+  }
+
+  &__button {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    border: #00b9b6 1px solid;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: $main-color;
+    transition: 0.5s;
+
+    &:hover {
+      color: #00b9b6;
+      background-color: transparent;
+      transition: 0.5s;
+    }
+  }
+
+  &.active {
+    top: 0;
+    transition: 1s ease-in-out;
+  }
+}
+
 .nonfooter {
   background-color: #f9fdff;
 }
@@ -89,18 +207,12 @@ body {
       background-color: rgb(249, 253, 255);
       transition: all 1s ease-in-out;
 
-      @media (max-width: 375px) {
-        height: calc(100vh - 60px);
-        top: 60px;
-        padding: 20px;
-      }
-
       ul {
         flex-direction: column;
         li {
           border-bottom: 2px solid #000;
           a {
-            font-size: 28px;
+            font-size: 28px !important;
 
             &:hover:after,
             &:focus:after {
@@ -109,6 +221,12 @@ body {
           }
         }
       }
+    }
+
+    @media (max-width: 375px) {
+      height: calc(100vh - 60px);
+      top: 60px;
+      padding: 20px;
     }
 
     &.active-menu {
@@ -1435,9 +1553,9 @@ body {
     font-size: 18px;
     line-height: 120%;
     color: #00b9b6;
-    margin: auto;
     transition: 0.5s;
     cursor: pointer;
+    margin: 40px auto 0;
 
     &:hover {
       color: #f9fdff;
@@ -1455,13 +1573,14 @@ body {
     left: 50%;
     transform: translate(-50%);
     width: 31%;
-    min-width: 200px;
 
     @media (max-width: 900px) {
+      display: none;
       position: relative;
       left: 0;
       transform: none;
       margin: auto;
+      width: 176px;
     }
 
     img {
@@ -1486,9 +1605,10 @@ body {
 
     .slick-track {
       display: flex;
-      align-items: center;
+      // align-items: center;
 
       .slick-slide {
+        // flex: 1 0 auto;
       }
     }
 
@@ -1496,16 +1616,13 @@ body {
       display: flex;
       gap: 40px;
       justify-content: center;
-      position: relative;
-      // top: calc(-160px - 50vw);
+      position: absolute;
+      bottom: auto;
+      top: -85px;
 
-      // @media (max-width: 730px) {
-      //   top: -530px;
-      // }
-
-      // @media (max-width: 450px) {
-      //   top: -570px;
-      // }
+      @media (max-width: 450px) {
+        top: -65px;
+      }
 
       li {
         width: 35px;
@@ -1675,6 +1792,20 @@ body {
       background: #00b9b6;
       color: #fff;
       transition: 0.5s;
+    }
+
+    img {
+      display: none;
+
+      @media (max-width: 900px) {
+        display: block;
+        margin: auto;
+        width: 176px;
+      }
+
+      @media (max-width: 450px) {
+        width: 160px;
+      }
     }
 
     h4 {
