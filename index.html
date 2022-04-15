@@ -5,598 +5,360 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPEAK</title>
+  <title>IPhub</title>
   <link rel="stylesheet" href="./fonts/stylesheet.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" type="text/css" href="./js/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css" />
-  <link rel="shortcut icon" type="image/ico" href="./img/speak-logo.ico" />
+  <!-- <link rel="shortcut icon" type="image/ico" href="./img/speak-logo.ico" /> -->
   <script defer src="./js/scripts.js"></script>
 </head>
 
 <body>
-  <div class="open-menu-scroll">
-    <div class="pop-up">
-      <div class="pop-up__container"></div>
-      <div class="pop-up__block">
-        <div class="pop-up__close">
-          <span></span>
-          <span></span>
-        </div>
-        <form action="" class="pop-up__form">
-          <input type="text" class="pop-up__name" placeholder="Имя">
-          <input type="tel" class="pop-up__phone" placeholder="+375 (__) ___-__-__">
-          <button class="pop-up__button">Подать заявку</button>
-        </form>
+  <div class="pop-up">
+    <div class="pop-up__container"></div>
+    <div class="pop-up__block">
+      <div class="pop-up__close">
+        <span></span>
+        <span></span>
       </div>
+      <form action="" class="pop-up__form" onchange="">
+        <h2 class="pop-up__title">Оставьте заявку</h2>
+        <p class="pop-up__subtitle">Укажите свои данные, и наш специалист свяжется с вами</p>
+        <label for="username" class="pop-up__label">Как к вам обращаться</label>
+        <input type="text" id="username" class="pop-up__input" required>
+        <label for="phone" class="pop-up__label">Номер телефона / WhatsApp</label>
+        <input type="tel" id="phone" class="pop-up__input" required>
+        <label for="email" class="pop-up__label">Почта</label>
+        <input type="email" id="email" class="pop-up__input" required>
+        <label for="request" class="pop-up__label">Запрос</label>
+        <textarea type="email" id="request" class="pop-up__textarea" optional></textarea>
+        <div class="pop-up__radio">
+          <input type="checkbox" id="deal" name="deal" value="deal">
+          <label for="deal">Я принимаю соглашение на <a href="">обработку персональных данных</a> и <a href="">политику
+              конфиденциальности</a></label>
+        </div>
+        <button class="pop-up__button">
+          <p>Отправить</p>
+          <img src="./img/main/button-arrow-right.svg" alt="">
+        </button>
+      </form>
     </div>
-    <div class="nonfooter">
-      <div class="first-blur">
+  </div>
+  <div class="background">
+    <div class="background__header">
+      <div class="container">
         <header class="header">
-          <div class="container">
-            <div class="header__container">
-              <div class="header__logo" onclick="slowScroll ('.header')"><img src=" ./img/header/logo.svg" alt=""></div>
-              <nav class="header__nav">
-                <ul>
-                  <li><a href="javascript://0" onclick="slowScroll ('.about-service')">About us</a></li>
-                  <li><a href="javascript://0" onclick="slowScroll ('.child-help__title')">Blog</a></li>
-                  <li><a href="javascript://0" onclick="slowScroll ('.footer')">Contact</a></li>
-                </ul>
-              </nav>
-              <div class="header__right-block">
-                <div class="header__burger-menu">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+          <div class="header__logo" onclick="slowScroll ('.header')"><img src=" ./img/header/logo.svg" alt="loho"></div>
+          <div class="header__middle">
+            <a href="tel:+78888888888" class="header__phone">+7 (888) 888 88 88</a>
+            <a href="" class="header__button-consultation">Получить консультацию</a>
+          </div>
+          <nav class="header__nav menu">
+            <div class="menu__container">
+              <ul class="header__list menu__list">
+                <li><a href=''>Услуги</a></li>
+                <li><a href=''>Кейсы</a></li>
+                <li><a href=''>FAQ</a></li>
+              </ul>
+              <div class="header__menu-text-block menu__text-block">
+                <div class="menu__contacts">
+                  <p class="menu__title">Наши контакты:</p>
+                  <a href="mailto:example@iphub.com" class="menu__content">example@iphub.com</a>
+                  <a href="tel:+78888888888" class="menu__content">+7 (888) 888 88 88</a>
                 </div>
-                <div class="header__languages">
-                  <div id='lan'></div>
+                <div class="menu__socials">
+                  <p class="menu__title">Мы в соцсетях:</p>
+                  <a href="#" class="menu__content">Facebook</a>
+                  <a href="#" class="menu__content">Instagram</a>
                 </div>
-                <div class="header__log-in">Войти</div>
+                <div class="menu__road">
+                  <p class="menu__title">Как добраться:</p>
+                  <a href="#" class="menu__content">Схема проезда</a>
+                </div>
+                <div class="menu__adress">
+                  <p>123317, г. Москва, Пресненская<br>
+                    наб., д.8, стр.1, эт.3, п.1, оф.10</p>
+                  <p>ИНН: 7703472433</p>
+                  <p>КПП: 770301001</p>
+                </div>
+                <div class="header__menu-image menu__image"><img src="./img/header/menu-image.png" alt=""></div>
               </div>
             </div>
+          </nav>
+          <div class="header__burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </header>
-        <div class="container">
-          <main class="main">
-            <div class="main__text">
-              <p class="main__subtitle">+300 прошедших отбор психологов</p>
-              <h1 class="main__title">Сессии с психологом<br>Онлайн</h1>
-              <div class="main__button">Начать беседу</div>
-            </div>
-            <div class="main__image"><img src="./img/main/main.png" alt=""></div>
-          </main>
-          <div class="app">
-            <div class="app__video-block"><img src="./img/app/video.png" alt=""></div>
-            <div class="app__text-block">
-              <h2 class="app__title">Скачайте бесплатно приложение SPEAK</h2>
-              <div class="app__content app-content">
-                <div class="app-content__image"><img src="./img/app/speak-logo.svg" alt=""></div>
-                <h3 class="app-content__title">Speak</h3>
-                <p class="app-content__subtitle">онлайн сессии с психологом<br>доступно для iOS и Android</p>
-              </div>
-              <div class="app__buttons">
-                <a href="" class="app__button">
-                  <img src="./img/app/appstore.svg" alt="appstore">
-                </a>
-                <a href="" class="app__button">
-                  <img src="./img/app/playstore.svg" alt="playstore">
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
       </div>
-      <div class="second-blur">
-        <div class="container">
-          <div class="workers">
-            <h2 class="workers__title">Психологи работающие с актуальными темами</h2>
-            <div class="workers__buttons">
-              <a href="#" class="workers__button">Чувства</a>
-              <a href="#" class="workers__button">Одиночество</a>
-              <a href="#" class="workers__button">Вредные привычки</a>
-              <a href="#" class="workers__button">Отношения</a>
-              <a href="#" class="workers__button">Работа</a>
-              <a href="#" class="workers__button">Смыслы</a>
-              <a href="#" class="workers__button">Одиночество</a>
-              <a href="#" class="workers__button">Не одиночество</a>
-              <a href="#" class="workers__button">Отношения с близкими</a>
-              <a href="#" class="workers__button">+ 300 психологов</a>
+    </div>
+    <div class="background__main">
+      <div class="container">
+        <main class="main">
+          <div class="main__text-block">
+            <p class="main__overtitle">ВАШ IP ПАРТНЕР</p>
+            <h1 class="main__title">
+              <span>
+                <img src="./img/main/quote-open.svg" alt="quote-open">
+                Интеллектуальная
+              </span>
+              <span>
+                собственность
+                <img src="./img/main/quote-close.svg" alt="quote-close">
+              </span>
+            </h1>
+            <p class="main__subtitle">Индивидуальные правовые решения для защиты и охраны ваших нематериальных активов
+              в России и за рубежом</p>
+            <div class="main__button-block">
+              <a href="" class="main__button-consultation">
+                <div></div>
+                <span href="#">Получить индивидуальную консультацию</span>
+              </a>
+              <a href="" class="main__button-service">
+                <span href="#">Все услуги</span>
+                <img src="./img/main/button-arrow-right.svg" alt="">
+              </a>
             </div>
-            <div class="workers__slider">
-              <div class="worker">
-                <div class="worker__photo"><img src="./img/workers/worker1.png" alt=""></div>
-                <p class="worker__name">Илья Благов</p>
-                <div class="worker__rating">
-                  <div class="worker__stars">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+          </div>
+          <div class="main__image-block">
+            <img src="./img/main/main.png" alt="">
+          </div>
+        </main>
+        <div class="experience">
+          <div class="experience__image-block"><img src="./img/experience/main.png" alt=""></div>
+          <div class="experience__text-block">
+            <div class="experience__statistics">
+              <h2 class="experience__title">Многолетний опыт</h2>
+              <p class="experience__subtitle">Наша компания была создана в 2019 году специалистами, имеющими опыт работы
+                в сфере интеллектуальной собственности более 20 лет</p>
+              <div class="statistics experience__blocks">
+                <div class="statistics__wrapper">
+                  <div class="statistics__block">
+                    <p class="statistics__number">><span class="count">300</span></p>
+                    <p class="statistics__description"><span>Представления интересов</span><span> в спорах по IP правам
+                        в год</span></p>
                   </div>
-                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
                 </div>
-              </div>
-              <div class="worker">
-                <div class="worker__photo"><img src="./img/workers/worker2.png" alt=""></div>
-                <p class="worker__name">Иванна Есина</p>
-                <div class="worker__rating">
-                  <div class="worker__stars">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                <div class="statistics__wrapper">
+                  <div class="statistics__block">
+                    <p class="statistics__number">><span class="count">2500</span></p>
+                    <p class="statistics__description"><span>Оказаний юридической</span><span> помощи компаниям
+                        в год</span>
+                    </p>
                   </div>
-                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
                 </div>
-              </div>
-              <div class="worker">
-                <div class="worker__photo"><img src="./img/workers/worker3.png" alt=""></div>
-                <p class="worker__name">Артур Островский</p>
-                <div class="worker__rating">
-                  <div class="worker__stars">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                <div class="statistics__wrapper">
+                  <div class="statistics__block">
+                    <p class="statistics__number"><span class="count">1150</span></p>
+                    <p class="statistics__description"><span>Завершённых дел</span><span> по регистрации товарных
+                        знаков</span></p>
                   </div>
-                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
                 </div>
-              </div>
-              <div class="worker">
-                <div class="worker__photo"><img src="./img/workers/worker4.png" alt=""></div>
-                <p class="worker__name">Юля Заграничная</p>
-                <div class="worker__rating">
-                  <div class="worker__stars">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                <div class="statistics__wrapper">
+                  <div class="statistics__block">
+                    <p class="statistics__number"><span class="count">61</span></p>
+                    <p class="statistics__description"><span>Совокупный опыт</span><span> экспертов</span></p>
                   </div>
-                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
                 </div>
-              </div>
-              <div class="worker">
-                <div class="worker__photo"><img src="./img/workers/worker5.png" alt=""></div>
-                <p class="worker__name">Андрей Ян</p>
-                <div class="worker__rating">
-                  <div class="worker__stars">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                <div class="statistics__wrapper">
+                  <div class="statistics__block">
+                    <p class="statistics__number"><span class="count">99</span>%</p>
+                    <p class="statistics__description"><span>Успех получения</span><span> патентов</span></p>
                   </div>
-                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
                 </div>
-              </div>
-              <div class="worker">
-                <div class="worker__photo"><img src="./img/workers/worker5.png" alt=""></div>
-                <p class="worker__name">Андрей Ян</p>
-                <div class="worker__rating">
-                  <div class="worker__stars">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
-                    <img src="./img/workers/icon_star.svg" alt="" class="worker__star">
+                <div class="statistics__wrapper">
+                  <div class="statistics__block">
+                    <p class="statistics__number"><span class="count">98</span>%</p>
+                    <p class="statistics__description"><span>Успех регистрации</span><span> товарных знаков</span></p>
                   </div>
-                  <div class="worker__arrow"><img src="./img/workers/icon_arrow-right.svg" alt=""></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="help">
-            <div class="help__text-block">
-              <h2 class="help__title">Поможем вам</h2>
-              <ul class="help__list">
-                <li class="help__item">Разрешить причины сложных отношений с партнером</li>
-                <li class="help__item">Снять или снизить остроту переживаний</li>
-                <li class="help__item">Справиться с выгоранием на работе и найти мотивацию</li>
-                <li class="help__item">Понять себя в отношениях с близкими людьми</li>
-                <li class="help__item">Найти себя и понимать свои желания</li>
-                <li class="help__item">Исследовать и управлять изменениями в своей жизни</li>
-              </ul>
-            </div>
-            <div class="help__picture-block"><img src="./img/help/help-image.png" alt=""></div>
-          </div>
-        </div>
-        <div class="advantages">
-          <div class="advantages__picture-block"><img src="./img/advantages/advantage-phone.png" alt=""></div>
-          <div class="advantages__text-block">
-            <h2 class="advantages__title">Преимущества онлайн сессий с психологом</h2>
-            <ul class="advantages__list">
-              <li class="advantages__advantage">
-                <h4>Занимайтесь где и как удобно</h4>
-                <p>Дома или в поездке и в любом часовом поясе</p>
-              </li>
-              <li class="advantages__advantage">
-                <h4>Меньше забот- больше мотивации</h4>
-                <p>Не тратьте время на дорогу и управляйте занятиями в два клика</p>
-              </li>
-              <li class="advantages__advantage">
-                <h4>Доверяйте себе</h4>
-                <p>Выбирайте среди проверенных психологов, которые специаллизируются на ваших запросах</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="third-blur">
-        <div class="container">
-          <div class="selection">
-            <h2 class="selection__title">Как мы отбираем специалистов?</h2>
-            <p class="selection__subtitle">Отбор проходят меньше 10% специаллистов</p>
-            <div class="selection__content">
-              <div class="selection__text">
-                <ul class="selection__list">
-                  <li class="selection__item">
-                    <div class="selection__item-number"><img src="./img/selection/num1.svg" alt=""></div>
-                    <h4>Документы об образовании</h4>
-                    <p>Обязательно иметь высшее психологическое образование и сертификаты для ведения психотерапии</p>
-                  </li>
-                  <li class="selection__item">
-                    <div class="selection__item-number"><img src="./img/selection/num2.svg" alt=""></div>
-                    <h4>Опыт частной практики и личной терапии</h4>
-                    <p>Нужно не менее 3-х лет частной практики, личная терапия и регулярные супервизии</p>
-                  </li>
-                  <li class="selection__item">
-                    <div class="selection__item-number"><img src="./img/selection/num3.svg" alt=""></div>
-                    <h4>Собеседование с нашим экспертом-ментором</h4>
-                    <p>Отслеживаются коммуникативные способности, уровень эмпатии, манера и стиль беседы,
-                      проффесиональные
-                      компетенции</p>
-                  </li>
-                </ul>
+            <div class="experience__clients">
+              <h2 class="experience__title">Подтвержденный практикой</h2>
+              <p class="experience__subtitle">Мы и наши клиенты гордимся опытом, который подтверждается нашими
+                результатами
+                от закрепления прав заявителей до успешной защиты интересов</p>
+              <div class="clients experience__blocks">
+                <div class="clients__client"><img src="./img/experience/client1.png" alt="client1"></div>
+                <div class="clients__client"><img src="./img/experience/client2.png" alt="client2"></div>
+                <div class="clients__client"><img src="./img/experience/client3.png" alt="client3"></div>
+                <div class="clients__client"><img src="./img/experience/client4.png" alt="client4"></div>
+                <div class="clients__client"><img src="./img/experience/client5.png" alt="client5"></div>
+                <div class="clients__client"><img src="./img/experience/client6.png" alt="client6"></div>
               </div>
-              <div class="selection__picture"><img src="./img/selection/selection-img.png" alt=""></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="fourth-blur">
+    </div>
+    <div class="background__services">
+      <div class="services">
         <div class="container">
-          <div class="about-service">
-            <h2 class="about-service__title">О сервисе</h2>
-            <div class="about-service__content">
-              <div class="about-service__video-block"><img src="./img/about-service/service-video.png" alt=""></div>
-              <ul class="about-service__list">
-                <li class="about-service__item">
-                  <div class="about-service__number"><span class="count">900</span> +</div>
-                  <div class="about-service__description">регистраций вчера</div>
-                </li>
-                <li class="about-service__item">
-                  <div class="about-service__number"><span class="count">75000</span> +</div>
-                  <div class="about-service__description">проведено сессий</div>
-                </li>
-                <li class="about-service__item">
-                  <div class="about-service__number"><span class="count">354</span> +</div>
-                  <div class="about-service__description">психологов</div>
-                </li>
-              </ul>
+          <h2 class="services__title">Решения для вашего бизнеса</h2>
+          <div class="services__subtitle">
+            <p>У нас есть все необходимые ресурсы для решения любых ваших потребностей в сфере интеллектуальной
+              собственности</p>
+            <div class="services__button-top ">
+              <span href="#">Все услуги</span>
+              <img src="./img/main/button-arrow-right.svg" alt="">
             </div>
-
-          </div>
-          <div class="sets">
-            <div class="sets__set">
-              <div class="sets__image-block"><img src="./img/sets/later.png" alt=""></div>
-              <div class="sets__text-block">
-                <h4 class="sets__title">Подбор “По позже”</h4>
-                <p class="sets__description">Подбор с возможностью бронирование сессии на будущее</p>
-              </div>
-            </div>
-            <div class="sets__set">
-              <div class="sets__image-block"><img src="./img/sets/now.png" alt=""></div>
-              <h4 class="sets__title">Подбор “Сейчас”</h4>
-              <p class="sets__description">Подбор с возможностью начала сессии “здесь и сейчас”</p>
-            </div>
-          </div>
-          <div class="order">
-            <h2 class="order__title">Как это устроено</h2>
-            <div class="order__steps steps">
-              <div class="steps__picture-block"><img src="./img/order/mobile.png" alt=""></div>
-              <div class="steps__content-block">
-                <div class="steps__step">
-                  <img src="./img/order/mobile.png" alt="">
-                  <h4>Заполните простую анкету</h4>
-                  <p>Расскажите, что вас беспокоит и что важно в психологе.</p>
-                </div>
-                <div class="steps__step">
-                  <img src="./img/order/mobile.png" alt="">
-                  <h4>Выберите психолога</h4>
-                  <p>Выберите понравившегося психолога </p>
-                </div>
-                <div class="steps__step">
-                  <img src="./img/order/mobile.png" alt="">
-                  <h4>Выберите способ связи с психологом</h4>
-                  <p>49руб/мин по <span>аудио/видео связи</span><br>200руб за 24 часа <span>чата + аудио
-                      сообщения</span>
-                  </p>
-                </div>
-                <div class="steps__step">
-                  <img src="./img/order/mobile.png" alt="">
-                  <h4>Начните общение</h4>
-                  <p>Все общение происходит через платформу SPEAK. Вслучае если психолог вам не понравится, вы можете
-                    заменить его без дополнительных переплат</p>
-                </div>
-              </div>
-            </div>
-            <div class="order__button">Начать общение</div>
           </div>
         </div>
-      </div>
-      <div class="fifth-blur">
-        <div class="container">
+        <div class="services__slider">
           <div class="service">
-            <h2 class="service__title">Услуги</h2>
-            <div class="service__content-block">
-              <div class="service__chat-block chat">
-                <div>
-                  <h4 class="chat__title service__subtitle">24 часа чата</h4>
-                  <p class="chat__price service__price"><span class="count2">4200</span>₽ <span
-                      class="service__per-time">/
-                      24 часа</span></p>
-                </div>
-                <ul class="chat__list service__list">
-                  <li>24 часа доступа к чату с психологом</li>
-                  <li>Аудио сообщения</li>
-                </ul>
-                <form action="" class="chat__form service__form">
-                  <button class="chat__button service__button">Перейти</button>
-                </form>
-              </div>
-              <div class="service__sessions-block sessions">
-                <div class="service__popular-mark">
-                  <p>Популярное</p>
-                  <img src="./img/service/star.svg" alt="">
-                </div>
-                <div>
-                  <h4 class="sessions__title service__subtitle">Аудио/Видео сессии</h4>
-                  <p class="sessions__price service__price"><span class="count2">49</span>₽ <span
-                      class="service__per-time">/ 1 минута</span></p>
-                </div>
-                <ul class="sessions__list service__list">
-                  <li>Безлимитный доступа к чату с психологом до начала сессии</li>
-                  <li>Аудио/Видео звонки</li>
-                  <li>Нет лимитов по времени разговора</li>
-                </ul>
-                <form action="" class="sessions__form service__form">
-                  <div class="sessions__inputs input">
-                    <input type="number" class="sessions__input" value='1' min='1'>
-                    <div class="input__minute">min</div>
-                    <div class="input__vertical-bar"></div>
-                    <p class="input__multiply-number">49</p>
-                    <div class="input__ruble">₽</div>
-                    <img src="./img/service/arrow.svg" alt="" class="input__arrow-left">
-                    <img src="./img/service/arrow.svg" alt="" class="input__arrow-right">
-                  </div>
-                  <button class="sessions__button service__button">Перейти</button>
-                </form>
-              </div>
-            </div>
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image1"></div>
+            <p class="service__title">Регистрация товарного знака в Роспатенте</p>
+            <p class="service__subtitle">Государственная регистрация торговых знаков в РФ и в мире</p>
           </div>
-          <div class="app second-app">
-            <div class="app__video-block second-video-block"><img src="./img/app/phone-photo.png" alt=""></div>
-            <div class="app__text-block">
-              <h2 class="app__title">Скачайте бесплатно приложение SPEAK</h2>
-              <div class="app__content app-content">
-                <div class="app-content__image"><img src="./img/app/speak-logo.svg" alt=""></div>
-                <h3 class="app-content__title">Speak</h3>
-                <p class="app-content__subtitle">онлайн сессии с психологом<br>доступно для iOS и Android</p>
-              </div>
-              <div class="app__buttons">
-                <a href="" class="app__button">
-                  <img src="./img/app/appstore.svg" alt="appstore">
-                </a>
-                <a href="" class="app__button">
-                  <img src="./img/app/playstore.svg" alt="playstore">
-                </a>
-              </div>
-            </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image1"></div>
+            <p class="service__title">Регистрация товарного знака в Роспатенте</p>
+            <p class="service__subtitle">Государственная регистрация торговых знаков в РФ и в мире</p>
           </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image1"></div>
+            <p class="service__title">Регистрация товарного знака в Роспатенте</p>
+            <p class="service__subtitle">Государственная регистрация торговых знаков в РФ и в мире</p>
+          </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image2"></div>
+            <p class="service__title">Изобретения и Полезные модели</p>
+            <p class="service__subtitle">Регистрация прав инновационные устройства, способы или технологии</p>
+          </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image2"></div>
+            <p class="service__title">Изобретения и Полезные модели</p>
+            <p class="service__subtitle">Регистрация прав инновационные устройства, способы или технологии</p>
+          </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image2"></div>
+            <p class="service__title">Изобретения и Полезные модели</p>
+            <p class="service__subtitle">Регистрация прав инновационные устройства, способы или технологии</p>
+          </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image3"></div>
+            <p class="service__title">Промышленные образцы</p>
+            <p class="service__subtitle">Государственная регистрация торговых знаков в РФ и в мире</p>
+          </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image4"></div>
+            <p class="service__title">Программы для ЭВМ и Базы данных</p>
+            <p class="service__subtitle">Государственная регистрация торговых знаков в РФ и в мире</p>
+          </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image5"></div>
+            <p class="service__title">Представление интересов, суды</p>
+            <p class="service__subtitle">Государственная регистрация торговых знаков в РФ и в мире</p>
+          </div>
+          <div class="service">
+            <div class="service__button icon-shape"></div>
+            <div class="service__image icon-service-image5"></div>
+            <p class="service__title">Представление интересов, суды</p>
+            <p class="service__subtitle">Государственная регистрация торговых знаков в РФ и в мире</p>
+          </div>
+          <div class="service invisible"></div>
+          <div class="service invisible"></div>
+          <div class="service invisible"></div>
+          <div class="service invisible"></div>
+          <div class="service invisible"></div>
         </div>
-        <div class="comments">
-          <h2 class="comments__title container">Отзывы</h2>
-          <div class="comments__slider">
-            <div class="comment">
-              <div class="comment__picture"><img src="./img/comments/person1.png" alt=""></div>
-              <div class="comment__head">
-                <div>
-                  <p class="comment__name">Sophia Jones</p>
-                  <p class="comment__profession">Teacher</p>
-                </div>
-                <div class="comment__stars">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                </div>
-              </div>
-              <div class="comment__text">After just 2 months, Speak has already made such an impact on my life. It has
-                helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me
-                navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s
-                easy to open up to, making me feel heard and understood.</div>
-            </div>
-            <div class="comment">
-              <div class="comment__picture"><img src="./img/comments/person2.png" alt=""></div>
-              <div class="comment__head">
-                <div>
-                  <p class="comment__name">Jay K. Braun</p>
-                  <p class="comment__profession">Artist</p>
-                </div>
-                <div class="comment__stars">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                </div>
-              </div>
-              <div class="comment__text">After just 2 months, Speak has already made such an impact on my life. It has
-                helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me
-                navigate the difficult stages of grief after losing my mom, with compassion and </div>
-            </div>
-            <div class="comment">
-              <div class="comment__picture"><img src="./img/comments/person3.png" alt=""></div>
-              <div class="comment__head">
-                <div>
-                  <p class="comment__name">Jay K. Braun</p>
-                  <p class="comment__profession">Artist</p>
-                </div>
-                <div class="comment__stars">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                </div>
-              </div>
-              <div class="comment__text">After just 2 months, Speak has already made such an impact on my life. It has
-                helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me
-                navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s
-                easy to open up to, making me feel heard and understood.</div>
-            </div>
-            <div class="comment">
-              <div class="comment__picture"><img src="./img/comments/person3.png" alt=""></div>
-              <div class="comment__head">
-                <div>
-                  <p class="comment__name">Jay K. Braun</p>
-                  <p class="comment__profession">Artist</p>
-                </div>
-                <div class="comment__stars">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                  <img src="./img/comments/icon_star.svg" alt="">
-                </div>
-              </div>
-              <div class="comment__text">After just 2 months, Speak has already made such an impact on my life. It has
-                helped me develop manageable solutions to feelings of stress, anxiety, and overwhelm. Speaker helped me
-                navigate the difficult stages of grief after losing my mom, with compassion and encouragement. And she’s
-                easy to open up to, making me feel heard and understood.</div>
-            </div>
-          </div>
+        <div class="services__button-bottom">
+          <span href="#">Все услуги</span>
+          <img src="./img/main/button-arrow-right.svg" alt="">
         </div>
       </div>
+    </div>
+    <div class="background__test">
       <div class="container">
-        <div class="child-help">
-          <h2 class="child-help__title">Детский психолог онлайн</h2>
-          <div class="child-help__text-block">
-            <div class="child-help__first-column">
-              <h4>Чем поможет детский психолог онлайн?</h4>
-              <p>Каждый родитель хочет, чтобы его ребенок рос сильной уравновешенной личностью. Мы понимаем, что именно
-                в
-                детстве формируются зачатки характера. Как справиться с возникающими проблемами, как выстроить отношения
-                с
-                ребенком, чтобы он доверял вам? На эти и другие вопросы поможет ответить детский психолог онлайн.</p>
-              <h4>Преимущества онлайн-консультации детского психолога</h4>
-              <p>Главный плюс сеанса в таком формате – экономия времени. Вам не придется тратить время на дорогу и
-                долгие
-                сборы. Все, что нужно – компьютер или смартфон, микрофон и блокнот с ручкой, чтобы записывать важную
-                информацию. Если вам или ребенку тяжело общаться с незнакомым человеком лично, онлайн-связь в этом
-                случае
-                упростит дело. </p>
-              <h4>Когда нужна помощь детского психолога онлайн?</h4>
-              <p>Онлайн-консультация детского психолога может быть полезна, если у вас есть вопросы по таким темам, как:
-              </p>
-              <ul>
-                <li>Плохая успеваемость;</li>
-                <li>Стеснительность;</li>
-                <li>Цифровая зависимость;</li>
-                <li>Агрессия;</li>
-                <li>Потеря близкого в семье;</li>
-                <li>Возрастной кризис;</li>
-                <li>Подготовка к детскому саду или школе;</li>
-                <li>Профориентация.</li>
-              </ul>
-              <p>Это лишь часть тем, которые можно затронуть. Помните, что, если возникает ситуация, в которой вы
-                самостоятельно не можете разобраться, сейчас консультация детского психолога онлайн поможет найти
-                ответы.
-              </p>
-              <h4>Как проходит онлайн-консультация детского психолога?</h4>
-              <p>Задать вопрос детскому психологу онлайн может как сам ребенок, так и родитель. </p>
+        <div class="test">
+          <h2 class="test__title">Не знаете, что вам нужно? </h2>
+          <p class="test__subtitle">Пройдите квиз, чтобы выбрать оптимальное решение для Вашей задачи</p>
+          <div class="test__wrapper-slider">
+            <div class="test__counter-slider">
+              <p><span>1/</span><span></span></p>
             </div>
-            <div class="child-help__second-column">
-              <p>На первом сеансе обычно присутствует родитель или опекун, а также сам «виновник торжества». Следующие
-                сеансы могут быть и без взрослого, если ребенок сам в состоянии связаться через интернет.
-              </p>
-              <p>Бывает и так, что сначала ребенку присутствовать необязательно. В этом случае работа происходит с
-                родителем, а если есть необходимость, позже присоединяется ребенок.
-              </p>
-              <p>Психолог по детским вопросам онлайн может попросить ребенка нарисовать что-то, далее по этим рисункам
-                он
-                проведет диагностику. Родитель тоже является звеном связи с психикой ребенка. Через него психолог может
-                сделать вывод о том, какая проблема сейчас назрела.
-              </p>
-              <p>Если специалист попросит вас пройти обследование или сдать анализы для более ясной картины, не
-                пугайтесь,
-                это нормально. Таким образом, вы оба сможете исключить какие-либо диагнозы</p>
-              <h4>О чем поговорить с детским психологом?</h4>
-              <p>Родители малышей часто обращаются с вопросами об адаптации в детском саду. Есть тревожные мамы, которые
-                сомневаются, стоит ли отдавать малыша в сад или же пока слишком рано. Очень многих волнует, что
-                воспитатель
-                будет срываться на ребенка. Это логично, ведь в силу того, что в СМИ регулярно появляются жуткие новости
-                о
-                чудовищных ЧП в детсадах, беспокойство обосновано.
-              </p>
-              <p>Отдельный вопрос подготовки к саду. В интернете полно информации в таком ключе: «ребенок должен
-                научиться
-                самостоятельно есть, ходить в туалет и засыпать сам перед тем, как идти в сад». Особо мнительные
-                беспрекословно верят, другие понимают: ребенок ничего никому не должен. Его невозможно научить чему-то,
-                пока
-                он сам не захочет делать это. «Дрессировке» малыши не поддаются. Но пугаться не стоит, в любом случае,
-                воспитатели будут помогать малышам в этих вопросах. Главное – настроиться на позитив и верить в хорошее.
-              </p>
-              <p>Дети постарше сталкиваются с проблемами переходного возраста, неуверенностью в себе, безответной
-                любовью
-                и
-                другими. Если вы понимаете, что вам с чадом необходима онлайн-консультация, вы можете выбрать
-                специалиста
-                на
-                нашем сайте.</p>
+            <div class="test__slider test-slider" onclick="changeSlider()" ontouchend="changeSlider()">
+              <div class="test-slider__slide">
+                <p class="test-slider__title">С какой целью вы обращаетесь?</p>
+                <div class="test-slider__options">
+                  <a href="" class="test-slider__option">Регистрацию полезной модели</a>
+                  <a href="" class="test-slider__option">Регистрацию промышленного образца</a>
+                  <a href="" class="test-slider__option">Регистрацию прав на использование полезной модели, промобразца,
+                    изобретенния</a>
+                  <a href="" class="test-slider__option">Подготовка заявки на выдачу патента</a>
+                  <a href="" class="test-slider__option">Регистрацию изобретения</a>
+                  <a href="" class="test-slider__option">Подготовка заявки на передачу прав патента</a>
+                </div>
+              </div>
+              <div class="test-slider__slide">
+                <p class="test-slider__title">С какой целью вы обращаетесь?</p>
+                <div class="test-slider__options">
+                  <div class="test-slider__option">Регистрацию полезной модели</div>
+                  <div class="test-slider__option">Регистрацию промышленного образца</div>
+                  <div class="test-slider__option">Регистрацию прав на использование полезной модели, промобразца,
+                    изобретенния</div>
+                  <div class="test-slider__option">Подготовка заявки на выдачу патента</div>
+                  <div class="test-slider__option">Регистрацию изобретения</div>
+                  <div class="test-slider__option">Подготовка заявки на передачу прав патента</div>
+                </div>
+              </div>
+              <div class="test-slider__slide">
+                <p class="test-slider__title">С какой целью вы обращаетесь?</p>
+                <div class="test-slider__options">
+                  <div class="test-slider__option">Регистрацию полезной модели</div>
+                  <div class="test-slider__option">Регистрацию промышленного образца</div>
+                  <div class="test-slider__option">Регистрацию прав на использование полезной модели, промобразца,
+                    изобретенния</div>
+                  <div class="test-slider__option">Подготовка заявки на выдачу патента</div>
+                  <div class="test-slider__option">Регистрацию изобретения</div>
+                  <div class="test-slider__option">Подготовка заявки на передачу прав патента</div>
+                </div>
+              </div>
+              <div class="test-slider__slide">
+                <p class="test-slider__title">С какой целью вы обращаетесь?</p>
+                <div class="test-slider__options">
+                  <div class="test-slider__option">Регистрацию полезной модели</div>
+                  <div class="test-slider__option">Регистрацию промышленного образца</div>
+                  <div class="test-slider__option">Регистрацию прав на использование полезной модели, промобразца,
+                    изобретенния</div>
+                  <div class="test-slider__option">Подготовка заявки на выдачу патента</div>
+                  <div class="test-slider__option">Регистрацию изобретения</div>
+                  <div class="test-slider__option">Подготовка заявки на передачу прав патента</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bonuses">
+          <p class="bonuses__title">Бонусы после прохождения</p>
+          <div class="bonuses__block">
+            <div class="bonuses__bonus">
+              <div class="bonuses__image"><img src="./img/test/bonuses/bonus1.svg" alt=""></div>
+              <p class="bonuses__text">Название бонуса в одну<br>или две строки</p>
+            </div>
+            <div class="bonuses__bonus">
+              <div class="bonuses__image"><img src="./img/test/bonuses/bonus2.svg" alt=""></div>
+              <p class="bonuses__text">Название бонуса в одну<br>или две строки</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="footer-blur">
-      <div class="container">
-        <footer class="footer">
-          <div class="footer__left-block">
-            <div class="footer__logo"><img src="./img/footer/logo.svg" alt=""></div>
-            <ul class="footer__menu">
-              <li><a href=''>Home</a></li>
-              <li><a href=''>Blog</a></li>
-              <li><a href=''>Privacy Policy</a></li>
-              <li><a href=''>About us</a></li>
-              <li><a href=''>Contact</a></li>
-              <li><a href=''>Terms and Conditions</a></li>
-            </ul>
-          </div>
-          <div class="footer__right-block">
-            <div class="footer__socials">
-              <img src="./img/footer/facebook.svg" alt="">
-              <img src="./img/footer/linkedin.svg" alt="">
-              <img src="./img/footer/twitter.svg" alt="">
-              <img src="./img/footer/instagram.svg" alt="">
-            </div>
-            <div class="footer__contacts">
-              <p class="footer__mail">info@speak.help</p>
-              <p class="footer__address">33 W 60th Street, 8th FI New York, NY 10023</p>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </div>
-
   </div>
+
+
 
 
 

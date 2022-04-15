@@ -1,29 +1,54 @@
 @font-face {
-    font-family: "Inter";
-    src: url("Inter-Regular.eot");
-    src: local("Inter Regular"), local("Inter-Regular"), url("Inter-Regular.eot?#iefix") format("embedded-opentype"),
-        url("Inter-Regular.woff2") format("woff2"), url("Inter-Regular.woff") format("woff"),
-        url("Inter-Regular.ttf") format("truetype");
+    font-family: 'Montserrat';
+    src: url('Montserrat-Regular.eot');
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Regular.woff2') format('woff2'),
+        url('Montserrat-Regular.woff') format('woff'),
+        url('Montserrat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url("Inter-Bold.eot");
-    src: local("Inter Bold"), local("Inter-Bold"), url("Inter-Bold.eot?#iefix") format("embedded-opentype"),
-        url("Inter-Bold.woff2") format("woff2"), url("Inter-Bold.woff") format("woff"),
-        url("Inter-Bold.ttf") format("truetype");
-    font-weight: bold;
+    font-family: 'Montserrat';
+    src: url('Montserrat-Medium.eot');
+    src: local('Montserrat Medium'), local('Montserrat-Medium'),
+        url('Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Medium.woff2') format('woff2'),
+        url('Montserrat-Medium.woff') format('woff'),
+        url('Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url("Inter-Medium.eot");
-    src: local("Inter Medium"), local("Inter-Medium"), url("Inter-Medium.eot?#iefix") format("embedded-opentype"),
-        url("Inter-Medium.woff2") format("woff2"), url("Inter-Medium.woff") format("woff"),
-        url("Inter-Medium.ttf") format("truetype");
+    font-family: 'STIX Two Text';
+src: local('STIX Two Text Regular'), local('STIXTwoText-Regular'),
+        url('./STIXTwoText-Regular.otf') format('otf'),
+        url('./STIXTwoText-Regular.woff2') format('woff2'),
+        url('./STIXTwoText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'STIX Two Text';
+    src: local('STIX Two Text Medium'), local('STIXTwoText-Medium'),
+        url('./STIXTwoText-Medium.otf') format('otf'),
+        url('./STIXTwoText-Medium.woff2') format('woff2'),
+        url('./STIXTwoText-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'STIX Two Text';
+    src: local('STIX Two Text Medium Italic'), local('STIXTwoText-Medium-Italic'),
+        url('./STIXTwoText-MediumItalic.otf') format('otf'),
+        url('./STIXTwoText-MediumItalic.woff2') format('woff2'),
+        url('./STIXTwoText-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
