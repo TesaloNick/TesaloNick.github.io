@@ -33,7 +33,7 @@
 //   }
 // ];
 
-//--------------------слайдеры-------------------------
+// --------------------слайдеры-------------------------
 
 // $('#lan').ddslick({
 //   data: ddData,
@@ -93,31 +93,131 @@ $('.test-slider').slick({
   nextArrow: "<div class='next'><span>Вперед</span><img src='../img/main/button-arrow-right.svg' class='next-arrow'></div>",
 });
 
+$('.cases__slider').slick({
+  infinite: false,
+  arrows: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  variableWidth: true,
+  prevArrow: "<div class='prev'><img src='../img/main/button-arrow-right.svg' class='prev-arrow'></div>",
+  nextArrow: "<div class='next'><img src='../img/main/button-arrow-right.svg' class='next-arrow'></div>",
+  responsive: [
+    {
+      breakpoint: 1256,
+      settings: {
+        variableWidth: false,
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        variableWidth: false,
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+$('.team__slider').slick({
+  infinite: false,
+  arrows: true,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  prevArrow: "<div class='prev'><img src='../img/main/button-arrow-right.svg' class='prev-arrow'></div>",
+  nextArrow: "<div class='next'><img src='../img/main/button-arrow-right.svg' class='next-arrow'></div>",
+  responsive: [
+    {
+      breakpoint: 1500,
+      settings: {
+        slidesToShow: 5
+      }
+    },
+    {
+      breakpoint: 1256,
+      settings: {
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 450,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
 //--------------------удаление слайдов при определенной ширине-------------------------
 
-let amountOfSlides = document.querySelectorAll('.service').length;
+let amountOfSlidesServices = document.querySelectorAll('.service').length;
+let amountOfSlidesCases = document.querySelectorAll('.case').length;
+let amountOfSlidesTeam = document.querySelectorAll('.member').length;
 let windowWidth = $(window).width();
 
 if (windowWidth <= 1500 && windowWidth > 1256) {
-  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 1);
 } else if (windowWidth <= 1256 && windowWidth > 1000) {
-  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 2);
-} else if (windowWidth <= 1000 && windowWidth > 700) {
-  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 2);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 3);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 2);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 1);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 2);
+  $('.cases__slider').slick('slickRemove', amountOfSlidesCases - 1);
+} else if (windowWidth <= 1000 && windowWidth > 900) {
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 2);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 3);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 1);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 2);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 3);
+  $('.cases__slider').slick('slickRemove', amountOfSlidesCases - 1);
+} else if (windowWidth <= 900 && windowWidth > 700) {
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 2);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 3);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 1);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 2);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 3);
+  $('.cases__slider').slick('slickRemove', amountOfSlidesCases - 1);
+  $('.cases__slider').slick('slickRemove', amountOfSlidesCases - 2);
 } else if (windowWidth <= 700 && windowWidth > 450) {
-  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 2);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 3);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 4);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 2);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 3);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 4);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 1);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 2);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 3);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 4);
+  $('.cases__slider').slick('slickRemove', amountOfSlidesCases - 1);
+  $('.cases__slider').slick('slickRemove', amountOfSlidesCases - 2);
 } else if (windowWidth <= 450) {
-  $('.services__slider').slick('slickRemove', amountOfSlides - 1);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 2);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 3);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 4);
-  $('.services__slider').slick('slickRemove', amountOfSlides - 5);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 1);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 2);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 3);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 4);
+  $('.services__slider').slick('slickRemove', amountOfSlidesServices - 5);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 1);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 2);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 3);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 4);
+  $('.team__slider').slick('slickRemove', amountOfSlidesTeam - 5);
+  $('.cases__slider').slick('slickRemove', amountOfSlidesCases - 1);
+  $('.cases__slider').slick('slickRemove', amountOfSlidesCases - 2);
 }
 // $('.service').on('click', function () {
 // console.log(this);
@@ -192,7 +292,7 @@ if (windowWidth <= 1500 && windowWidth > 1256) {
 //   multiplyNumber.innerHTML = +number.value * 49;
 // })
 
-// //-----------------------возрастающие числа------------------------------
+//-----------------------возрастающие числа------------------------------
 
 function countup(className) {
   var countBlockTop = $("." + className).offset().top;
@@ -274,6 +374,7 @@ $(function () {
   popUp('pop-up__container')
   popUp('pop-up__close')
   popUp('header__button-consultation')
+  popUp('ban__button')
 });
 
 //------------------------------замена фона при непустом поле ввода-------------------------
@@ -347,12 +448,11 @@ document.querySelectorAll('.test-slider__option').forEach(slide => slide.addEven
 const amountTestSlides = document.querySelectorAll('.test-slider__slide')
 document.querySelector('.test__counter-slider > p > span:nth-of-type(2)').innerHTML = amountTestSlides.length; // изменение общего количества слайдов
 
-function changeSlider() { // изменение номера атекущего слайда
+function changeSlider() { // изменение номера атекущего слайда (onclick, mousemove, ontouchend)
   for (let i = 0; i < amountTestSlides.length; i++) {
-    console.log('1');
     if (amountTestSlides[i].classList.contains('slick-current')) {
       document.querySelector('.test__counter-slider > p > span:nth-of-type(1)').innerHTML = `${i + 1}/`
+      console.log(i);
     }
   }
 }
-document.querySelector('.test-slider').addEventListener('touchend', changeSlider())
