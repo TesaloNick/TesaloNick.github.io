@@ -96,6 +96,14 @@
 
 .background {
   background: #1b1b1b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
 }
 
 .background__header {
@@ -108,7 +116,6 @@
 }
 
 .background__main {
-  background-color: #1b1b1b;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url(../img/backgrounds/backgroud-main.png) center/cover no-repeat;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/backgrounds/backgroud-main.png) center/cover no-repeat;
 }
@@ -802,7 +809,6 @@
 
 @media (max-width: 768px) {
   .main {
-    padding: 0 0 36px 0;
     padding: 179px 0 80px;
   }
 }
@@ -1567,9 +1573,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0 20px 0 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1592,6 +1595,16 @@
   transition: 0.5s;
 }
 
+.service:hover .icon-service-image1,
+.service:hover .icon-service-image2,
+.service:hover .icon-service-image3,
+.service:hover .icon-service-image4,
+.service:hover .icon-service-image5 {
+  font-size: 100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .service:hover .icon-service-image1::before,
 .service:hover .icon-service-image2::before,
 .service:hover .icon-service-image3::before,
@@ -1612,7 +1625,7 @@
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  top: 0;
+  bottom: -50%;
 }
 
 .service .icon-shape {
@@ -1638,6 +1651,8 @@
       -ms-grid-row-align: center;
       align-self: center;
   padding: 0 0 30px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 1000px) {
@@ -1679,13 +1694,19 @@
   transition: 0.5s;
 }
 
+.service__text {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 .service__title {
   color: #8a8a8a;
   position: absolute;
-  bottom: 20px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 0 0 5px 0;
+  padding: 0 25px 5px 0;
 }
 
 @media (max-width: 768px) {
@@ -1698,6 +1719,7 @@
   .service__title {
     font-size: 14px;
     bottom: 10px;
+    padding: 0 15px 5px 0;
   }
 }
 
@@ -1710,11 +1732,9 @@
 .service__subtitle {
   color: #8a8a8a;
   position: relative;
-  top: 50%;
+  bottom: -200%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -ms-grid-column-align: end;
-      justify-self: end;
 }
 
 .test {
@@ -1903,7 +1923,6 @@
           align-items: center;
   cursor: pointer;
   position: absolute;
-  margin: 0 15px 0 0;
   bottom: 35px;
 }
 
@@ -1925,6 +1944,7 @@
 
 .test__slider .slick-arrow.prev {
   left: 40px;
+  margin: 0 0 0 15px;
 }
 
 @media (max-width: 450px) {
@@ -1935,6 +1955,7 @@
 
 .test__slider .slick-arrow.next {
   right: 40px;
+  margin: 0 15px 0 0;
 }
 
 @media (max-width: 450px) {
@@ -3594,11 +3615,19 @@
 
 .footer-menu__item {
   padding: 0 0 15px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (max-width: 400px) {
   .footer-menu__item {
     font-size: 14px;
   }
+}
+
+.footer-menu__item:hover {
+  color: #da4533;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=style.css.map */
